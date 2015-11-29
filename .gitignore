@@ -27,6 +27,7 @@ target
 .project
 .metadata
 .settings
+.mvn
  
 # IntelliJ files
 .idea
