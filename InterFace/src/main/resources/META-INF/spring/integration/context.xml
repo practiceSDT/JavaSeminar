@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream-4.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd
+		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.8.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+	<context:component-scan base-package="iftool"></context:component-scan>
+
+	
+    <bean id="dataRecieved" class="iftool.controller.DataRecieved"/>
+	
+
+    <jdbc:embedded-database id="datasource" type="H2">
+    </jdbc:embedded-database>
+    
+	<int:channel id="input">
+	</int:channel>
+
+	
+	<int:service-activator input-channel="input"
+		output-channel="channel2" ref="datarecieved">
+	</int:service-activator>
+	
+	
+	<int:channel id="channel2">
+		<int:interceptors>
+			<int:wire-tap channel="logger"/>
+		</int:interceptors>
+	</int:channel>
+	
+	<int:logging-channel-adapter id="logger">
+	</int:logging-channel-adapter>
+</beans>
