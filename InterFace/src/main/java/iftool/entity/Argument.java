@@ -1,7 +1,7 @@
 /**
  * 
  */
-package InterFace.entity;
+package iftool.entity;
 
 import lombok.Data;
 

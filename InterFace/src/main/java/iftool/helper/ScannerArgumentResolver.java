@@ -1,14 +1,14 @@
 /**
  * 
  */
-package InterFace.helper;
+package iftool.helper;
 
 import java.io.InputStream;
 import java.util.Scanner;
 
 import org.springframework.stereotype.Component;
 
-import InterFace.entity.Argument;
+import iftool.entity.Argument;
 
 /**
  * @author MIT

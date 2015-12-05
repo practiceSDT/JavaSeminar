@@ -1,7 +1,7 @@
 /**
  * 
  */
-package InterFace;
+package iftool;
 
 import javax.sql.DataSource;
 
