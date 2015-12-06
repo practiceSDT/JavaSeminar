@@ -21,6 +21,8 @@ classes/
  
 # Maven output folder
 target
+data
+.apt_generated
  
 # Eclipse project files
 .classpath
