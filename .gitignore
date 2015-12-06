@@ -29,6 +29,7 @@ data
 .project
 .metadata
 .settings
+.factorypath
 .mvn
  
 # IntelliJ files
