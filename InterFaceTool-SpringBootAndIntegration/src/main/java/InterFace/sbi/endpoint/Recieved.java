@@ -1,4 +1,4 @@
-package InterFace.sbi.controllor;
+package InterFace.sbi.endpoint;
 
 import org.springframework.integration.annotation.ServiceActivator;
 
