@@ -20,19 +20,27 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.jmx.export.annotation.ManagedResource;
 
+import lombok.Setter;
+
 @ConfigurationProperties(prefix = "service", ignoreUnknownFields = false)
 @ManagedResource
 public class ServiceProperties {
 
+	@Setter
 	private String greeting = "Hello";
+
+	@Setter
+	private String filetype = "Txt";
 
 	@ManagedAttribute
 	public String getGreeting() {
 		return this.greeting;
 	}
 
-	public void setGreeting(String greeting) {
-		this.greeting = greeting;
+	@ManagedAttribute
+	public String getFiletype() {
+		return filetype;
 	}
-
+	
+	
 }

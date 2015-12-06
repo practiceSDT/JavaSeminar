@@ -12,7 +12,6 @@ import InterFace.sbi.domain.ExcelInterfaceDesignFile;
  * @author MIT
  *
  */
-@Repository
 public interface ExcelInterfaceDesignFileRepository 
 		extends JpaRepository<ExcelInterfaceDesignFile, Integer> {
 

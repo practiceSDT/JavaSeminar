@@ -11,20 +11,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import InterFace.sbi.ServiceProperties;
 import InterFace.sbi.domain.ExcelInterfaceDesignFile;
 import InterFace.sbi.repository.ExcelInterfaceDesignFileRepository;
+import lombok.Setter;
 
 @Service
 @Transactional
-@Component
-@ConfigurationProperties(prefix = "service", ignoreUnknownFields = false)
 public class ExcelDao implements IntDao {
 	
 	@Autowired
 	ExcelInterfaceDesignFileRepository excelInterfaceDesignFileRepository;
 	
-	@Value("${prefix.filetype}")
-	String filetype;
+	@Autowired
+	private ServiceProperties configuration;
 
 //	@ServiceActivator
 	/* (non-Javadoc)
@@ -33,7 +33,7 @@ public class ExcelDao implements IntDao {
 	@Override
 	public void createRow(Integer id, String st) throws Exception {
 		ExcelInterfaceDesignFile c = excelInterfaceDesignFileRepository.save(
-				new ExcelInterfaceDesignFile(id,st,filetype));
+				new ExcelInterfaceDesignFile(id,st,this.configuration.getFiletype()));
 		System.out.println(c + "is created");
 		excelInterfaceDesignFileRepository.findAll().forEach(System.out::println);
 	}
