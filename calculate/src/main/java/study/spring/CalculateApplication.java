@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ImportResource;
 
 import study.spring.e.CalculateOperator;
 import study.spring.entity.CalculateData;
+import study.spring.service.DataBaseDataService;
 import study.spring.service.MessageSendService;
 
 @SpringBootApplication
@@ -22,6 +23,8 @@ public class CalculateApplication implements CommandLineRunner{
     @Autowired
     private MessageSendService messageSendService;
 
+    @Autowired
+    private DataBaseDataService dataBaseDataService;
     
     public static void main(String[] args) {
         SpringApplication.run(CalculateApplication.class, args);
@@ -32,7 +35,7 @@ public class CalculateApplication implements CommandLineRunner{
 		
 		messageSendService.sendMessage(
 				new CalculateData(
-						"tes1",
+						null,
 						null,
 						CalculateOperator.PLUS, 
 						4, 
@@ -40,7 +43,7 @@ public class CalculateApplication implements CommandLineRunner{
 
 		messageSendService.sendMessage(
 				new CalculateData(
-						"tes2",
+						null,
 						null,
 						CalculateOperator.MINUS, 
 						8, 
@@ -48,11 +51,13 @@ public class CalculateApplication implements CommandLineRunner{
 
 		messageSendService.sendMessage(
 				new CalculateData(
-						"tes3",
+						null,
 						null,
 						CalculateOperator.PLUS, 
 						0, 
 						5));
+		
+		dataBaseDataService.allDataBaseOut();
 
 	}
 }
