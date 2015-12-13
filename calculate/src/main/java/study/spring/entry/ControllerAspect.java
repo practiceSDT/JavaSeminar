@@ -9,7 +9,7 @@ import lombok.extern.log4j.Log4j;
 @Aspect
 @Log4j
 public class ControllerAspect {
-    @Around("execution(* study.spring..*(..))")
+    @Around("execution(* study.spring.entry..*(..))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
     	log.info("Start : " + point.toString());
     	long beforeTime = System.currentTimeMillis();
