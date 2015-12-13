@@ -11,13 +11,13 @@ import lombok.extern.log4j.Log4j;
 public class ControllerAspect {
     @Around("execution(* study.spring..*(..))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
-    	log.info("前処理");
+    	log.info("Start : " + point.toString());
     	long beforeTime = System.currentTimeMillis();
         Object obj = point.proceed();
-        log.info("後処理");
+        log.info("End : " + point.toString());
     	long afterTime = System.currentTimeMillis();
     	long execTime = afterTime - beforeTime;
-        log.info("Time : " + execTime);
+        log.info("Time : " + execTime + " : "+ point.toString());
         return obj;
     }
 }
