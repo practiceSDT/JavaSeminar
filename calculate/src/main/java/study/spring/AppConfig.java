@@ -6,11 +6,13 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
 
 @Configuration
+@EnableAspectJAutoProxy
 public class AppConfig {
     @Autowired
     DataSourceProperties dataSourceProperties;
