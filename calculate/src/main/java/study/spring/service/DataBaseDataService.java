@@ -9,10 +9,10 @@ public class DataBaseDataService {
 	@Autowired
 	private CalculateService calculateService;
 
-    public void allDataBaseOut()
+    public void outputStoredAllData()
     {
     	System.out.println("Stored All Data");
-    	calculateService.allDataFetch().forEach(System.out::println);
+    	calculateService.fetchAllData().forEach(System.out::println);
     }
 	
 }

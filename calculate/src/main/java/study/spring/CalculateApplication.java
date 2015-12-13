@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
@@ -14,7 +15,7 @@ import study.spring.service.DataBaseDataService;
 import study.spring.service.MessageSendService;
 
 @SpringBootApplication
-//@EnableConfigurationProperties(ServiceProperties.class)
+@EnableConfigurationProperties(ServiceProperties.class)
 @ImportResource("integration-context.xml")
 @EnableAutoConfiguration
 @ComponentScan
@@ -55,9 +56,9 @@ public class CalculateApplication implements CommandLineRunner{
 						null,
 						CalculateOperator.PLUS, 
 						0, 
-						5));
+						511));
 		
-		dataBaseDataService.allDataBaseOut();
+		dataBaseDataService.outputStoredAllData();
 
 	}
 }

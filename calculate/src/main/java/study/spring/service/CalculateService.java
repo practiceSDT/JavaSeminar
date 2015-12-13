@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.extern.log4j.Log4j;
+import study.spring.ServiceProperties;
 import study.spring.bean.Factory;
 import study.spring.bean.ICalculator;
 import study.spring.entity.CalculateData;
@@ -19,8 +20,11 @@ public class CalculateService {
 	
 	@Autowired
 	private ICalculateJpaRepository iCalculateJpaRepository;
+	
+	@Autowired
+	private ServiceProperties configuration;
 
-	public void parsistenceData(CalculateData _calculateData){
+	public void saveData(CalculateData _calculateData){
 		
 		iCalculateJpaRepository.save(_calculateData);
 		log.info("Saved Data : " + _calculateData);
@@ -34,7 +38,8 @@ public class CalculateService {
 		log.info("Operator : " + calculateData.getCalculateOperator());
 		ICalculator iCalculator = Factory.create(calculateData);
 		
-		log.info("Answer : " + iCalculator.calculate(calculateData));
+		log.info(configuration.getAnswer() +
+				configuration.getSep() + iCalculator.calculate(calculateData));
 		sb.append("Headder : " + calculateData.getId() + " & " + calculateData.getReceivedDate())
 		.append(" ")
 		.append("Answer : " + iCalculator.calculate(calculateData));
@@ -42,7 +47,7 @@ public class CalculateService {
 				
 	}
 	
-	public List<CalculateData> allDataFetch(){
+	public List<CalculateData> fetchAllData(){
 
 		List<CalculateData> calculateDatas = iCalculateJpaRepository.findAll();
 		log.info("Fetched Count : " + calculateDatas.size());
