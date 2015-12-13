@@ -2,10 +2,10 @@
 <configuration>
 	<include resource="org/springframework/boot/logging/logback/base.xml" />
 	<logger name="jdbc" level="OFF" />
-	<logger name="jdbc.sqltiming" level="WARN" />
+	<logger name="jdbc.sqltiming" level="INFO" />
 
 	<!-- ERROR, WARN, INFO, DEBUG or TRACE. -->
-	<root level="WARN">
+	<root level="INFO">
 		<appender-ref ref="CONSOLE" />
 		<appender-ref ref="FILE" />
 	</root>
