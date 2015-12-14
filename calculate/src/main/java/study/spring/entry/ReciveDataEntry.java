@@ -1,6 +1,7 @@
 package study.spring.entry;
 
 import java.util.HashSet;
+import java.util.Optional;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
@@ -56,10 +57,17 @@ public class ReciveDataEntry {
         java.util.Set<ConstraintViolation<CalculateData>> result 
         = validator.validate(calculateData);
         
-        if (!result.isEmpty()) {
-            log.error("Validate : " + result.toString());
-            throw new ConstraintViolationException(new HashSet<ConstraintViolation<?>>(result));
-          }
+        Optional<java.util.Set<ConstraintViolation<CalculateData>>> resultOpt 
+        	= Optional.ofNullable(validator.validate(calculateData));
+        resultOpt.ifPresent(hoge -> {
+        	log.error("Validate : " + hoge.toString());
+            throw new ConstraintViolationException(new HashSet<ConstraintViolation<?>>(hoge));
+        });
+        
+//        if (!result.isEmpty()) {
+//            log.error("Validate : " + result.toString());
+//            throw new ConstraintViolationException(new HashSet<ConstraintViolation<?>>(result));
+//          }
 		
 		EntityCommon entityCommon = new EntityCommon(
 				_message.getHeaders().getId().toString(), 

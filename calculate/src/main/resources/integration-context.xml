@@ -13,22 +13,28 @@
     <context:component-scan base-package="study.spring" />
 -->
 	<aop:aspectj-autoproxy/>
-	<bean id="myAspect" class="study.spring.entry.ControllerAspect">
+	<bean id="myAspect" class="study.spring.aop.ControllerAspect">
 	</bean>
     <!-- A Spring Integration channel -->
-    <int:channel id="inputChannel" />
+    <int:channel id="requestChannel" />
 
     <!-- A Spring Integration adapter that routes messages sent to the helloWorldChannel to the bean named "helloServiceImpl"'s hello() method -->
-    <int:service-activator input-channel="inputChannel" ref="reciveDataEntry" output-channel="outputChannel"/>
+    <int:service-activator id="reciveDataSA"
+    	input-channel="requestChannel" ref="reciveDataEntry"
+    	output-channel="outputChannel" />
 
     <int:channel id="outputChannel"></int:channel>
-    <int:service-activator input-channel="outputChannel" ref="calculateDataEntry" ></int:service-activator>
+    <int:service-activator id="calculateDataSA" input-channel="outputChannel" ref="calculateDataEntry" output-channel="replyChannel"></int:service-activator>
 
-	<int:gateway id="dtoGateway"
-    	 service-interface="study.spring.entry.IDtoCollectorGateway" error-channel="failedChannel">
-    	<int:method name="collectDto" request-channel="inputChannel" />
+    <int:gateway id="dtoGateway"
+    	service-interface="study.spring.entry.IDtoCollectorGateway"
+    	error-channel="failedChannel" default-reply-channel="replyChannel"
+    	default-request-channel="requestChannel">
+    	
 	</int:gateway>
-	<int:channel id = "failedChannel" />
-    <int:service-activator input-channel="failedChannel" ref="failedHandler" />
-    
+    <int:channel id = "failedChannel" />
+	<int:service-activator input-channel="failedChannel"
+		ref="failedHandler" id="failedHandlerSA" />
+
+	<int:channel id="replyChannel"></int:channel>
 </beans>

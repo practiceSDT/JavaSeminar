@@ -2,7 +2,6 @@ package study.spring.entry;
 
 import org.springframework.integration.annotation.MessageEndpoint;
 import org.springframework.integration.annotation.Transformer;
-import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.Message;
 
 import study.spring.dto.CalculateTransaction;
