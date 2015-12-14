@@ -1,11 +1,11 @@
 package study.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
@@ -14,12 +14,20 @@ import study.spring.entity.CalculateData;
 import study.spring.service.DataBaseDataService;
 import study.spring.service.RequestReplyMessageSendService;
 
+/**
+ * 
+ * @author 
+ * 
+ * CommandLineRunnerは利用しない。テストケース利用時に以下のアノテーションで、自動起動してしまう。
+ * 「@SpringApplicationConfiguration(classes = Application.class)」
+ *
+ */
 @SpringBootApplication
 @EnableConfigurationProperties(ServiceProperties.class)
 @ImportResource("integration-context.xml")
 @EnableAutoConfiguration
 @ComponentScan
-public class CalculateApplication implements CommandLineRunner{
+public class CalculateApplication{
 
     @Autowired
     private RequestReplyMessageSendService messageSendService;
@@ -28,10 +36,14 @@ public class CalculateApplication implements CommandLineRunner{
     private DataBaseDataService dataBaseDataService;
     
     public static void main(String[] args) {
-        SpringApplication.run(CalculateApplication.class, args);
+        try (ConfigurableApplicationContext ctx = SpringApplication.run(CalculateApplication.class, args)) {
+        	CalculateApplication app = ctx.getBean(CalculateApplication.class);
+            app.run(args);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-	@Override
 	public void run(String... arg0) throws Exception {
 		
 		messageSendService.sendMessage(

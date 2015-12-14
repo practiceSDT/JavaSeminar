@@ -39,7 +39,7 @@ public class CalculateService {
 		CalculateData calculateData = iCalculateJpaRepository.findOne(_calculateData.getId());
 		ICalculator iCalculator = Factory.create(calculateData);
 
-		//FIXME 下位の
+		//FIXME 無関係の下位問題。関心の分離
 		DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		LocalDateTime d = LocalDateTime.now();
 		
