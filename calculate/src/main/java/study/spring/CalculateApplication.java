@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ImportResource;
 import study.spring.e.CalculateOperator;
 import study.spring.entity.CalculateData;
 import study.spring.service.DataBaseDataService;
-import study.spring.service.MessageSendService;
+import study.spring.service.RequestReplyMessageSendService;
 
 @SpringBootApplication
 @EnableConfigurationProperties(ServiceProperties.class)
@@ -22,7 +22,7 @@ import study.spring.service.MessageSendService;
 public class CalculateApplication implements CommandLineRunner{
 
     @Autowired
-    private MessageSendService messageSendService;
+    private RequestReplyMessageSendService messageSendService;
 
     @Autowired
     private DataBaseDataService dataBaseDataService;

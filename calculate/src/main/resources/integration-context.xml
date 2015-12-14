@@ -13,7 +13,7 @@
     <context:component-scan base-package="study.spring" />
 -->
 	<aop:aspectj-autoproxy/>
-	<bean id="myAspect" class="study.spring.entry.ControllerAspect">
+	<bean id="myAspect" class="study.spring.aop.ControllerAspect">
 	</bean>
     <!-- A Spring Integration channel -->
     <int:channel id="inputChannel" />
@@ -22,13 +22,14 @@
     <int:service-activator input-channel="inputChannel" ref="reciveDataEntry" output-channel="outputChannel"/>
 
     <int:channel id="outputChannel"></int:channel>
-    <int:service-activator input-channel="outputChannel" ref="calculateDataEntry" ></int:service-activator>
+    <int:service-activator input-channel="outputChannel" ref="calculateDataEntry" output-channel="channel1"></int:service-activator>
 
 	<int:gateway id="dtoGateway"
-    	 service-interface="study.spring.entry.IDtoCollectorGateway" error-channel="failedChannel">
+    	 service-interface="study.spring.entry.IDtoCollectorGateway" error-channel="failedChannel" default-reply-channel="channel1">
     	<int:method name="collectDto" request-channel="inputChannel" />
 	</int:gateway>
 	<int:channel id = "failedChannel" />
     <int:service-activator input-channel="failedChannel" ref="failedHandler" />
     
+    <int:channel id="channel1"></int:channel>
 </beans>
