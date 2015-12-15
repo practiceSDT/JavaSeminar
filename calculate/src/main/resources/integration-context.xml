@@ -33,8 +33,10 @@
     	
 	</int:gateway>
     <int:channel id = "failedChannel" />
-	<int:service-activator input-channel="failedChannel"
-		ref="failedHandler" id="failedHandlerSA" />
+    <int:service-activator input-channel="failedChannel"
+    	ref="failedHandler" id="failedHandlerSA"
+    	output-channel="failedOutChannel" />
 
-	<int:channel id="replyChannel"></int:channel>
+    <int:channel id="replyChannel"></int:channel>
+	<int:channel id="failedOutChannel"></int:channel>
 </beans>

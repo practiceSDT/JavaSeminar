@@ -1,5 +1,8 @@
 package study.spring;
 
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -27,6 +30,7 @@ import study.spring.service.RequestReplyMessageSendService;
 @ImportResource("integration-context.xml")
 @EnableAutoConfiguration
 @ComponentScan
+@Log4j
 public class CalculateApplication{
 
     @Autowired
@@ -68,8 +72,9 @@ public class CalculateApplication{
 						null,
 						CalculateOperator.PLUS, 
 						0, 
-						511));
+						512));
 		
+		log.info("All Data");
 		dataBaseDataService.outputStoredAllData();
 
 	}
