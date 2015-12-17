@@ -19,6 +19,8 @@ public class FailedHandler {
     	}else{
             log.error("Unknown ERROR : " + e);
     	}
+    	
+		System.exit(1);
     }
 	
 }
