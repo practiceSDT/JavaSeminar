@@ -5,7 +5,6 @@ import lombok.ToString;
 
 @AllArgsConstructor
 @ToString
-
 public class CalculatedAnswer implements ICalculatedAnswer {
 
 	private String id;
