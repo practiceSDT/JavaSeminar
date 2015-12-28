@@ -36,7 +36,7 @@ public class CityFactory {
 	}
 
 	public static ArrayList<City> createArryListCites() {
-		return (ArrayList<City>) createStreamCites().collect(Collectors.toList()); 
+		return createStreamCites().collect(Collectors.toCollection(ArrayList::new)); 
 	}
 
 	
