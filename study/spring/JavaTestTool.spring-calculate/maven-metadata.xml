@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>study.spring</groupId>
+  <artifactId>JavaTestTool.spring-calculate</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160130052657</lastUpdated>
+  </versioning>
+</metadata>
