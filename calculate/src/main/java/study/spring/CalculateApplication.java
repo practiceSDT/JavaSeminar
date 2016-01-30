@@ -72,7 +72,7 @@ public class CalculateApplication{
 						null,
 						CalculateOperator.PLUS, 
 						0, 
-						511));
+						5));
 		
 		log.info("All Data");
 		dataBaseDataService.outputStoredAllData();
