@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>study.spring</groupId>
-	<artifactId>spring-calculate</artifactId>
+	<artifactId>JavaTestTool.spring-calculate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -21,7 +21,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<github.global.server>github</github.global.server>
+		<maven.test.skip>true</maven.test.skip>
 	</properties>
+
 
 	<dependencies>
 		<dependency>
@@ -80,15 +83,75 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.github.github</groupId>
+			<artifactId>site-maven-plugin</artifactId>
+			<version>0.12</version>
+		</dependency>
 	</dependencies>
+	
+	<distributionManagement>
+	<!-- 
+	    <repository>
+        	<id>internal.repo</id>
+        	<name>Temporary Staging Repository</name>
+        	<url>file://${project.build.directory}/mvn-repo</url>
+    	</repository>
+     -->
+		<repository>
+			<id>nexus</id>
+			<url>http://metal:8081/nexus/content/repositories/private/</url>
+		</repository>
+	</distributionManagement>
 	
 	<build>
 		<plugins>
+		
+		    <plugin>
+            <groupId>com.github.github</groupId>
+            <artifactId>site-maven-plugin</artifactId>
+            <version>0.12</version>
+            <configuration>
+                <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+                <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+                <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+                <includes><include>**/*</include></includes>
+                <repositoryName>JavaTestTool</repositoryName>      <!-- github repo name -->
+                <repositoryOwner>practiceSDT</repositoryOwner>    <!-- github username  -->
+            </configuration>
+            <executions>
+              <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+              <execution>
+                <goals>
+                  <goal>site</goal>
+                </goals>
+                <phase>deploy</phase>
+              </execution>
+            </executions>
+        </plugin>
+		
+		
+		
+		<!-- 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+		 -->
+  <plugin>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok-maven-plugin</artifactId>
+    <version>1.16.6.1</version>
+    <dependencies>
+      <dependency>
+        <groupId>com.github.peichhorn</groupId>
+        <artifactId>lombok-pg</artifactId>
+        <version>0.11.3</version>
+      </dependency>
+    </dependencies>
+  </plugin>
+  		</plugins>
 	</build>
 	
 
