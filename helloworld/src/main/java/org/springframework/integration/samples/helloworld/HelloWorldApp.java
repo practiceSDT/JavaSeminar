@@ -43,10 +43,15 @@ public class HelloWorldApp {
 
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("/META-INF/spring/integration/helloWorldDemo.xml", HelloWorldApp.class);
-		MessageChannel inputChannel = context.getBean("inputChannel", MessageChannel.class);
+		MessageChannel inputChannel = context.getBean("inputchannel", MessageChannel.class);
 		PollableChannel outputChannel = context.getBean("outputChannel", PollableChannel.class);
-		inputChannel.send(new GenericMessage<String>("World"));
+		PollableChannel outputChannel2 = context.getBean("channel2", PollableChannel.class);
+		inputChannel.send(new GenericMessage<String>("morningChannel"));
+		inputChannel.send(new GenericMessage<String>("helloChannel"));
+		
 		logger.info("==> HelloWorldDemo: " + outputChannel.receive(0).getPayload());
+		logger.info("==> HelloWorldDemo: " + outputChannel2.receive(0).getPayload());
+		
 	}
 
 }

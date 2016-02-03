@@ -21,10 +21,10 @@ package org.springframework.integration.samples.helloworld;
  *
  * @author Mark Fisher
  */
-public class HelloService {
+public class MorningService {
 
 	public String sayHello(String name) {
-		return "GoodMornig " + name;
+		return "Hello " + name;
 	}
 
 }

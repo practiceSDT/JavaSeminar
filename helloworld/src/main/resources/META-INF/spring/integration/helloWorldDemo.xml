@@ -7,17 +7,28 @@
 			http://www.springframework.org/schema/integration
 			http://www.springframework.org/schema/integration/spring-integration.xsd">
 
-	<channel id="inputChannel"/>
+	<channel id="helloChannel" />
 
 	<channel id="outputChannel">
 		<queue capacity="10"/>
 	</channel>
 
-	<service-activator input-channel="inputChannel"
-	                   output-channel="outputChannel"
-	                   ref="helloService"
-	                   method="sayHello"/>
+	<service-activator input-channel="helloChannel"
+		output-channel="outputChannel" ref="helloService" method="sayHello" />
 
 	<beans:bean id="helloService" class="org.springframework.integration.samples.helloworld.HelloService"/>
+	<beans:bean id="morningService" class="org.springframework.integration.samples.helloworld.MorningService"/>
+	<beans:bean id="docTypeRouter" class="org.springframework.integration.samples.helloworld.DocTypeRouter"/>
 
+	<channel id="morningChannel"></channel>
+	<channel id="channel2">
+		<queue capacity="10"/>
+	</channel>
+	<service-activator input-channel="morningChannel"
+		output-channel="channel2" ref="morningService" method="sayHello">
+	</service-activator>
+	<router ref="docTypeRouter" method="resolveObjectTypeChannel"
+		input-channel="inputchannel">
+	</router>
+	<channel id="inputchannel"></channel>
 </beans:beans>
