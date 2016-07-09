@@ -1,0 +1,36 @@
+digraph "summary" {
+   "study.pojo"                                       -> "study.pojo (classes)";
+   "study.spring"                                     -> "study.spring (classes)";
+   "study.spring"                                     -> "study.spring.e (classes)";
+   "study.spring"                                     -> "study.spring.entity (classes)";
+   "study.spring"                                     -> "study.spring.service (classes)";
+   "study.spring.aop"                                 -> "study.spring.aop (classes)";
+   "study.spring.bean"                                -> "study.spring.bean (classes)";
+   "study.spring.bean"                                -> "study.spring.e (classes)";
+   "study.spring.bean"                                -> "study.spring.entity (classes)";
+   "study.spring.dto"                                 -> "study.spring.dto (classes)";
+   "study.spring.dto"                                 -> "study.spring.e (classes)";
+   "study.spring.e"                                   -> "study.spring.e (classes)";
+   "study.spring.entity"                              -> "study.spring.dto (classes)";
+   "study.spring.entity"                              -> "study.spring.e (classes)";
+   "study.spring.entity"                              -> "study.spring.entity (classes)";
+   "study.spring.entry"                               -> "study.spring.dto (classes)";
+   "study.spring.entry"                               -> "study.spring.entity (classes)";
+   "study.spring.entry"                               -> "study.spring.entry (classes)";
+   "study.spring.entry"                               -> "study.spring.service (classes)";
+   "study.spring.repository"                          -> "study.spring.entity (classes)";
+   "study.spring.repository"                          -> "study.spring.repository (classes)";
+   "study.spring.service"                             -> "study.spring (classes)";
+   "study.spring.service"                             -> "study.spring.bean (classes)";
+   "study.spring.service"                             -> "study.spring.dto (classes)";
+   "study.spring.service"                             -> "study.spring.e (classes)";
+   "study.spring.service"                             -> "study.spring.entity (classes)";
+   "study.spring.service"                             -> "study.spring.repository (classes)";
+   "study.spring.service"                             -> "study.spring.service (classes)";
+   "study.spring.service"                             -> "study.spring.entry (classes)";
+   "study.stream.collect"                             -> "study.stream.collect (classes)";
+   "study.stream.collect"                             -> "study.stream.common.factory (classes)";
+   "study.stream.common.bean"                         -> "study.stream.common.bean (classes)";
+   "study.stream.common.factory"                      -> "study.stream.common.bean (classes)";
+   "study.stream.common.factory"                      -> "study.stream.common.factory (classes)";
+}
