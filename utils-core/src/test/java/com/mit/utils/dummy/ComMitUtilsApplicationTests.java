@@ -1,4 +1,4 @@
-package com.mit.utils;
+package com.mit.utils.dummy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
