@@ -4,6 +4,7 @@
     <groupId>com.mit.utils</groupId>
     <artifactId>utils-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath />
   </parent>
   <groupId>com.mit.utils.core</groupId>
   <artifactId>utils-core</artifactId>
