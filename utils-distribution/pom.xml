@@ -30,12 +30,23 @@
 
 	<build>
 		<plugins>
-			<plugin>
+
+<!-- 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+ -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
+								<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
         <configuration>
           <descriptors>
             <descriptor>src/assembly/distribution.xml</descriptor>
@@ -88,4 +99,5 @@
 		</plugins>
 	</build>
 
+	<name>Utility Distribution Project</name>
 </project>
