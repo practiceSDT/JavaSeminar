@@ -18,7 +18,7 @@ public class Dummy implements IDummy {
 	 */
 	@Override
 	public String helloWorld(){
-		return "HelloWorld !";
+		return "HelloWorld !!";
 		
 	}
 	

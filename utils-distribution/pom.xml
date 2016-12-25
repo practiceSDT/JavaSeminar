@@ -27,7 +27,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<github.global.server>github</github.global.server>
 	</properties>
+		<dependencies>
+			<dependency>
+				<groupId>com.mit.utils.core</groupId>
+				<artifactId>utils-core</artifactId>
+				</dependency>
 
+		</dependencies>
 	<build>
 		<plugins>
 
@@ -49,7 +55,7 @@
 				</executions>
         <configuration>
           <descriptors>
-            <descriptor>src/assembly/distribution.xml</descriptor>
+            <descriptor>src/assembly/bin.xml</descriptor>
           </descriptors>
         </configuration>
         			</plugin>
@@ -59,7 +65,8 @@
 					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
 				</configuration>
 			</plugin>
-			<plugin>
+			
+<!-- 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
 				<executions>
@@ -71,6 +78,7 @@
 					</execution>
 				</executions>
 			</plugin>
+ -->			
 			<!-- Github用の諸々の設定は公式サイトで https://github.com/github/maven-plugins -->
 			<plugin>
 				<groupId>com.github.github</groupId>

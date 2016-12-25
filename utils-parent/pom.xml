@@ -17,7 +17,7 @@
 	</parent>
 	<modules>
 		<module>../utils-core</module>
- 		<module>../utils-distribution</module>
+		<module>../utils-distribution</module>
 	</modules>
 
 	<properties>
@@ -51,14 +51,22 @@
 		</dependency>
 	</dependencies>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.mit.utils.core</groupId>
+				<artifactId>utils-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
 	<build>
 		<plugins>
-		
-<!-- 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
- -->			
+
+			<!-- <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+				</plugin> -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<executions>
@@ -75,11 +83,11 @@
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
 
- 					<archive>
+					<archive>
 						<manifest>
- 							<mainClass>com.takemikami.batchsample.App</mainClass>
-<!-- 							<addClasspath>true</addClasspath>
- -->						</manifest>
+							<mainClass></mainClass>
+							<!-- <addClasspath>true</addClasspath> -->
+						</manifest>
 					</archive>
 
 				</configuration>

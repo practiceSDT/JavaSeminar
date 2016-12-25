@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>true</includeBaseDirectory>
+  <dependencySets>
+    <dependencySet>
+      <useProjectArtifact>false</useProjectArtifact>
+      <useTransitiveDependencies>true</useTransitiveDependencies>
+      <outputDirectory>lib</outputDirectory>
+      <excludes>
+        <exclude>junit:junit</exclude>
+      </excludes>
+    </dependencySet>
+  </dependencySets>
+  <moduleSets>
+    <moduleSet>
+<!--       <useAllReactorProjects>true</useAllReactorProjects>
+      <binaries>
+        <outputDirectory>lib</outputDirectory>
+        <unpack>false</unpack>
+      </binaries>
+ -->              <includes>
+            <include>utils-core</include>
+        </includes>
+    </moduleSet>
+  </moduleSets>
+  <fileSets>
+    <fileSet>
+      <includes>
+        <include>README*</include>
+        <include>LICENSE*</include>
+        <include>NOTICE*</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>src/bin</directory>
+      <outputDirectory>bin</outputDirectory>
+      <includes>
+        <include>*.bat</include>
+        <include>*.conf</include>
+      </includes>
+      <lineEnding>dos</lineEnding>
+    </fileSet>
+    <fileSet>
+      <directory>src/conf</directory>
+      <outputDirectory>conf</outputDirectory>
+    </fileSet>
+  </fileSets>
+</assembly>
