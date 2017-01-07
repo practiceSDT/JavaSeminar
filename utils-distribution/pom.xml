@@ -108,4 +108,5 @@
 	</build>
 
 	<name>Utility Distribution Project</name>
+	<packaging>pom</packaging>
 </project>

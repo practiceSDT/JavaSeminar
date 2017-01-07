@@ -17,7 +17,8 @@
 	</parent>
 	<modules>
 		<module>../utils-core</module>
-		<module>../utils-distribution</module>
+		
+		
 	</modules>
 
 	<properties>
