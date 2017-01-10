@@ -17,7 +17,8 @@
 	</parent>
 	<modules>
 		<module>../utils-core</module>
-		<module>../utils-distribution</module>
+		
+		
 	</modules>
 
 	<properties>
@@ -66,8 +67,7 @@
 		<plugins>
 
 			<!-- <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
-				</plugin>
-			 -->
+				</plugin> -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<executions>
@@ -87,6 +87,7 @@
 					<archive>
 						<manifest>
 							<mainClass></mainClass>
+							<!-- <addClasspath>true</addClasspath> -->
 						</manifest>
 					</archive>
 
