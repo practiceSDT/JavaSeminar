@@ -7,17 +7,7 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'application'
-
-mainClassName = 'testing.Client'
-
-startScripts {
-    applicationName = 'hoge'
-}
-
-distZip {
-    baseName = 'HelloGradle'
-}
+apply plugin: 'java'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -28,13 +18,14 @@ repositories {
 
 dependencies {
     // The production code uses Guava
-    compile 'com.google.guava:guava:latest.release'
-    compileOnly "org.projectlombok:lombok:latest.release"
-    compile 'org.apache.commons:commons-lang3:latest.release'
+    compile 'com.google.guava:guava:20.0'
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+	compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.7.3'
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-core
+	compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '2.7.3'
+
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
-    testCompile 'com.googlecode.jmockit:jmockit:1.4'
-    testCompile 'org.hamcrest:hamcrest-library:1.3'
 }
 
