@@ -1,10 +1,10 @@
-package study.object;
+package study.object.base;
 
-public interface IAnswer {
+public interface InterAnswer {
 
 	/*
 	 * 本当はもっと丁寧にキャストなどの処理をしなければならない。
 	 */
-	Integer getIntegerType();
+	Object getCastAnswer();
 
 }
