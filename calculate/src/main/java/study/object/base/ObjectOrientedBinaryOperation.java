@@ -15,10 +15,10 @@ public class ObjectOrientedBinaryOperation {
 		
 		MessageObjects messageObjects = new MessageObjects(first, operator, second);
 		
-		AbsCalculater calculater = CalcuraterFactory.createCalculater(messageObjects);
-		InterAnswer answer = calculater.calculate(messageObjects);
+		AbsCalculator calculator = CalculatorFactory.createCalculater(messageObjects);
+		InterAnswer answer = calculator.calculate(messageObjects);
 		
-		MessageText messageText = new MessageText(messageObjects, calculater, answer);
+		MessageText messageText = new MessageText(messageObjects, calculator, answer);
 		
 		System.out.println(messageText.getPrintMessage());
 		
@@ -26,10 +26,10 @@ public class ObjectOrientedBinaryOperation {
 		
 		messageObjects = new MessageObjects(first, operator, second);
 		
-		calculater = CalcuraterFactory.createCalculater(messageObjects);
-		answer = calculater.calculate(messageObjects);
+		calculator = CalculatorFactory.createCalculater(messageObjects);
+		answer = calculator.calculate(messageObjects);
 		
-		messageText = new MessageText(messageObjects, calculater, answer);
+		messageText = new MessageText(messageObjects, calculator, answer);
 
 		System.out.println(messageText.getPrintMessage());
 

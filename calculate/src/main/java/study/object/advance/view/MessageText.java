@@ -1,8 +1,12 @@
-package study.object.base;
+package study.object.advance.view;
 
 import lombok.Getter;
+import study.object.advance.fw.AbsCalculator;
+import study.object.advance.fw.InterAnswer;
+import study.object.advance.fw.InterMessageText;
+import study.object.advance.pojo.MessageObjects;
 
-public class MessageText {
+public class MessageText implements InterMessageText {
 
 	@Getter
 	private final MessageObjects messageObjects;
@@ -17,6 +21,10 @@ public class MessageText {
 		= "%d %s %d = " + calculator.getOutputFormatType() + " です。";
 	}
 	
+	/* (非 Javadoc)
+	 * @see study.object.advance.view.InterMessageText#getPrintMessage()
+	 */
+	@Override
 	public String getPrintMessage() {
 		return String.format(
 				formtext,

@@ -1,4 +1,11 @@
-package study.object.base;
+package study.object.advance;
+
+import study.object.advance.factry.CalculatorFactory;
+import study.object.advance.fw.AbsCalculator;
+import study.object.advance.fw.InterAnswer;
+import study.object.advance.fw.InterMessageText;
+import study.object.advance.pojo.MessageObjects;
+import study.object.advance.view.MessageText;
 
 /**
  * 
@@ -18,7 +25,7 @@ public class ObjectOrientedBinaryOperationMod {
 		AbsCalculator calculator = CalculatorFactory.createCalculater(messageObjects);
 		InterAnswer answer = calculator.calculate(messageObjects);
 		
-		MessageText messageText = new MessageText(messageObjects, calculator, answer);
+		InterMessageText messageText = new MessageText(messageObjects, calculator, answer);
 		
 		System.out.println(messageText.getPrintMessage());
 		

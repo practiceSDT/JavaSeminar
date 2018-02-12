@@ -19,18 +19,7 @@ public class StructuredBinaryOperationAddDiv {
 		System.out.println(commonPrintMessage(first, second, operator));
 
 	}
-	
-	private static String commonCalculationArithmetic(Integer first, Integer second, String operator) {
-		switch (operator) {
-		case "Division":
-		    return String.valueOf(Float.valueOf(first) / Float.valueOf(second));
-		case "Multi":
-			return String.valueOf(first * second);
-		default:
-			return String.valueOf(commonCalculation(first, second, operator));
-		}
-	}
-	
+
 	private static Integer commonCalculation(Integer first, Integer second, String operator) {
 		
 		switch (operator) {
@@ -41,17 +30,48 @@ public class StructuredBinaryOperationAddDiv {
 		default:
 			return 0;
 		}
-		
 	}
 	
 	private static String commonPrintMessage(Integer first, Integer second, String operator) {
-		
-		return String.format(
-				"%d %s %d = %s です。",
-				first,
-				operator,
-				second,
-				commonCalculationArithmetic(first, second, operator)
-				);
+
+		if(isFloatingPointNumberType(operator)) {
+			return String.format(
+					"%d %s %d = " + getOutputFormatType(operator) +" です。",
+					first,
+					operator,
+					second,
+					commonCalculationFloat(first, second)
+					);
+		}else {
+			return String.format(
+					"%d %s %d = " + getOutputFormatType(operator) +" です。",
+					first,
+					operator,
+					second,
+					commonCalculation(first, second, operator)
+					);
+		}
 	}
+	
+	private static Boolean isFloatingPointNumberType(String operator) {
+		switch (operator) {
+		case "Division":
+		    return true;
+		default:
+			return false;
+		}
+	}
+
+	private static Float commonCalculationFloat(Integer first, Integer second) {
+	    return Float.valueOf(first) / Float.valueOf(second);
+	}
+
+	private static String getOutputFormatType(String operator) {
+		if(isFloatingPointNumberType(operator)) {
+			return "%f";
+		} else {
+			return "%d";
+		}
+	}
+	
 }
