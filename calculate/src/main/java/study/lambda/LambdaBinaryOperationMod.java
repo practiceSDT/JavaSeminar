@@ -1,24 +1,16 @@
 package study.lambda;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.BinaryOperator;
-import java.util.function.Supplier;
-import java.util.stream.Collector;
-import java.util.stream.Collector.Characteristics;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.stream.Collectors;
-
-import lombok.extern.java.Log;
-import study.object.base.Answer;
 
 /**
  * 
  * @author mitsuik
  *
  */
-@Log
 public class LambdaBinaryOperationMod {
 
 	public static void main(String[] args) {
@@ -26,6 +18,9 @@ public class LambdaBinaryOperationMod {
 		Integer first = 3;
 		Integer second = 2;
 		
+		/*
+		 * Stream処理説明のため、配列化。
+		 */
 		List<MessageObject> messageObjects = 
 				Arrays.asList(
 						new MessageObject(first, "Plus", second)
@@ -33,31 +28,39 @@ public class LambdaBinaryOperationMod {
 						, new MessageObject(first, "Division", second)
 						);
 		
-//		List<InterAnswer> caluclators =
+		/*
+		 * ラムダ式を代入した関数型インタフェースで出力部分を記載する。
+		 * コントロールの処理に制御文が混じらなくなるので、理解しやすくなる。
+		 * forEach(answerPrint)　answerPrintを配列要素一つ一つで処理する。ということ
+		 * 設計書と自然な記載ができるようになる。理解と経験があれば。。。
+		 */
+		Function<MessageObject, InterCaluclateObject> createCaluclateFromMessage 
+			= mo -> new CaluclateObject(mo);
+		Function<InterCaluclateObject, MessageText> createMessageTextFromCaluclator 
+			= ca -> new MessageText(ca);
+		Consumer<MessageText> answerPrint = mt -> System.out.println(mt.getPrintMessage());
+		
 			messageObjects
+			/*
+			 * messageObjectsを入力として、
+			 * messageObjectsを引数としてCaluclateObject生成し
+			 * CaluclateObjectを引数としてMessageText生成し
+			 * MessageTextの配列を生成し
+			 * 全ての要素にanswerPrintを適用する。
+			 */
 			.stream()
-			.map(m -> new CaluclateObject(m))
+			.map(createCaluclateFromMessage)
+			/*
+			 * これも依存を生み出す記載となる。
+			 * 上記Mapはnewするオブジェクトが変わってもインタフェースが同じであれば、この処理には影響がない。
+			 * 下記の処理は、newするオブジェクトが直値になっているので、実装を変える場合は影響を受ける可能性がある。
+			 *  	.map(createMessageTextFromCaluclator)
+			 *  でよい。
+			 */
 			.map(c -> new MessageText(c))
 			.collect(Collectors.toList())
-			.stream()
-			.forEach(m -> m.getPrintMessage());
+			.forEach(answerPrint);
 		
-		
-		
-//		messageText = new MessageText(messageObjects, calculator, answer);
-
-//		System.out.println(messageText.getPrintMessage());
-}
-	
-public static final Collector<Answer, ?, List<Answer>> TO_MESSAGELIST;
-	static {
-		Supplier<List<Answer>>           supplier    = ()       -> new ArrayList<>(10);
-		BiConsumer<List<Answer>, Answer> accumulator = (l, t)   -> l.add(t);
-		BinaryOperator<List<Answer>>     combiner    = (l1, l2) -> {
-			l1.addAll(l2);
-			return l1;
-		};
-		TO_MESSAGELIST = Collector.of(supplier, accumulator, combiner, Characteristics.IDENTITY_FINISH);
 	}
 
 }

@@ -7,6 +7,10 @@ package study.struct;
  */
 public class StructuredBinaryOperation {
 
+	/*
+	 * どこにでもあるプログラムですが、オブジェクト指向の考えに基づくとメンテナンスに支障がある。
+	 * どのあたりが支障となるだろうか？
+	 */
 	public static void main(String[] args) {
 		
 		Integer first = 3;
