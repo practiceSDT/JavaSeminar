@@ -49,6 +49,7 @@ public class LambdaBinaryOperationMod {
 			 * 全ての要素にanswerPrintを適用する。
 			 */
 			.stream()
+			//.parallelStream()
 			.map(createCaluclateFromMessage)
 			/*
 			 * これも依存を生み出す記載となる。
@@ -58,7 +59,7 @@ public class LambdaBinaryOperationMod {
 			 *  でよい。
 			 */
 			.map(c -> new MessageText(c))
-			.collect(Collectors.toList())
+			//.collect(Collectors.toList())
 			.forEach(answerPrint);
 		
 	}
