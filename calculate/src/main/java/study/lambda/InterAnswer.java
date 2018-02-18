@@ -1,4 +1,4 @@
-package study.object.advance.fw;
+package study.lambda;
 
 public interface InterAnswer {
 
@@ -6,5 +6,7 @@ public interface InterAnswer {
 	 * 本当はもっと丁寧にキャストなどの処理をしなければならない。
 	 */
 	Object getCastAnswer();
+	
+	String getOutputFormatType();
 
 }

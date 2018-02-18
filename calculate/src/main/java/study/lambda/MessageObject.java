@@ -1,9 +1,9 @@
-package study.object.base;
+package study.lambda;
 
 import lombok.Getter;
 
 @Getter
-public class MessageObjects {
+public class MessageObject {
 
 	private final Integer first;
 	private final String operator;
@@ -15,7 +15,7 @@ public class MessageObjects {
 	 * @param second
 	 * @param calculater
 	 */
-	public MessageObjects(Integer first, String operator, Integer second) {
+	public MessageObject(Integer first, String operator, Integer second) {
 		this.first = first;
 		this.operator = operator;
 		this.second = second;

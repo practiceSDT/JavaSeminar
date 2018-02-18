@@ -7,7 +7,7 @@ public class Minus extends AbsCalculator {
 	}
 	
 	@Override
-	public InterAnswer calculate(MessageObjects messageObjects) {
+	public InterAnswer calculate(MessageObject messageObjects) {
 		return new Answer(messageObjects.getFirst() - messageObjects.getSecond());
 	}
 

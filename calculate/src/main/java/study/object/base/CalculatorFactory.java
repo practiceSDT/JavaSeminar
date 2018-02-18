@@ -8,7 +8,7 @@ public class CalculatorFactory {
 	 * @param operator
 	 * @return
 	 */
-	public static AbsCalculator createCalculater(MessageObjects messageObjects) {
+	public static AbsCalculator createCalculater(MessageObject messageObjects) {
 		
 		try {
 			String fqcn = ObjectOrientedBinaryOperation.class.getPackage().getName()

@@ -7,7 +7,7 @@ public class Division extends AbsCalculator {
 	}
 	
 	@Override
-	public InterAnswer calculate(MessageObjects messageObjects) {
+	public InterAnswer calculate(MessageObject messageObjects) {
 		return new Answer(
 				Float.valueOf(messageObjects.getFirst()) / 
 				Float.valueOf(messageObjects.getSecond())

@@ -13,7 +13,7 @@ public class ObjectOrientedBinaryOperationMod {
 		Integer second = 2;
 		String operator = "Plus";
 		
-		MessageObjects messageObjects = new MessageObjects(first, operator, second);
+		MessageObject messageObjects = new MessageObject(first, operator, second);
 		
 		AbsCalculator calculator = CalculatorFactory.createCalculater(messageObjects);
 		InterAnswer answer = calculator.calculate(messageObjects);
@@ -24,7 +24,7 @@ public class ObjectOrientedBinaryOperationMod {
 		
 		operator = "Minus";
 		
-		messageObjects = new MessageObjects(first, operator, second);
+		messageObjects = new MessageObject(first, operator, second);
 		
 		calculator = CalculatorFactory.createCalculater(messageObjects);
 		answer = calculator.calculate(messageObjects);
@@ -35,7 +35,7 @@ public class ObjectOrientedBinaryOperationMod {
 			
 		operator = "Division";
 		
-		messageObjects = new MessageObjects(first, operator, second);
+		messageObjects = new MessageObject(first, operator, second);
 		
 		calculator = CalculatorFactory.createCalculater(messageObjects);
 		answer = calculator.calculate(messageObjects);

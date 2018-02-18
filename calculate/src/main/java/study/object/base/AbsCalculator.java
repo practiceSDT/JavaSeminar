@@ -7,5 +7,5 @@ public abstract class AbsCalculator {
 	@Getter
 	protected String outputFormatType;
 
-	public abstract InterAnswer calculate(MessageObjects messageObjects);
+	public abstract InterAnswer calculate(MessageObject messageObjects);
 }

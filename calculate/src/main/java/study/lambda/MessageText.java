@@ -1,4 +1,4 @@
-package study.object.base;
+package study.lambda;
 
 import lombok.Getter;
 
@@ -10,11 +10,12 @@ public class MessageText {
 	private final InterAnswer answer;
 	private final String formtext;
 
-	public MessageText(MessageObject messageObjects,AbsCalculator calculator, InterAnswer answer) {
-		this.messageObjects = messageObjects;
-		this.answer = answer;
+	//public MessageText(MessageObject messageObjects,InterCaluclate calculator, InterAnswer answer) {
+	public MessageText(InterCaluclateObject caluclateObject) {
+		this.messageObjects = caluclateObject.getMessageObject();
+		this.answer = caluclateObject.getAnswer();
 		this.formtext 
-		= "%d %s %d = " + calculator.getOutputFormatType() + " です。";
+		= "%d %s %d = " + answer.getOutputFormatType() + " です。";
 	}
 	
 	public String getPrintMessage() {
