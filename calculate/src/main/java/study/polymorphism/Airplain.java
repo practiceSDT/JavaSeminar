@@ -1,9 +1,9 @@
-package study.pojo;
+package study.polymorphism;
 
 public class Airplain implements Airplaininterface {
 
 	/* (非 Javadoc)
-	 * @see study.pojo.Airplaininterface#fly()
+	 * @see study.polymorphism.Airplaininterface#fly()
 	 */
 	@Override
 	public void fly(){

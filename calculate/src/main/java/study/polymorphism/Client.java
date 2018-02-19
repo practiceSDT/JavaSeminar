@@ -1,4 +1,4 @@
-package study.pojo;
+package study.polymorphism;
 
 public class Client {
 

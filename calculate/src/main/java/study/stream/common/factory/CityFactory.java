@@ -16,12 +16,12 @@ import study.stream.common.bean.City;
 @Log4j
 public class CityFactory {
 
-	public static Stream<City> createStreamCites() {
+	 private static Stream<City> createStreamCites() {
 		try {
 			return Files.lines(
 					Paths.get(
 							new File(".").getAbsoluteFile().toString() +
-				    		"/src/main/java/study/stream/common/bean/cities.txt"
+				    		"/src/test/resources/cities.txt"
 							)
 					)
 			.map(l -> l.split(", "))
