@@ -62,7 +62,7 @@
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<connectors>
 						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-							<port>18080</port>
+							<port>8086</port>
 							<maxIdleTime>6000</maxIdleTime>
 						</connector>
 					</connectors>

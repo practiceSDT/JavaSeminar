@@ -18,7 +18,7 @@ http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
 
 	<bean id="customerResourceImpl" class="jp.opensquare.sandbox.cxf.jaxrs.provider.CustomerResourceImpl" />
 
- 	<jaxrs:server id="xMLService" address="/">
+  	<jaxrs:server id="xMLService" address="/user">
 		<jaxrs:serviceBeans>
 			<ref bean="xMLServiceImpl" />
 		</jaxrs:serviceBeans>

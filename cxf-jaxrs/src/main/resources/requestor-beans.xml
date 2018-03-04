@@ -11,13 +11,13 @@ http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 
 	<jaxrs:client id="xMLService"
-		address="http://localhost:18080/cxf-jaxrs/resources/"
+		address="http://localhost:8086/cxf-jaxrs/resources/"
 		serviceClass="jp.opensquare.sandbox.cxf.jaxrs.user.XMLService"
 		inheritHeaders="true">
 	</jaxrs:client>	
 
-	<jaxrs:client id="customerResource"
-		address="http://localhost:18080/cxf-jaxrs/resources/"
+ 	<jaxrs:client id="customerResource"
+		address="http://localhost:8086/cxf-jaxrs/resources/"
 		serviceClass="jp.opensquare.sandbox.cxf.jaxrs.provider.CustomerResource"
 		inheritHeaders="true">
 	</jaxrs:client>	
