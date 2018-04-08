@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lifecycles>
+    <lifecycle>
+        <id>echocycle</id>
+        <phases>
+            <phase>
+                <id>package</id>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>echo</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </phase>
+        </phases>
+    </lifecycle>
+</lifecycles>
