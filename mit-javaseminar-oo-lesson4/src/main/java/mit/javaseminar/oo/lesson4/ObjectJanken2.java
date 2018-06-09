@@ -16,7 +16,7 @@ public class ObjectJanken2
 			Player murata = new Player("村田さん");
 			
 			// 引数で指定されたクラス名のClassオブジェクトを取得する
-			Class tacticsClass = Class.forName(args[0]);
+			Class<?> tacticsClass = Class.forName(args[0]);
 			
 			// Classオブジェクトを使用して引数で指定されたクラスを生成する
 			Tactics murataTactics = (Tactics)tacticsClass.newInstance();
