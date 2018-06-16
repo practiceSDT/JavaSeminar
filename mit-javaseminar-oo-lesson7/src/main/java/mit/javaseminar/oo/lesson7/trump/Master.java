@@ -3,112 +3,112 @@ package mit.javaseminar.oo.lesson7.trump;
 import java.util.ArrayList;
 
 /**
- * is–ğ‚ğ•\‚·ƒNƒ‰ƒXB
+ * é€²è¡Œå½¹ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Master
 {
-    /** ƒvƒŒƒCƒ„[‚ÌƒŠƒXƒg */
+    /** ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ãƒªã‚¹ãƒˆ */
     private ArrayList<Player> players_ = new ArrayList<Player>();
     
     /**
-     * ƒQ[ƒ€‚Ì€”õ‚ğ‚·‚éB
+     * ã‚²ãƒ¼ãƒ ã®æº–å‚™ã‚’ã™ã‚‹ã€‚
      * 
-     * @param cards ƒgƒ‰ƒ“ƒv‚ğis–ğ‚ÌèD‚Æ‚µ‚Ä“n‚·
+     * @param cards ãƒˆãƒ©ãƒ³ãƒ—ã‚’é€²è¡Œå½¹ã®æ‰‹æœ­ã¨ã—ã¦æ¸¡ã™
      */
     public void prepareGame(Hand cards)
     {
-        System.out.println("yƒJ[ƒh‚ğ”z‚è‚Ü‚·z");
+        System.out.println("ã€ã‚«ãƒ¼ãƒ‰ã‚’é…ã‚Šã¾ã™ã€‘");
         
-        // ƒgƒ‰ƒ“ƒv‚ğƒVƒƒƒbƒtƒ‹‚·‚é
+        // ãƒˆãƒ©ãƒ³ãƒ—ã‚’ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã™ã‚‹
         cards.shuffle();
         
-        // ƒgƒ‰ƒ“ƒv‚Ì–‡”‚ğæ“¾‚·‚é
+        // ãƒˆãƒ©ãƒ³ãƒ—ã®æšæ•°ã‚’å–å¾—ã™ã‚‹
         int numberOfCards = cards.getNumberOfCards();
         
-        // ƒvƒŒƒCƒ„[‚Ìl”‚ğæ“¾‚·‚é
+        // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®äººæ•°ã‚’å–å¾—ã™ã‚‹
         int numberOfPlayers = players_.size();
         
         for (int index = 0; index < numberOfCards; index++)
         {
-            // ƒJ[ƒh‚©‚çˆê–‡ˆø‚­
+            // ã‚«ãƒ¼ãƒ‰ã‹ã‚‰ä¸€æšå¼•ã
             Card card = cards.pickCard(0);
             
-            // ŠeƒvƒŒƒCƒ„[‚É‡”Ô‚ÉƒJ[ƒh‚ğ”z‚é
+            // å„ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«é †ç•ªã«ã‚«ãƒ¼ãƒ‰ã‚’é…ã‚‹
             Player player = (Player)players_.get(index % numberOfPlayers);
             player.receiveCard(card);
         }
     }
     
     /**
-     * ƒQ[ƒ€‚ğŠJn‚·‚éB
+     * ã‚²ãƒ¼ãƒ ã‚’é–‹å§‹ã™ã‚‹ã€‚
      */
     public void startGame()
     {
-        System.out.println("\nyƒQ[ƒ€‚ğŠJn‚µ‚Ü‚·z");
+        System.out.println("\nã€ã‚²ãƒ¼ãƒ ã‚’é–‹å§‹ã—ã¾ã™ã€‘");
         
-        // ƒvƒŒƒCƒ„[‚Ìl”‚ğæ“¾‚·‚é
+        // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®äººæ•°ã‚’å–å¾—ã™ã‚‹
         for (int count = 0; players_.size() > 1; count++)
         {
             int playerIndex = count % players_.size(); 
             int nextPlayerIndex = (count + 1) % players_.size();
             
-            // w–¼‚·‚éƒvƒŒƒCƒ„[‚Ìæ“¾
+            // æŒ‡åã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å–å¾—
             Player player = (Player)players_.get(playerIndex);
             
-            // Ÿ‚ÌƒvƒŒƒCƒ„[‚Ìæ“¾
+            // æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å–å¾—
             Player nextPlayer = (Player)players_.get(nextPlayerIndex);
                         
-            // ƒvƒŒƒCƒ„[‚ğw–¼‚·‚é
-            System.out.println("\n" + player + "‚³‚ñ‚Ì”Ô‚Å‚·B");
+            // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’æŒ‡åã™ã‚‹
+            System.out.println("\n" + player + "ã•ã‚“ã®ç•ªã§ã™ã€‚");
             player.play(nextPlayer); 
         }
         
-        // ƒvƒŒƒCƒ„[‚ªã‚ª‚Á‚Äc‚è1–¼‚É‚È‚é‚Æƒ‹[ƒv‚ğ”²‚¯‚é
-        System.out.println("yƒQ[ƒ€‚ğI—¹‚µ‚Ü‚µ‚½z");
+        // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒä¸ŠãŒã£ã¦æ®‹ã‚Š1åã«ãªã‚‹ã¨ãƒ«ãƒ¼ãƒ—ã‚’æŠœã‘ã‚‹
+        System.out.println("ã€ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†ã—ã¾ã—ãŸã€‘");
     }
     
     /**
-     * ã‚ª‚è‚ğéŒ¾‚·‚éB
+     * ä¸ŠãŒã‚Šã‚’å®£è¨€ã™ã‚‹ã€‚
      * 
-     * @param winner ã‚ª‚Á‚½ƒvƒŒƒCƒ„[
+     * @param winner ä¸ŠãŒã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void declareWin(Player winner)
     {
-        // ã‚ª‚Á‚½ƒvƒŒƒCƒ„[
-        System.out.println("  " + winner + "‚³‚ñ‚ªã‚ª‚è‚Ü‚µ‚½I");
+        // ä¸ŠãŒã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
+        System.out.println("  " + winner + "ã•ã‚“ãŒä¸ŠãŒã‚Šã¾ã—ãŸï¼");
         
-        // ã‚ª‚Á‚½ƒvƒŒƒCƒ„[‚ğƒŠƒXƒg‚©‚ç‚Í‚¸‚·
+        // ä¸ŠãŒã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ãƒªã‚¹ãƒˆã‹ã‚‰ã¯ãšã™
         deregisterPlayer(winner);
         
     }
     
     /**
-     * ƒQ[ƒ€‚ÉQ‰Á‚·‚éƒvƒŒƒCƒ„[‚ğ“o˜^‚·‚éB
+     * ã‚²ãƒ¼ãƒ ã«å‚åŠ ã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ç™»éŒ²ã™ã‚‹ã€‚
      * 
-     * @param player Q‰Á‚·‚éƒvƒŒƒCƒ„[
+     * @param player å‚åŠ ã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void registerPlayer(Player player)
     {
-        // ƒŠƒXƒg‚ÉQ‰ÁÒ‚ğ’Ç‰Á‚·‚é
+        // ãƒªã‚¹ãƒˆã«å‚åŠ è€…ã‚’è¿½åŠ ã™ã‚‹
         players_.add(player);
     }
     
     /**
-     * ƒQ[ƒ€‚ÉQ‰Á‚·‚éƒvƒŒƒCƒ„[‚ğ“o˜^‚©‚çíœ‚·‚éB
-     * Ÿ‚Á‚½ƒvƒŒƒCƒ„[‚ğƒQ[ƒ€‚©‚ç”²‚­‚Æ‚«‚Ég—p‚·‚éB
+     * ã‚²ãƒ¼ãƒ ã«å‚åŠ ã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ç™»éŒ²ã‹ã‚‰å‰Šé™¤ã™ã‚‹ã€‚
+     * å‹ã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ã‚²ãƒ¼ãƒ ã‹ã‚‰æŠœãã¨ãã«ä½¿ç”¨ã™ã‚‹ã€‚
      * 
-     * @param player íœ‚·‚éƒvƒŒƒCƒ„[
+     * @param player å‰Šé™¤ã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void deregisterPlayer(Player player)
     {
-        // ƒŠƒXƒg‚ÉQ‰ÁÒ‚ğ’Ç‰Á‚·‚é
+        // ãƒªã‚¹ãƒˆã«å‚åŠ è€…ã‚’è¿½åŠ ã™ã‚‹
         players_.remove(players_.indexOf(player));
         
-        // c‚èƒvƒŒƒCƒ„[‚ª‚Pl‚É‚È‚Á‚½‚Í”sÒ‚ğ•\¦‚·‚é
+        // æ®‹ã‚Šãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒï¼‘äººã«ãªã£ãŸæ™‚ã¯æ•—è€…ã‚’è¡¨ç¤ºã™ã‚‹
         if (players_.size() == 1)
         {
             Player loser = (Player)players_.get(0);
-            System.out.println("  " + loser + "‚³‚ñ‚Ì•‰‚¯‚Å‚·I");
+            System.out.println("  " + loser + "ã•ã‚“ã®è² ã‘ã§ã™ï¼");
         }
     }
 }

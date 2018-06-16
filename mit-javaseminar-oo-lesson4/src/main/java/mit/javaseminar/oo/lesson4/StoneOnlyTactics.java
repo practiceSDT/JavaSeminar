@@ -1,23 +1,23 @@
 package mit.javaseminar.oo.lesson4;
 
 /**
- * uƒO[‚ª‘åD‚«Iví—ªƒNƒ‰ƒXB
+ * ã€Œã‚°ãƒ¼ãŒå¤§å¥½ãï¼ã€æˆ¦ç•¥ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class StoneOnlyTactics implements Tactics
 {
 	/**
-	 * í—ª‚ğ“Ç‚İAƒWƒƒƒ“ƒPƒ“‚Ìè‚ğ“¾‚éB
-	 * ƒO[Eƒ`ƒ‡ƒLEƒp[‚Ì‚¢‚¸‚ê‚©‚ğPlayerƒNƒ‰ƒX‚É’è‹`‚³‚ê‚½
-	 * ˆÈ‰º‚Ì’è”‚Å•Ô‚·B
-	 * Player.STONE    EEE ƒO[
-	 * Player.SCISSORS EEE ƒ`ƒ‡ƒL
-	 * Player.PAPER    EEE ƒp[
+	 * æˆ¦ç•¥ã‚’èª­ã¿ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’å¾—ã‚‹ã€‚
+	 * ã‚°ãƒ¼ãƒ»ãƒãƒ§ã‚­ãƒ»ãƒ‘ãƒ¼ã®ã„ãšã‚Œã‹ã‚’Playerã‚¯ãƒ©ã‚¹ã«å®šç¾©ã•ã‚ŒãŸ
+	 * ä»¥ä¸‹ã®å®šæ•°ã§è¿”ã™ã€‚
+	 * Player.STONE    ãƒ»ãƒ»ãƒ» ã‚°ãƒ¼
+	 * Player.SCISSORS ãƒ»ãƒ»ãƒ» ãƒãƒ§ã‚­
+	 * Player.PAPER    ãƒ»ãƒ»ãƒ» ãƒ‘ãƒ¼
 	 * 
-	 * @return ƒWƒƒƒ“ƒPƒ“‚Ìè
+	 * @return ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 	 */
 	public int readTactics()
 	{
-		// •K‚¸ƒO[‚ğo‚·
+		// å¿…ãšã‚°ãƒ¼ã‚’å‡ºã™
 		return Player.STONE;
 	}
 }

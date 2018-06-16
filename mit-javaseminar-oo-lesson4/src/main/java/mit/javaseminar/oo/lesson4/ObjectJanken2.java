@@ -1,7 +1,7 @@
 package mit.javaseminar.oo.lesson4;
 
 /**
- * í—ªƒCƒ“ƒ^[ƒtƒF[ƒX‚É‘Î‰‚µ‚½ƒWƒƒƒ“ƒPƒ“ƒvƒƒOƒ‰ƒ€(ƒNƒ‰ƒXƒ[ƒ_‘Î‰”Å)
+ * æˆ¦ç•¥ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã«å¯¾å¿œã—ãŸã‚¸ãƒ£ãƒ³ã‚±ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ (ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€å¯¾å¿œç‰ˆ)
  */
 public class ObjectJanken2
 {
@@ -9,44 +9,44 @@ public class ObjectJanken2
 	{
 		try
 		{
-			// R”»‚ÌƒCƒ“ƒXƒ^ƒ“ƒX¶¬
+			// å¯©åˆ¤ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç”Ÿæˆ
 			Judge judge = new Judge();
 
-			// ƒvƒŒƒCƒ„[‚Pi‘º“c‚³‚ñj‚Ì¶¬
-			Player murata = new Player("‘º“c‚³‚ñ");
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ï¼ˆæ‘ç”°ã•ã‚“ï¼‰ã®ç”Ÿæˆ
+			Player murata = new Player("æ‘ç”°ã•ã‚“");
 			
-			// ˆø”‚Åw’è‚³‚ê‚½ƒNƒ‰ƒX–¼‚ÌClassƒIƒuƒWƒFƒNƒg‚ğæ“¾‚·‚é
+			// å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸã‚¯ãƒ©ã‚¹åã®Classã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã™ã‚‹
 			Class<?> tacticsClass = Class.forName(args[0]);
 			
-			// ClassƒIƒuƒWƒFƒNƒg‚ğg—p‚µ‚Äˆø”‚Åw’è‚³‚ê‚½ƒNƒ‰ƒX‚ğ¶¬‚·‚é
+			// Classã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½¿ç”¨ã—ã¦å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸã‚¯ãƒ©ã‚¹ã‚’ç”Ÿæˆã™ã‚‹
 			Tactics murataTactics = (Tactics)tacticsClass.newInstance();
 
-			// ‘º“c‚³‚ñ‚Éí—ªƒNƒ‰ƒX‚ğ“n‚·
+			// æ‘ç”°ã•ã‚“ã«æˆ¦ç•¥ã‚¯ãƒ©ã‚¹ã‚’æ¸¡ã™
 			murata.setTactics(murataTactics);
 
-			// ƒvƒŒƒCƒ„[‚QiR“c‚³‚ñj‚Ì¶¬
-			Player yamada = new Player("R“c‚³‚ñ");
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ï¼ˆå±±ç”°ã•ã‚“ï¼‰ã®ç”Ÿæˆ
+			Player yamada = new Player("å±±ç”°ã•ã‚“");
 
-			// R“c‚³‚ñ‚É“n‚·í—ªƒNƒ‰ƒX‚ğ¶¬‚·‚é
+			// å±±ç”°ã•ã‚“ã«æ¸¡ã™æˆ¦ç•¥ã‚¯ãƒ©ã‚¹ã‚’ç”Ÿæˆã™ã‚‹
 			Tactics yamadaTactics = new RandomTactics();
 
-			// R“c‚³‚ñ‚Éí—ªƒNƒ‰ƒX‚ğ“n‚·
+			// å±±ç”°ã•ã‚“ã«æˆ¦ç•¥ã‚¯ãƒ©ã‚¹ã‚’æ¸¡ã™
 			yamada.setTactics(yamadaTactics);
 
-			// ‘º“c‚³‚ñ‚ÆR“c‚³‚ñ‚ğƒvƒŒƒCƒ„[‚Æ‚µ‚ÄƒWƒƒƒ“ƒPƒ“‚ğŠJn‚·‚é
+			// æ‘ç”°ã•ã‚“ã¨å±±ç”°ã•ã‚“ã‚’ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¨ã—ã¦ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’é–‹å§‹ã™ã‚‹
 			judge.startJanken(murata, yamada);
 		}
 		catch (ClassNotFoundException ex)
 		{
-			System.err.println("ƒNƒ‰ƒX‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ : " + args[0]);
+			System.err.println("ã‚¯ãƒ©ã‚¹ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ : " + args[0]);
 		}
 		catch (InstantiationException e)
 		{
-			System.err.println("ƒNƒ‰ƒX‚Ì¶¬‚É¸”s‚µ‚Ü‚µ‚½ : " + args[0]);
+			System.err.println("ã‚¯ãƒ©ã‚¹ã®ç”Ÿæˆã«å¤±æ•—ã—ã¾ã—ãŸ : " + args[0]);
 		}
 		catch (IllegalAccessException e)
 		{
-			System.err.println("ƒNƒ‰ƒX‚Ì¶¬‚É¸”s‚µ‚Ü‚µ‚½ : " + args[0]);
+			System.err.println("ã‚¯ãƒ©ã‚¹ã®ç”Ÿæˆã«å¤±æ•—ã—ã¾ã—ãŸ : " + args[0]);
 		}
 	}
 }

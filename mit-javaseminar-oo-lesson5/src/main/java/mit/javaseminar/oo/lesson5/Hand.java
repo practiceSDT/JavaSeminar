@@ -3,28 +3,28 @@ package mit.javaseminar.oo.lesson5;
 import java.util.ArrayList;
 
 /**
- * ‚Î‚Î”²‚«‚ÌèD‚ğ•\‚·ƒNƒ‰ƒXB
+ * ã°ã°æŠœãã®æ‰‹æœ­ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Hand
 {
-    /** èD‚É‚ ‚éƒJ[ƒh‚ğ•Û‚·‚é‚½‚ß‚ÌƒŠƒXƒg */
+    /** æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’ä¿æŒã™ã‚‹ãŸã‚ã®ãƒªã‚¹ãƒˆ */
     private ArrayList<Card> hand_ = new ArrayList<Card>();
 
     /**
-     * ƒJ[ƒh‚ğ‰Á‚¦‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’åŠ ãˆã‚‹ã€‚
      * 
-     * @param card ‰Á‚¦‚éƒJ[ƒh
+     * @param card åŠ ãˆã‚‹ã‚«ãƒ¼ãƒ‰
      */
     public void addCard(Card card)
     {
-        // ƒJ[ƒh‚ğƒŠƒXƒg‚ÌÅŒã‚É’Ç‰Á‚·‚é
+        // ã‚«ãƒ¼ãƒ‰ã‚’ãƒªã‚¹ãƒˆã®æœ€å¾Œã«è¿½åŠ ã™ã‚‹
         hand_.add(card);
     }
 
     /**
-     * ƒJ[ƒh‚ğˆø‚­B
+     * ã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã€‚
      * 
-     * @return ˆø‚¢‚½ƒJ[ƒh
+     * @return å¼•ã„ãŸã‚«ãƒ¼ãƒ‰
      */
     public Card pickCard()
     {
@@ -34,32 +34,32 @@ public class Hand
     }
 
     /**
-     * ƒVƒƒƒbƒtƒ‹‚·‚éB
+     * ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã™ã‚‹ã€‚
      */
     public void shuffle()
     {
-        // èD‚Ì–‡”‚ğæ“¾
+        // æ‰‹æœ­ã®æšæ•°ã‚’å–å¾—
         int number = hand_.size();
 
-        // ƒJ[ƒh‚ğ”²‚«o‚·ˆÊ’u
+        // ã‚«ãƒ¼ãƒ‰ã‚’æŠœãå‡ºã™ä½ç½®
         int pos;
 
-        // ƒJ[ƒh‚ğƒ‰ƒ“ƒ_ƒ€‚É”²‚«æ‚Á‚ÄÅŒã‚É‰Á‚¦‚é“®ì‚ğŒJ‚è•Ô‚·
+        // ã‚«ãƒ¼ãƒ‰ã‚’ãƒ©ãƒ³ãƒ€ãƒ ã«æŠœãå–ã£ã¦æœ€å¾Œã«åŠ ãˆã‚‹å‹•ä½œã‚’ç¹°ã‚Šè¿”ã™
         for (int count = 0; count < number * 2; count++)
         {
-            // ƒ‰ƒ“ƒ_ƒ€‚ÈˆÊ’u‚©‚çƒJ[ƒh‚ğˆê–‡”²‚«æ‚é
+            // ãƒ©ãƒ³ãƒ€ãƒ ãªä½ç½®ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’ä¸€æšæŠœãå–ã‚‹
             pos = (int) (Math.random() * number);
             Card pickedCard = (Card) hand_.remove(pos);
 
-            // ”²‚«æ‚Á‚½ƒJ[ƒh‚ğÅŒã‚É‰Á‚¦‚é
+            // æŠœãå–ã£ãŸã‚«ãƒ¼ãƒ‰ã‚’æœ€å¾Œã«åŠ ãˆã‚‹
             hand_.add(pickedCard);
         }
     }
 
     /**
-     * –‡”‚ğ”‚¦‚éB
+     * æšæ•°ã‚’æ•°ãˆã‚‹ã€‚
      * 
-     * @return èD‚É‚ ‚éƒJ[ƒh‚Ì–‡”
+     * @return æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã®æšæ•°
      */
     public int getNumberOfCards()
     {
@@ -67,24 +67,24 @@ public class Hand
     }
 
     /**
-     * “¯‚¶”‚ÌƒJ[ƒh‚ğ’T‚·B
-     * “¯‚¶”‚ÌƒJ[ƒh‚ª‚È‚¢ê‡‚Í null ‚ğ•Ô‚µ‚Ü‚·B
+     * åŒã˜æ•°ã®ã‚«ãƒ¼ãƒ‰ã‚’æ¢ã™ã€‚
+     * åŒã˜æ•°ã®ã‚«ãƒ¼ãƒ‰ãŒãªã„å ´åˆã¯ null ã‚’è¿”ã—ã¾ã™ã€‚
      * 
-     * @return “¯‚¶”‚ÌƒJ[ƒh
+     * @return åŒã˜æ•°ã®ã‚«ãƒ¼ãƒ‰
      */
     public Card[] findSameNumberCard()
     {
         int numberOfCards = hand_.size();
         Card[] sameCards = null;
 
-        // èD‚ÉƒJ[ƒh‚ª1–‡‚à‚È‚¢ê‡‚Í‰½‚à‚µ‚È‚¢
+        // æ‰‹æœ­ã«ã‚«ãƒ¼ãƒ‰ãŒ1æšã‚‚ãªã„å ´åˆã¯ä½•ã‚‚ã—ãªã„
         if (numberOfCards > 0)
         {
-            // ÅŒã‚É’Ç‰Á‚³‚ê‚½ƒJ[ƒh‚ğæ“¾‚·‚é
+            // æœ€å¾Œã«è¿½åŠ ã•ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’å–å¾—ã™ã‚‹
             int lastIndex = numberOfCards - 1;
             Card lastAddedCard = (Card) hand_.get(lastIndex);
 
-            // ÅŒã‚É’Ç‰Á‚³‚ê‚½ƒJ[ƒh‚Ì”š‚ğæ“¾‚·‚é
+            // æœ€å¾Œã«è¿½åŠ ã•ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã®æ•°å­—ã‚’å–å¾—ã™ã‚‹
             int lastAddedCardNum = lastAddedCard.getNumber();
 
             for (int index = 0; index < lastIndex; index++)
@@ -92,8 +92,8 @@ public class Hand
                 Card card = (Card) hand_.get(index);
                 if (card.getNumber() == lastAddedCardNum)
                 {
-                    // ÅŒã‚É’Ç‰Á‚³‚ê‚½ƒJ[ƒh‚Æ“¯‚¶ƒJ[ƒh‚ªŒ©‚Â‚©‚Á‚½ê‡
-                    // Œ©‚Â‚©‚Á‚½‘g‚İ‡‚í‚¹‚ğsameCards‚ÉŠi”[‚µAƒ‹[ƒv‚ğ”²‚¯‚é
+                    // æœ€å¾Œã«è¿½åŠ ã•ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã¨åŒã˜ã‚«ãƒ¼ãƒ‰ãŒè¦‹ã¤ã‹ã£ãŸå ´åˆ
+                    // è¦‹ã¤ã‹ã£ãŸçµ„ã¿åˆã‚ã›ã‚’sameCardsã«æ ¼ç´ã—ã€ãƒ«ãƒ¼ãƒ—ã‚’æŠœã‘ã‚‹
                     sameCards = new Card[2];
                     sameCards[0] = (Card) hand_.remove(lastIndex);
                     sameCards[1] = (Card) hand_.remove(index);
@@ -101,8 +101,8 @@ public class Hand
                     break;
                 }
 
-                // “¯‚¶”‚Ì‘g‚İ‡‚í‚¹‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡A
-                // sameCards‚Ínull‚Ì‚Ü‚Ü‚Æ‚È‚éB
+                // åŒã˜æ•°ã®çµ„ã¿åˆã‚ã›ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã€
+                // sameCardsã¯nullã®ã¾ã¾ã¨ãªã‚‹ã€‚
             }
         }
 
@@ -110,10 +110,10 @@ public class Hand
     }
 
     /**
-     * èD‚É‚ ‚éƒJ[ƒh‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB
-     * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+     * æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚
+     * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
      * 
-     * @return èD‚É‚ ‚éƒJ[ƒh‚Ì•¶š—ñ•\Œ»
+     * @return æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã®æ–‡å­—åˆ—è¡¨ç¾
      */
     public String toString()
     {

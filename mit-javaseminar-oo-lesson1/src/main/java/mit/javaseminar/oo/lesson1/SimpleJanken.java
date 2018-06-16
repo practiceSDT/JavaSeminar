@@ -1,178 +1,178 @@
 package mit.javaseminar.oo.lesson1;
 /**
- * ƒIƒuƒWƒFƒNƒgŽwŒü‚ðŽg—p‚µ‚È‚¢ƒWƒƒƒ“ƒPƒ“ƒvƒƒOƒ‰ƒ€
+ * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæŒ‡å‘ã‚’ä½¿ç”¨ã—ãªã„ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
  */
 public class SimpleJanken
 {
-	// ƒWƒƒƒ“ƒPƒ“‚ÌŽè‚ð•\‚·’è”
-	public static final int STONE = 0; // ƒO[
-	public static final int SCISSORS = 1; // ƒ`ƒ‡ƒL
-	public static final int PAPER = 2; // ƒp[
+	// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’è¡¨ã™å®šæ•°
+	public static final int STONE = 0; // ã‚°ãƒ¼
+	public static final int SCISSORS = 1; // ãƒãƒ§ã‚­
+	public static final int PAPER = 2; // ãƒ‘ãƒ¼
 	
-	// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-	// @ƒvƒƒOƒ‰ƒ€‚ÌƒXƒ^[ƒg‚Í‚±‚±‚©‚ç
-	// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+	// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+	// ã€€ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚¹ã‚¿ãƒ¼ãƒˆã¯ã“ã“ã‹ã‚‰
+	// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 	public static void main(String[] args)
 	{
-		// ƒvƒŒƒCƒ„[‚P‚ÌŸ‚¿”
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®å‹ã¡æ•°
 		int player1WinCount = 0;
 		
-		// ƒvƒŒƒCƒ„[‚Q‚ÌŸ‚¿”
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®å‹ã¡æ•°
 		int player2WinCount = 0;
 
-		// ƒvƒŒƒCƒ„[‚P‚ªo‚·Žè
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ãŒå‡ºã™æ‰‹
 		int player1Hand = 0;
 		
-		// ƒvƒŒƒCƒ„[‚Q‚ªo‚·Žè
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ãŒå‡ºã™æ‰‹
 		int player2Hand = 0;
 
-		// ƒWƒƒƒ“ƒPƒ“‚ÌŽè‚ðŒˆ‚ß‚é‚Ì‚ÉŽg—p‚·‚é—”
+		// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’æ±ºã‚ã‚‹ã®ã«ä½¿ç”¨ã™ã‚‹ä¹±æ•°
 		double randomNum = 0;
 
-		// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-		// @‡@ ƒvƒƒOƒ‰ƒ€‚ªŠJŽn‚µ‚½‚±‚Æ‚ð•\Ž¦‚·‚é
-		// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-		// ƒvƒƒOƒ‰ƒ€ŠJŽnƒƒbƒZ[ƒW‚ð•\Ž¦‚·‚é
-		System.out.println("yƒWƒƒƒ“ƒPƒ“ŠJŽnz\n");
+		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+		// ã€€â‘  ãƒ—ãƒ­ã‚°ãƒ©ãƒ ãŒé–‹å§‹ã—ãŸã“ã¨ã‚’è¡¨ç¤ºã™ã‚‹
+		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+		// ãƒ—ãƒ­ã‚°ãƒ©ãƒ é–‹å§‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹
+		System.out.println("ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³é–‹å§‹ã€‘\n");
 
-		// ƒWƒƒƒ“ƒPƒ“‚ð‚R‰ñŽÀŽ{‚·‚é
-		// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-		// @‡E Ÿ•‰‚µ‚½‰ñ”‚ð‰ÁŽZ‚·‚é
-		// @‡F ‚R‰ñŸ•‰‚ªI‚í‚Á‚½‚©H
-		// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+		// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’ï¼“å›žå®Ÿæ–½ã™ã‚‹
+		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+		// ã€€â‘¥ å‹è² ã—ãŸå›žæ•°ã‚’åŠ ç®—ã™ã‚‹
+		// ã€€â‘¦ ï¼“å›žå‹è² ãŒçµ‚ã‚ã£ãŸã‹ï¼Ÿ
+		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 		for (int cnt = 0; cnt < 3; cnt++)
 		{
-			// ‰½‰ñí–Ú‚©‚ð•\Ž¦‚·‚é
-			System.out.println("y" + (cnt + 1) + "‰ñí–Úz");
+			// ä½•å›žæˆ¦ç›®ã‹ã‚’è¡¨ç¤ºã™ã‚‹
+			System.out.println("ã€" + (cnt + 1) + "å›žæˆ¦ç›®ã€‘");
 
-			// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-			// @‡A ƒvƒŒƒCƒ„[‚P‚ª‰½‚ðo‚·‚©Œˆ‚ß‚é
-			// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-			// 0.0ˆÈã3.0–¢–ž‚Ì¬”‚Æ‚µ‚Ä—”‚ð“¾‚é
+			// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+			// ã€€â‘¡ ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ãŒä½•ã‚’å‡ºã™ã‹æ±ºã‚ã‚‹
+			// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+			// 0.0ä»¥ä¸Š3.0æœªæº€ã®å°æ•°ã¨ã—ã¦ä¹±æ•°ã‚’å¾—ã‚‹
 			randomNum = Math.random() * 3;
 
 			if (randomNum < 1)
 			{
-				// randomNum ‚ª 0.0ˆÈã1.0–¢–ž ‚Ìê‡AƒO[
+				// randomNum ãŒ 0.0ä»¥ä¸Š1.0æœªæº€ ã®å ´åˆã€ã‚°ãƒ¼
 				player1Hand = STONE;
 
-				// ƒvƒŒƒCƒ„[‚P‚ÌŽè‚ð•\Ž¦‚·‚é
-				System.out.print("ƒO[");
+				// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.print("ã‚°ãƒ¼");
 			}
 			else if (randomNum < 2)
 			{
-				// randomNum ‚ª 1.0ˆÈã2.0–¢–ž ‚Ìê‡Aƒ`ƒ‡ƒL
+				// randomNum ãŒ 1.0ä»¥ä¸Š2.0æœªæº€ ã®å ´åˆã€ãƒãƒ§ã‚­
 				player1Hand = SCISSORS;
 
-				// ƒvƒŒƒCƒ„[‚P‚ÌŽè‚ð•\Ž¦‚·‚é
-				System.out.print("ƒ`ƒ‡ƒL");
+				// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.print("ãƒãƒ§ã‚­");
 			}
 			else if (randomNum < 3)
 			{
-				// randomNum ‚ª 2.0ˆÈã3.0–¢–ž ‚Ìê‡Aƒp[
+				// randomNum ãŒ 2.0ä»¥ä¸Š3.0æœªæº€ ã®å ´åˆã€ãƒ‘ãƒ¼
 				player1Hand = PAPER;
 
-				// ƒvƒŒƒCƒ„[‚P‚ÌŽè‚ð•\Ž¦‚·‚é
-				System.out.print("ƒp[");
+				// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.print("ãƒ‘ãƒ¼");
 			}
 
 			System.out.print(" vs. ");
 
-			// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-			// @‡B ƒvƒŒƒCƒ„[‚Q‚ª‰½‚ðo‚·‚©Œˆ‚ß‚é
-			// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+			// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+			// ã€€â‘¢ ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ãŒä½•ã‚’å‡ºã™ã‹æ±ºã‚ã‚‹
+			// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 
-			// 0.0ˆÈã3.0–¢–ž‚Ì¬”‚Æ‚µ‚Ä—”‚ð“¾‚é
+			// 0.0ä»¥ä¸Š3.0æœªæº€ã®å°æ•°ã¨ã—ã¦ä¹±æ•°ã‚’å¾—ã‚‹
 			randomNum = Math.random() * 3;
 
 			if (randomNum < 1)
 			{
-				// randomNum ‚ª 0.0ˆÈã1.0–¢–ž ‚Ìê‡AƒO[
+				// randomNum ãŒ 0.0ä»¥ä¸Š1.0æœªæº€ ã®å ´åˆã€ã‚°ãƒ¼
 				player2Hand = STONE;
 
-				// ƒvƒŒƒCƒ„[‚Q‚ÌŽè‚ð•\Ž¦‚·‚é
-				System.out.print("ƒO[");
+				// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.print("ã‚°ãƒ¼");
 			}
 			else if (randomNum < 2)
 			{
-				// randomNum ‚ª 1.0ˆÈã2.0–¢–ž ‚Ìê‡Aƒ`ƒ‡ƒL
+				// randomNum ãŒ 1.0ä»¥ä¸Š2.0æœªæº€ ã®å ´åˆã€ãƒãƒ§ã‚­
 				player2Hand = SCISSORS;
 
-				// ƒvƒŒƒCƒ„[‚Q‚ÌŽè‚ð•\Ž¦‚·‚é
-				System.out.print("ƒ`ƒ‡ƒL");
+				// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.print("ãƒãƒ§ã‚­");
 			}
 			else if (randomNum < 3)
 			{
-				// randomNum ‚ª 2.0ˆÈã3.0–¢–ž ‚Ìê‡Aƒp[
+				// randomNum ãŒ 2.0ä»¥ä¸Š3.0æœªæº€ ã®å ´åˆã€ãƒ‘ãƒ¼
 				player2Hand = PAPER;
 
-				// ƒvƒŒƒCƒ„[‚R‚ÌŽè‚ð•\Ž¦‚·‚é
-				System.out.print("ƒp[");
+				// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼“ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.print("ãƒ‘ãƒ¼");
 			}
 
-			// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-			// @‡C ‚Ç‚¿‚ç‚ªŸ‚¿‚©‚ð”»’è‚µAŒ‹‰Ê‚ð•\Ž¦‚·‚é
-			// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+			// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+			// ã€€â‘£ ã©ã¡ã‚‰ãŒå‹ã¡ã‹ã‚’åˆ¤å®šã—ã€çµæžœã‚’è¡¨ç¤ºã™ã‚‹
+			// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 
-			// ƒvƒŒƒCƒ„[‚P‚ªŸ‚Âê‡
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ãŒå‹ã¤å ´åˆ
 			if ((player1Hand == STONE && player2Hand == SCISSORS)
 					|| (player1Hand == SCISSORS && player2Hand == PAPER)
 					|| (player1Hand == PAPER && player2Hand == STONE))
 			{
-				// ƒWƒƒƒ“ƒPƒ“‚ÌŒ‹‰Ê‚ð•\Ž¦‚·‚é
-				System.out.println("\nƒvƒŒƒCƒ„[‚P‚ªŸ‚¿‚Ü‚µ‚½I\n");
+				// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®çµæžœã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.println("\nãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ãŒå‹ã¡ã¾ã—ãŸï¼\n");
 
-				// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-				// @‡D ƒvƒŒƒCƒ„[‚P‚ÌŸ‚Á‚½‰ñ”‚ð‰ÁŽZ‚·‚é
-				// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+				// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+				// ã€€â‘¤ ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®å‹ã£ãŸå›žæ•°ã‚’åŠ ç®—ã™ã‚‹
+				// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 				player1WinCount++;
 			}
-			// ƒvƒŒƒCƒ„[‚Q‚ªŸ‚Âê‡
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ãŒå‹ã¤å ´åˆ
 			else if ((player1Hand == STONE && player2Hand == PAPER)
 					|| (player1Hand == SCISSORS && player2Hand == STONE)
 					|| (player1Hand == PAPER && player2Hand == SCISSORS))
 			{
-				// ƒWƒƒƒ“ƒPƒ“‚ÌŒ‹‰Ê‚ð•\Ž¦‚·‚é
-				System.out.println("\nƒvƒŒƒCƒ„[‚Q‚ªŸ‚¿‚Ü‚µ‚½I\n");
+				// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®çµæžœã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.println("\nãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ãŒå‹ã¡ã¾ã—ãŸï¼\n");
 
-				// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-				// @‡D ƒvƒŒƒCƒ„[‚Q‚ÌŸ‚Á‚½‰ñ”‚ð‰ÁŽZ‚·‚é
-				// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+				// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+				// ã€€â‘¤ ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®å‹ã£ãŸå›žæ•°ã‚’åŠ ç®—ã™ã‚‹
+				// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 				player2WinCount++;
 			}
-			// ˆø‚«•ª‚¯‚Ìê‡
+			// å¼•ãåˆ†ã‘ã®å ´åˆ
 			else
 			{
-				// ƒWƒƒƒ“ƒPƒ“‚ÌŒ‹‰Ê‚ð•\Ž¦‚·‚é
-				System.out.println("\nˆø‚«•ª‚¯‚Å‚·I\n");
+				// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®çµæžœã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.println("\nå¼•ãåˆ†ã‘ã§ã™ï¼\n");
 			}
 		}
 
-		// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-		// @‡G ÅI“I‚ÈŸŽÒ‚ð”»’è‚µA‰æ–Ê‚É•\Ž¦‚·‚é
-		// ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-		System.out.println("yƒWƒƒƒ“ƒPƒ“I—¹z\n");
+		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+		// ã€€â‘§ æœ€çµ‚çš„ãªå‹è€…ã‚’åˆ¤å®šã—ã€ç”»é¢ã«è¡¨ç¤ºã™ã‚‹
+		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
+		System.out.println("ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³çµ‚äº†ã€‘\n");
 
-		// ƒvƒŒƒCƒ„[‚P‚ÌŸ‚¿”‚ª‘½‚¢Žž
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®å‹ã¡æ•°ãŒå¤šã„æ™‚
 		if (player1WinCount > player2WinCount)
 		{
-			// ƒvƒŒƒCƒ„[‚P‚ÌŸ‚¿‚ð•\Ž¦‚·‚éB
-			System.out.println(player1WinCount + "‘Î" + player2WinCount
-					+ "‚ÅƒvƒŒƒCƒ„[‚P‚ÌŸ‚¿‚Å‚·I\n");
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®å‹ã¡ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+			System.out.println(player1WinCount + "å¯¾" + player2WinCount
+					+ "ã§ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®å‹ã¡ã§ã™ï¼\n");
 		}
-		// ƒvƒŒƒCƒ„[‚Q‚ÌŸ‚¿”‚ª‘½‚¢Žž
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®å‹ã¡æ•°ãŒå¤šã„æ™‚
 		else if (player1WinCount < player2WinCount)
 		{
-			// ƒvƒŒƒCƒ„[‚Q‚ÌŸ‚¿‚ð•\Ž¦‚·‚éB
-			System.out.println(player1WinCount + "‘Î" + player2WinCount
-					+ "‚ÅƒvƒŒƒCƒ„[‚Q‚ÌŸ‚¿‚Å‚·I\n");
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®å‹ã¡ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+			System.out.println(player1WinCount + "å¯¾" + player2WinCount
+					+ "ã§ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®å‹ã¡ã§ã™ï¼\n");
 		}
-		// ƒvƒŒƒCƒ„[‚P‚Æ‚Q‚ÌŸ‚¿”‚ª“¯‚¶Žž
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã¨ï¼’ã®å‹ã¡æ•°ãŒåŒã˜æ™‚
 		else if (player1WinCount == player2WinCount)
 		{
-			// ˆø‚«•ª‚¯‚ð•\Ž¦‚·‚éB
-			System.out.println(player1WinCount + "‘Î" + player2WinCount
-					+ "‚Åˆø‚«•ª‚¯‚Å‚·I\n");
+			// å¼•ãåˆ†ã‘ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+			System.out.println(player1WinCount + "å¯¾" + player2WinCount
+					+ "ã§å¼•ãåˆ†ã‘ã§ã™ï¼\n");
 		}
 	}
 }

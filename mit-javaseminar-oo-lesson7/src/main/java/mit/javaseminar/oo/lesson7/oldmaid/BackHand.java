@@ -4,19 +4,19 @@ import mit.javaseminar.oo.lesson7.trump.Card;
 import mit.javaseminar.oo.lesson7.trump.Hand;
 
 /**
- * — ‘¤‚©‚çŒ©‚½èD‚ğ•\‚·ƒNƒ‰ƒXB
- * —×‚ÌƒvƒŒƒCƒ„[‚ÉƒJ[ƒh‚ğˆø‚©‚¹‚éÛAƒJ[ƒh‚Ì— ‘¤‚¾‚¯‚ğŒ©‚¹‚é‚½‚ß‚É
- * g—p‚Å‚«‚éƒƒ\ƒbƒh‚ğ§ŒÀ‚µ‚Ä‚¢‚éB
+ * è£å´ã‹ã‚‰è¦‹ãŸæ‰‹æœ­ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
+ * éš£ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«ã‚«ãƒ¼ãƒ‰ã‚’å¼•ã‹ã›ã‚‹éš›ã€ã‚«ãƒ¼ãƒ‰ã®è£å´ã ã‘ã‚’è¦‹ã›ã‚‹ãŸã‚ã«
+ * ä½¿ç”¨ã§ãã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã‚’åˆ¶é™ã—ã¦ã„ã‚‹ã€‚
  */
 public class BackHand
 {
-	/** èD */
+	/** æ‰‹æœ­ */
 	private Hand hand_;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
 	 * 
-	 * @param hand èD
+	 * @param hand æ‰‹æœ­
 	 */
 	public BackHand(Hand hand)
 	{
@@ -24,9 +24,9 @@ public class BackHand
 	}
 	
 	/**
-	 * –‡”‚ğ”‚¦‚éB
+	 * æšæ•°ã‚’æ•°ãˆã‚‹ã€‚
 	 * 
-	 * @return èD‚É‚ ‚éƒJ[ƒh‚Ì–‡”
+	 * @return æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã®æšæ•°
 	 */
 	public int getNumberOfCards()
 	{
@@ -34,11 +34,11 @@ public class BackHand
 	}
 
 	/**
-	 * ƒJ[ƒh‚ğˆø‚­B
-	 * ˆø‚¢‚½ƒJ[ƒh‚ÍèD‚©‚çíœ‚³‚ê‚éB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã€‚
+	 * å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã¯æ‰‹æœ­ã‹ã‚‰å‰Šé™¤ã•ã‚Œã‚‹ã€‚
 	 * 
-	 * @param position ƒJ[ƒh‚ÌˆÊ’uB
-	 * @return position ‚Åw’è‚³‚ê‚½ˆÊ’u‚ÌƒJ[ƒhB”ÍˆÍŠO‚Ìê‡‚Ínull‚ğ•Ô‚·B
+	 * @param position ã‚«ãƒ¼ãƒ‰ã®ä½ç½®ã€‚
+	 * @return position ã§æŒ‡å®šã•ã‚ŒãŸä½ç½®ã®ã‚«ãƒ¼ãƒ‰ã€‚ç¯„å›²å¤–ã®å ´åˆã¯nullã‚’è¿”ã™ã€‚
 	 */
 	public Card pickCard(int position)
 	{

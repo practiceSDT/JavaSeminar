@@ -1,31 +1,31 @@
 package mit.javaseminar.oo.lesson6;
 
 /**
- * ƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒXB
+ * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Player
 {
-	/** –¼‘O */
+	/** åå‰ */
 	private String name_;
 
-	/** ƒe[ƒuƒ‹ */
+	/** ãƒ†ãƒ¼ãƒ–ãƒ« */
 	Table table_;
 
-	/** èD */
+	/** æ‰‹æœ­ */
 	Hand myHand_ = new Hand();
 
-	/** is–ğ */
+	/** é€²è¡Œå½¹ */
 	Master master_;
 
-	/** ƒpƒX‚µ‚½‰ñ” */
+	/** ãƒ‘ã‚¹ã—ãŸå›æ•° */
 	int pass_;
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
 	 * 
-	 * @param name –¼‘O
-	 * @param master is–ğ
-	 * @param table ƒe[ƒuƒ‹
+	 * @param name åå‰
+	 * @param master é€²è¡Œå½¹
+	 * @param table ãƒ†ãƒ¼ãƒ–ãƒ«
 	 */
 	public Player(String name, Master master, Table table)
 	{
@@ -35,34 +35,34 @@ public class Player
 	}
 
 	/**
-	 * ‡”Ô‚ğw–¼‚·‚éB
+	 * é †ç•ªã‚’æŒ‡åã™ã‚‹ã€‚
 	 */
 	public void play()
 	{
-		// Œ»İ‚ÌèD‚ğ•\¦‚·‚é
+		// ç¾åœ¨ã®æ‰‹æœ­ã‚’è¡¨ç¤ºã™ã‚‹
 		System.out.println("  " + myHand_);
 		
-		// èD‚É‚ ‚éƒJ[ƒh‚ğ1–‡‚¸‚Âƒ`ƒFƒbƒN‚µ‚ÄAê‚É’u‚¯‚é‚©’²‚×‚é
+		// æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’1æšãšã¤ãƒã‚§ãƒƒã‚¯ã—ã¦ã€å ´ã«ç½®ã‘ã‚‹ã‹èª¿ã¹ã‚‹
 		int handSize = myHand_.getNumberOfCards();
 		for (int position = 0; position < handSize; position++)
 		{
-			// èD‚É‚ ‚éƒJ[ƒh‚ğŒ©‚é
+			// æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’è¦‹ã‚‹
 			Card lookingCard = myHand_.lookCard(position);
 
 			int number = lookingCard.getNumber();
 			int suit = lookingCard.getSuit();
 
-			// ¡’–Ú‚µ‚Ä‚¢‚éèD‚Ì¶‚©‰E‚ÉƒJ[ƒh‚ª‚ ‚ê‚ÎAƒJ[ƒh‚ğ’u‚¯‚é
+			// ä»Šæ³¨ç›®ã—ã¦ã„ã‚‹æ‰‹æœ­ã®å·¦ã‹å³ã«ã‚«ãƒ¼ãƒ‰ãŒã‚ã‚Œã°ã€ã‚«ãƒ¼ãƒ‰ã‚’ç½®ã‘ã‚‹
 			int leftNumber = (number != 1) ? number - 1 : 13;
 			int rightNumber = (number != 13) ? number + 1 : 1;
 
 			if ((true == table_.isThereCard(suit, leftNumber))
 				|| (true == table_.isThereCard(suit, rightNumber)))
 			{
-				// èD‚©‚çƒJ[ƒh‚ğˆø‚¢‚Äƒe[ƒuƒ‹‚É’u‚­
+				// æ‰‹æœ­ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’å¼•ã„ã¦ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã
 				table_.putCard(myHand_.pickCard(position));
 
-				// èD‚ª‚È‚­‚È‚Á‚½‚çAã‚ª‚è‚ğéŒ¾‚·‚é
+				// æ‰‹æœ­ãŒãªããªã£ãŸã‚‰ã€ä¸ŠãŒã‚Šã‚’å®£è¨€ã™ã‚‹
 				if (myHand_.getNumberOfCards() == 0)
 				{
 					master_.declareWin(this);
@@ -72,14 +72,14 @@ public class Player
 			}
 		}
 
-		// ƒe[ƒuƒ‹‚É’u‚¯‚éƒJ[ƒh‚ª‚È‚©‚Á‚½ê‡AƒpƒX‚·‚é
+		// ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã‘ã‚‹ã‚«ãƒ¼ãƒ‰ãŒãªã‹ã£ãŸå ´åˆã€ãƒ‘ã‚¹ã™ã‚‹
 		pass_++;
 		master_.pass(this);
 
-		// ƒpƒX‰ñ”‚ª4‰ñˆÈã‚È‚ç‚ÎƒJ[ƒh‚ğ‘S‚Äƒe[ƒuƒ‹‚É’u‚­
+		// ãƒ‘ã‚¹å›æ•°ãŒ4å›ä»¥ä¸Šãªã‚‰ã°ã‚«ãƒ¼ãƒ‰ã‚’å…¨ã¦ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã
 		if (pass_ > 3)
 		{
-			// èD‚ğ‘S‚Äƒe[ƒuƒ‹‚É’u‚­
+			// æ‰‹æœ­ã‚’å…¨ã¦ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã
 			for (int count = 0; count < handSize; count++)
 			{
 				table_.putCard(myHand_.pickCard(0));
@@ -88,28 +88,28 @@ public class Player
 	}
 
 	/**
-	 * ƒJ[ƒh‚ğó‚¯æ‚éB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’å—ã‘å–ã‚‹ã€‚
 	 * 
-	 * @param card ó‚¯æ‚Á‚½ƒJ[ƒh
+	 * @param card å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰
 	 */
 	public void receiveCard(Card card)
 	{
 		if (card.getNumber() == 7)
 		{
-			// ƒJ[ƒh‚ª7‚Ìê‡‚ÍAƒe[ƒuƒ‹‚ÉƒJ[ƒh‚ğ’u‚­
+			// ã‚«ãƒ¼ãƒ‰ãŒ7ã®å ´åˆã¯ã€ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚«ãƒ¼ãƒ‰ã‚’ç½®ã
 			table_.putCard(card);
 		}
 		else
 		{
-			// ƒJ[ƒh‚ª7‚Å‚È‚¢ê‡‚ÍAó‚¯æ‚Á‚½ƒJ[ƒh‚ğèD‚Ö‰Á‚¦‚é
+			// ã‚«ãƒ¼ãƒ‰ãŒ7ã§ãªã„å ´åˆã¯ã€å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰ã‚’æ‰‹æœ­ã¸åŠ ãˆã‚‹
 			myHand_.addCard(card);
 		}
 	}
 
 	/**
-	 * ƒpƒX‰ñ”‚ğ•·‚­B
+	 * ãƒ‘ã‚¹å›æ•°ã‚’èãã€‚
 	 * 
-	 * @return ƒpƒX‰ñ”
+	 * @return ãƒ‘ã‚¹å›æ•°
 	 */
 	public int getPass()
 	{
@@ -117,10 +117,10 @@ public class Player
 	}
 
 	/**
-	 * ƒvƒŒƒCƒ„[‚Ì–¼‘O‚ğ•Ô‚·B
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰ã‚’è¿”ã™ã€‚
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return ƒvƒŒƒCƒ„[‚Ì–¼‘O
+	 * @return ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰
 	 */
 	public String toString()
 	{

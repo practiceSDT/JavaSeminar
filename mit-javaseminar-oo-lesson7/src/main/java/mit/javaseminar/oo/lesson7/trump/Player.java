@@ -1,32 +1,32 @@
 package mit.javaseminar.oo.lesson7.trump;
 
 /**
- * ƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒXB
+ * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public abstract class Player
 {
-    /** –¼‘O */
+    /** åå‰ */
     protected String name_;
 
-    /** ƒe[ƒuƒ‹ */
+    /** ãƒ†ãƒ¼ãƒ–ãƒ« */
     protected Table table_;
 
-    /** èD */
+    /** æ‰‹æœ­ */
     protected Hand myHand_ = new Hand();
 
-    /** is–ğ */
+    /** é€²è¡Œå½¹ */
     protected Master master_;
     
-    /** ƒ‹[ƒ‹ */
+    /** ãƒ«ãƒ¼ãƒ« */
     protected Rule rule_;
     
     /**
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      * 
-     * @param name –¼‘O
-     * @param master is–ğ
-     * @param table ƒe[ƒuƒ‹
-     * @param rule ƒ‹[ƒ‹
+     * @param name åå‰
+     * @param master é€²è¡Œå½¹
+     * @param table ãƒ†ãƒ¼ãƒ–ãƒ«
+     * @param rule ãƒ«ãƒ¼ãƒ«
      */
     public Player(String name, Master master, Table table, Rule rule)
     {
@@ -37,31 +37,31 @@ public abstract class Player
     }
 
     /**
-     * ‡”Ô‚ğw–¼‚·‚éB
-     * ÀÛ‚Ìˆ—‚ÍƒTƒuƒNƒ‰ƒX‚Å‹Lq‚·‚é‚±‚ÆB
+     * é †ç•ªã‚’æŒ‡åã™ã‚‹ã€‚
+     * å®Ÿéš›ã®å‡¦ç†ã¯ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã§è¨˜è¿°ã™ã‚‹ã“ã¨ã€‚
      * 
-     * @param nextPlayer Ÿ‚ÌƒvƒŒƒCƒ„[
+     * @param nextPlayer æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public abstract void play(Player nextPlayer);
 
     /**
-     * ƒJ[ƒh‚ğ”z‚éB<br>
-     * ƒJ[ƒh‚ğó‚¯æ‚Á‚½‚Ìˆ—‚ğŠg’£‚µ‚½‚¢ê‡‚ÍA
-     * –{ƒƒ\ƒbƒh‚ğƒTƒuƒNƒ‰ƒX‚ÅƒI[ƒo[ƒ‰ƒCƒh‚·‚é‚±‚ÆB
+     * ã‚«ãƒ¼ãƒ‰ã‚’é…ã‚‹ã€‚<br>
+     * ã‚«ãƒ¼ãƒ‰ã‚’å—ã‘å–ã£ãŸæ™‚ã®å‡¦ç†ã‚’æ‹¡å¼µã—ãŸã„å ´åˆã¯ã€
+     * æœ¬ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã§ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã™ã‚‹ã“ã¨ã€‚
      *
-     * @param card ó‚¯æ‚Á‚½ƒJ[ƒh
+     * @param card å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰
      */
     public void receiveCard(Card card)
     {
-        // ó‚¯æ‚Á‚½ƒJ[ƒh‚ğèD‚É‰Á‚¦‚é
+        // å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰ã‚’æ‰‹æœ­ã«åŠ ãˆã‚‹
         myHand_.addCard(card);
     }
     
     /**
-     * ƒvƒŒƒCƒ„[‚Ì–¼‘O‚ğ•Ô‚·B
-     * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+     * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰ã‚’è¿”ã™ã€‚
+     * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
      * 
-     * @return ƒvƒŒƒCƒ„[‚Ì–¼‘O
+     * @return ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰
      */
     public String toString()
     {

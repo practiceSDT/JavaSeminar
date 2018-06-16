@@ -1,21 +1,21 @@
 package mit.javaseminar.oo.lesson3;
 /**
- * í—ªƒCƒ“ƒ^[ƒtƒF[ƒX‚É‘Î‰‚µ‚½ƒWƒƒƒ“ƒPƒ“ƒvƒƒOƒ‰ƒ€
+ * æˆ¦ç•¥ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã«å¯¾å¿œã—ãŸã‚¸ãƒ£ãƒ³ã‚±ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
  */
 public class ObjectJanken
 {
   public static void main(String[] args)
   {
-	// R”»‚ÌƒCƒ“ƒXƒ^ƒ“ƒX¶¬
+	// å¯©åˆ¤ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç”Ÿæˆ
 	Judge judge = new Judge();
     
-	// ƒvƒŒƒCƒ„[‚Pi‘º“c‚³‚ñj‚Ì¶¬
-	Player murata = new Player("‘º“c‚³‚ñ");
+	// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ï¼ˆæ‘ç”°ã•ã‚“ï¼‰ã®ç”Ÿæˆ
+	Player murata = new Player("æ‘ç”°ã•ã‚“");
     
-	// ƒvƒŒƒCƒ„[‚QiR“c‚³‚ñj‚Ì¶¬
-	Player yamada = new Player("R“c‚³‚ñ");
+	// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ï¼ˆå±±ç”°ã•ã‚“ï¼‰ã®ç”Ÿæˆ
+	Player yamada = new Player("å±±ç”°ã•ã‚“");
     
-	// ‘º“c‚³‚ñ‚ÆR“c‚³‚ñ‚ğƒvƒŒƒCƒ„[‚Æ‚µ‚ÄƒWƒƒƒ“ƒPƒ“‚ğŠJn‚·‚é
+	// æ‘ç”°ã•ã‚“ã¨å±±ç”°ã•ã‚“ã‚’ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¨ã—ã¦ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’é–‹å§‹ã™ã‚‹
 	judge.startJanken(murata, yamada);
   }
 }

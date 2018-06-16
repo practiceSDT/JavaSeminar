@@ -7,20 +7,20 @@ import mit.javaseminar.oo.lesson7.trump.Rule;
 import mit.javaseminar.oo.lesson7.trump.Table;
 
 /**
- * µ•À‚×—pƒvƒŒƒCƒ„[ƒNƒ‰ƒXB
+ * ä¸ƒä¸¦ã¹ç”¨ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class FantanPlayer extends Player
 {
-    /** ƒpƒX‚µ‚½‰ñ” */
+    /** ãƒ‘ã‚¹ã—ãŸå›æ•° */
     private int pass_;
 
     /**
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      * 
-     * @param name    ƒvƒŒƒCƒ„[‚Ì–¼‘O
-     * @param master is–ğ
-     * @param table  ƒe[ƒuƒ‹
-     * @param rule    ƒ‹[ƒ‹
+     * @param name    ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰
+     * @param master é€²è¡Œå½¹
+     * @param table  ãƒ†ãƒ¼ãƒ–ãƒ«
+     * @param rule    ãƒ«ãƒ¼ãƒ«
      */
     public FantanPlayer(String name, Master master, Table table, Rule rule)
     {
@@ -28,48 +28,48 @@ public class FantanPlayer extends Player
     }
 
     /**
-     * ƒJ[ƒh‚ğ”z‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’é…ã‚‹ã€‚
      * 
-     * @param card ó‚¯æ‚Á‚½ƒJ[ƒh
+     * @param card å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰
      */
     public void receiveCard(Card card)
     {
         if (card.getNumber() == 7)
         {
-            // ƒJ[ƒh‚ª7‚Ìê‡‚ÍAƒe[ƒuƒ‹‚ÉƒJ[ƒh‚ğ’u‚­
-            System.out.println(name_ + "F" + card + "‚ğ’u‚«‚Ü‚µ‚½B");
+            // ã‚«ãƒ¼ãƒ‰ãŒ7ã®å ´åˆã¯ã€ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚«ãƒ¼ãƒ‰ã‚’ç½®ã
+            System.out.println(name_ + "ï¼š" + card + "ã‚’ç½®ãã¾ã—ãŸã€‚");
             table_.putCard(new Card[] { card });
         }
         else
         {
-            // ƒJ[ƒh‚ª7‚Å‚È‚¢ê‡‚ÍAó‚¯æ‚Á‚½ƒJ[ƒh‚ğèD‚Ö‰Á‚¦‚é
+            // ã‚«ãƒ¼ãƒ‰ãŒ7ã§ãªã„å ´åˆã¯ã€å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰ã‚’æ‰‹æœ­ã¸åŠ ãˆã‚‹
             super.receiveCard(card);
         }
     }
 
     /**
-     * ‡”Ô‚ğw–¼‚·‚éB
+     * é †ç•ªã‚’æŒ‡åã™ã‚‹ã€‚
      * 
-     * @param nextPlayer Ÿ‚ÌƒvƒŒƒCƒ„[
+     * @param nextPlayer æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void play(Player nextPlayer)
     {
-        // Œ»İ‚ÌèD‚ğ•\¦‚·‚é
+        // ç¾åœ¨ã®æ‰‹æœ­ã‚’è¡¨ç¤ºã™ã‚‹
         System.out.println("  " + myHand_);
 
-        // Œ»İ‚ÌèD‚©‚çƒe[ƒuƒ‹‚Éo‚¹‚é‚à‚Ì‚ğ’T‚·
+        // ç¾åœ¨ã®æ‰‹æœ­ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã›ã‚‹ã‚‚ã®ã‚’æ¢ã™
         Card[] candidate = rule_.findCandidate(myHand_, table_);
 
-        // Œó•â‚ª‚ ‚éê‡‚Íƒe[ƒuƒ‹‚Éo‚·
+        // å€™è£œãŒã‚ã‚‹å ´åˆã¯ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã™
         if (candidate != null)
         {
-            System.out.println("  " + candidate[0] + "‚ğ’u‚«‚Ü‚µ‚½B\n");
+            System.out.println("  " + candidate[0] + "ã‚’ç½®ãã¾ã—ãŸã€‚\n");
             table_.putCard(candidate);
             
-            // ƒe[ƒuƒ‹‚Ìó‘Ô‚ğ•\¦‚·‚é
+            // ãƒ†ãƒ¼ãƒ–ãƒ«ã®çŠ¶æ…‹ã‚’è¡¨ç¤ºã™ã‚‹
             System.out.println(table_);
 
-            // èD‚ª‚È‚­‚È‚Á‚½‚çAã‚ª‚è‚ğéŒ¾‚·‚é
+            // æ‰‹æœ­ãŒãªããªã£ãŸã‚‰ã€ä¸ŠãŒã‚Šã‚’å®£è¨€ã™ã‚‹
             if (myHand_.getNumberOfCards() == 0)
             {
                 master_.declareWin(this);
@@ -77,15 +77,15 @@ public class FantanPlayer extends Player
         }
         else
         {
-            // ƒe[ƒuƒ‹‚Éo‚¹‚éƒJ[ƒh‚ª‚È‚©‚Á‚½ê‡AƒpƒX‚·‚é
+            // ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã›ã‚‹ã‚«ãƒ¼ãƒ‰ãŒãªã‹ã£ãŸå ´åˆã€ãƒ‘ã‚¹ã™ã‚‹
             pass_++;
             ((FantanMaster)master_).pass(this);
 
-            // ƒpƒX‰ñ”‚ª§ŒÀ‰ñ”ˆÈã‚È‚ç‚ÎƒJ[ƒh‚ğ‘S‚Äƒe[ƒuƒ‹‚É’u‚­
+            // ãƒ‘ã‚¹å›æ•°ãŒåˆ¶é™å›æ•°ä»¥ä¸Šãªã‚‰ã°ã‚«ãƒ¼ãƒ‰ã‚’å…¨ã¦ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã
             if (pass_ > FantanMaster.PASS_LIMIT)
             {
                 int numberOfHand = myHand_.getNumberOfCards();
-                // èD‚ğ‘S‚Äƒe[ƒuƒ‹‚É’u‚­
+                // æ‰‹æœ­ã‚’å…¨ã¦ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã
                 for (int count = 0; count < numberOfHand; count++)
                 {
                     table_.putCard(new Card[] { myHand_.pickCard(0)});
@@ -95,9 +95,9 @@ public class FantanPlayer extends Player
     }
 
     /**
-     * ƒpƒX‰ñ”‚ğ‹³‚¦‚éB
+     * ãƒ‘ã‚¹å›æ•°ã‚’æ•™ãˆã‚‹ã€‚
      * 
-     * @return ƒpƒX‰ñ”
+     * @return ãƒ‘ã‚¹å›æ•°
      */
     public int getPass()
     {

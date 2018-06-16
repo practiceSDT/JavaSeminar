@@ -6,40 +6,40 @@ import mit.javaseminar.oo.lesson7.trump.Card;
 import mit.javaseminar.oo.lesson7.trump.Table;
 
 /**
- * ‚Î‚Î”²‚«‚Ìƒe[ƒuƒ‹‚ğ•\‚·ƒNƒ‰ƒXB
+ * ã°ã°æŠœãã®ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class OldMaidTable implements Table
 {
-    /** Ì‚Ä‚ç‚ê‚½ƒJ[ƒh‚ğ•Û‚µ‚Ä‚¨‚­‚½‚ß‚ÌƒŠƒXƒg */
+    /** æ¨ã¦ã‚‰ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’ä¿æŒã—ã¦ãŠããŸã‚ã®ãƒªã‚¹ãƒˆ */
     private ArrayList<Card> disposedCards_ = new ArrayList<Card>();
     
     /**
-     * ƒJ[ƒh‚ğÌ‚Ä‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’æ¨ã¦ã‚‹ã€‚
      * 
-     * @param cards Ì‚Ä‚éƒJ[ƒh
+     * @param cards æ¨ã¦ã‚‹ã‚«ãƒ¼ãƒ‰
      */
     public void putCard(Card[] cards)
     {
         for (int index = 0; index < cards.length; index++)
         {
-            // Ì‚Ä‚ç‚ê‚½ƒJ[ƒh‚ğ•\¦‚·‚é
+            // æ¨ã¦ã‚‰ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹
             System.out.print(cards[index] + " ");
         
-            // Ì‚Ä‚ç‚ê‚½ƒJ[ƒh‚ÍƒŠƒXƒg‚É’Ç‰Á‚µ‚Ä•Û‚µ‚Ä‚¨‚­B
+            // æ¨ã¦ã‚‰ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã¯ãƒªã‚¹ãƒˆã«è¿½åŠ ã—ã¦ä¿æŒã—ã¦ãŠãã€‚
             disposedCards_.add(cards[index]);
         }
         
-        System.out.println("‚ğÌ‚Ä‚Ü‚µ‚½");
+        System.out.println("ã‚’æ¨ã¦ã¾ã—ãŸ");
     }
     
     /**
-     * ƒJ[ƒh‚ğŒ©‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’è¦‹ã‚‹ã€‚
      * 
-     * @return ƒe[ƒuƒ‹‚É’u‚©‚ê‚½ƒJ[ƒh‚ğ•\‚·”z—ñ
+     * @return ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã‹ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’è¡¨ã™é…åˆ—
      */
     public Card[][] getCards()
     {
-        // ‚Î‚Î”²‚«‚Å‚ÍƒJ[ƒh‚ğŒ©‚é•K—v‚Í‚È‚¢‚½‚ßAnull‚ğ•Ô‚·
+        // ã°ã°æŠœãã§ã¯ã‚«ãƒ¼ãƒ‰ã‚’è¦‹ã‚‹å¿…è¦ã¯ãªã„ãŸã‚ã€nullã‚’è¿”ã™
         return null;
     }
 }

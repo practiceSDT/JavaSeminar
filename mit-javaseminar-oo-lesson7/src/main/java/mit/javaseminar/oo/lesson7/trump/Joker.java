@@ -1,17 +1,17 @@
 package mit.javaseminar.oo.lesson7.trump;
 
 /**
- * ƒWƒ‡[ƒJ[‚ğ•\‚·ƒNƒ‰ƒXB
- * CardƒNƒ‰ƒX‚ğŒp³‚µ‚Ä‚¢‚éB
- * setNumber()AsetSuit()ƒƒ\ƒbƒh‚ğ—˜—p‚·‚é‚±‚Æ‚ÅA‚Ç‚Ì‚æ‚¤‚ÈƒJ[ƒh‚Æ‚µ‚Ä‚à
- * ˆµ‚¤‚±‚Æ‚ª‚Å‚«‚éB
+ * ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
+ * Cardã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ã—ã¦ã„ã‚‹ã€‚
+ * setNumber()ã€setSuit()ãƒ¡ã‚½ãƒƒãƒ‰ã‚’åˆ©ç”¨ã™ã‚‹ã“ã¨ã§ã€ã©ã®ã‚ˆã†ãªã‚«ãƒ¼ãƒ‰ã¨ã—ã¦ã‚‚
+ * æ‰±ã†ã“ã¨ãŒã§ãã‚‹ã€‚
  */
 public class Joker extends Card
 {
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
-	 * ƒfƒtƒHƒ‹ƒg‚Å‚ÍAƒWƒ‡[ƒJ[‚Í‰½‚Ì’lEƒX[ƒg‚à•\‚³‚È‚¢B 
-	 * getNumber()AgetSuit()‚Í0‚ğ•Ô‚·B
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
+	 * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ã€ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã¯ä½•ã®å€¤ãƒ»ã‚¹ãƒ¼ãƒˆã‚‚è¡¨ã•ãªã„ã€‚ 
+	 * getNumber()ã€getSuit()ã¯0ã‚’è¿”ã™ã€‚
 	 */
 	public Joker()
 	{
@@ -19,9 +19,9 @@ public class Joker extends Card
 	}
 	
 	/**
-	 * ”‚ğ•ÏX‚·‚éB
+	 * æ•°ã‚’å¤‰æ›´ã™ã‚‹ã€‚
 	 * 
-	 * @param number ”
+	 * @param number æ•°
 	 */
 	public void setNumber(int number)
 	{
@@ -29,7 +29,7 @@ public class Joker extends Card
 	}
 	
 	/**
-	 * ƒX[ƒg‚ğ•ÏX‚·‚éB
+	 * ã‚¹ãƒ¼ãƒˆã‚’å¤‰æ›´ã™ã‚‹ã€‚
 	 * @param suit
 	 */
 	public void setSuit(int suit)
@@ -38,10 +38,10 @@ public class Joker extends Card
 	}
 	
 	/**
-	 * ƒJ[ƒh‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return ƒJ[ƒh‚Ì•¶š•\Œ»
+	 * @return ã‚«ãƒ¼ãƒ‰ã®æ–‡å­—è¡¨ç¾
 	 */
 	public String toString()
 	{

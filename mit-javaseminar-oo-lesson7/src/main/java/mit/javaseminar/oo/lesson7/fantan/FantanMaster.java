@@ -3,28 +3,28 @@ package mit.javaseminar.oo.lesson7.fantan;
 import mit.javaseminar.oo.lesson7.trump.Master;
 
 /**
- * µ•À‚×—pis–ğƒNƒ‰ƒXB
+ * ä¸ƒä¸¦ã¹ç”¨é€²è¡Œå½¹ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class FantanMaster extends Master
 {
-    /** ƒpƒX‚Å‚«‚é§ŒÀ‰ñ” */
+    /** ãƒ‘ã‚¹ã§ãã‚‹åˆ¶é™å›æ•° */
     public static final int PASS_LIMIT = 3;
 
     /**
-     * ƒpƒX‚ğéŒ¾‚·‚éB<br>
+     * ãƒ‘ã‚¹ã‚’å®£è¨€ã™ã‚‹ã€‚<br>
      * 
-     * @param player ƒpƒX‚·‚éƒvƒŒƒCƒ„[
+     * @param player ãƒ‘ã‚¹ã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void pass(FantanPlayer player)
     {
-        // ƒpƒX‚ğ•\¦
+        // ãƒ‘ã‚¹ã‚’è¡¨ç¤º
         System.out.println(
-            "  " + player + "‚³‚ñ‚Í " + player.getPass() + " ‰ñ–Ú‚ÌƒpƒX‚µ‚Ü‚µ‚½I");
+            "  " + player + "ã•ã‚“ã¯ " + player.getPass() + " å›ç›®ã®ãƒ‘ã‚¹ã—ã¾ã—ãŸï¼");
 
         if (player.getPass() > PASS_LIMIT)
         {
-            // ƒpƒX‰ñ”‚ª§ŒÀ’l‚ğ’´‚¦‚Ä‚¢‚éê‡‚Í•‰‚¯B
-            System.out.println("  " + player + "‚³‚ñ‚Í•‰‚¯‚Å‚·I");
+            // ãƒ‘ã‚¹å›æ•°ãŒåˆ¶é™å€¤ã‚’è¶…ãˆã¦ã„ã‚‹å ´åˆã¯è² ã‘ã€‚
+            System.out.println("  " + player + "ã•ã‚“ã¯è² ã‘ã§ã™ï¼");
             deregisterPlayer(player);
         }
     }

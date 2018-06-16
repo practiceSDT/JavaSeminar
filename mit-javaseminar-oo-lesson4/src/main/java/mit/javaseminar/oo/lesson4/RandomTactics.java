@@ -1,44 +1,44 @@
 package mit.javaseminar.oo.lesson4;
 
 /**
- * ƒ‰ƒ“ƒ_ƒ€‚Éè‚ğŒˆ‚ß‚éí—ªƒNƒ‰ƒXB
+ * ãƒ©ãƒ³ãƒ€ãƒ ã«æ‰‹ã‚’æ±ºã‚ã‚‹æˆ¦ç•¥ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class RandomTactics implements Tactics
 {
 	/**
-	 * í—ª‚ğ“Ç‚İAƒWƒƒƒ“ƒPƒ“‚Ìè‚ğ“¾‚éB
-	 * ƒO[Eƒ`ƒ‡ƒLEƒp[‚Ì‚¢‚¸‚ê‚©‚ğPlayerƒNƒ‰ƒX‚É’è‹`‚³‚ê‚½
-	 * ˆÈ‰º‚Ì’è”‚Å•Ô‚·B
-	 * Player.STONE    EEE ƒO[
-	 * Player.SCISSORS EEE ƒ`ƒ‡ƒL
-	 * Player.PAPER    EEE ƒp[
+	 * æˆ¦ç•¥ã‚’èª­ã¿ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’å¾—ã‚‹ã€‚
+	 * ã‚°ãƒ¼ãƒ»ãƒãƒ§ã‚­ãƒ»ãƒ‘ãƒ¼ã®ã„ãšã‚Œã‹ã‚’Playerã‚¯ãƒ©ã‚¹ã«å®šç¾©ã•ã‚ŒãŸ
+	 * ä»¥ä¸‹ã®å®šæ•°ã§è¿”ã™ã€‚
+	 * Player.STONE    ãƒ»ãƒ»ãƒ» ã‚°ãƒ¼
+	 * Player.SCISSORS ãƒ»ãƒ»ãƒ» ãƒãƒ§ã‚­
+	 * Player.PAPER    ãƒ»ãƒ»ãƒ» ãƒ‘ãƒ¼
 	 * 
-	 * @return ƒWƒƒƒ“ƒPƒ“‚Ìè
+	 * @return ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 	 */
 	public int readTactics()
 	{
-		// ƒvƒŒƒCƒ„[‚Ìè
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ‰‹
 		int hand = 0;
         
-		// 0ˆÈã3–¢–‚Ì¬”‚Æ‚µ‚Ä—”‚ğ“¾‚é
+		// 0ä»¥ä¸Š3æœªæº€ã®å°æ•°ã¨ã—ã¦ä¹±æ•°ã‚’å¾—ã‚‹
 		double randomNum = Math.random() * 3;
 		if (randomNum < 1)
 		{
-			// randomNum ‚ª 0ˆÈã1–¢–‚Ìê‡AƒO[
+			// randomNum ãŒ 0ä»¥ä¸Š1æœªæº€ã®å ´åˆã€ã‚°ãƒ¼
 			hand = Player.STONE;
 		}
 		else if (randomNum < 2)
 		{
-			// randomNum ‚ª 1ˆÈã2–¢–‚Ìê‡Aƒ`ƒ‡ƒL
+			// randomNum ãŒ 1ä»¥ä¸Š2æœªæº€ã®å ´åˆã€ãƒãƒ§ã‚­
 			hand = Player.SCISSORS;
 		}
 		else if (randomNum < 3)
 		{
-			// randomNum ‚ª 2ˆÈã3–¢–‚Ìê‡Aƒp[
+			// randomNum ãŒ 2ä»¥ä¸Š3æœªæº€ã®å ´åˆã€ãƒ‘ãƒ¼
 			hand = Player.PAPER;
 		}
         
-		// Œˆ’è‚µ‚½è‚ğ–ß‚è’l‚Æ‚µ‚Ä•Ô‚·
+		// æ±ºå®šã—ãŸæ‰‹ã‚’æˆ»ã‚Šå€¤ã¨ã—ã¦è¿”ã™
 		return hand;
 	}
 }

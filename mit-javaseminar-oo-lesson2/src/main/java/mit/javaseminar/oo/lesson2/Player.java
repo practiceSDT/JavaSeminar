@@ -1,30 +1,30 @@
 package mit.javaseminar.oo.lesson2;
 /**
- * ƒWƒƒƒ“ƒPƒ“‚ÌƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒXB
+ * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Player
 {
-	// ƒWƒƒƒ“ƒPƒ“‚Ìè‚ğ•\‚·’è”
-	public static final int STONE = 0; // ƒO[
-	public static final int SCISSORS = 1; // ƒ`ƒ‡ƒL
-	public static final int PAPER = 2; // ƒp[
+	// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’è¡¨ã™å®šæ•°
+	public static final int STONE = 0; // ã‚°ãƒ¼
+	public static final int SCISSORS = 1; // ãƒãƒ§ã‚­
+	public static final int PAPER = 2; // ãƒ‘ãƒ¼
 
 	//------------------------
-	// ƒvƒŒƒCƒ„[ƒNƒ‰ƒX‚Ì‘®«
+	// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã®å±æ€§
 	//------------------------
-	/** ƒvƒŒƒCƒ„[‚Ì–¼‘O */
+	/** ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰ */
 	private String name_;
 
-	/** ƒvƒŒƒCƒ„[‚ÌŸ‚Á‚½‰ñ” */
+	/** ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å‹ã£ãŸå›æ•° */
 	private int winCount_ = 0;
 
 	//------------------------
-	// ƒvƒŒƒCƒ„[ƒNƒ‰ƒX‚Ì‘€ì
+	// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã®æ“ä½œ
 	//------------------------
 	/**
-	 * ƒvƒŒƒCƒ„[ƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+	 * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
 	 * 
-	 * @param name –¼‘O
+	 * @param name åå‰
 	 */
 	public Player(String name)
 	{
@@ -32,55 +32,55 @@ public class Player
 	}
 
 	/**
-	 * ƒWƒƒƒ“ƒPƒ“‚Ìè‚ğo‚·B
+	 * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’å‡ºã™ã€‚
 	 *
-	 * @return ƒWƒƒƒ“ƒPƒ“‚Ìè
+	 * @return ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 	 */
 	public int showHand()
 	{
-		// ƒvƒŒƒCƒ„[‚Ìè
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ‰‹
 		int hand = 0;
 
-		// 0.0ˆÈã3.0–¢–‚Ì¬”‚Æ‚µ‚Ä—”‚ğ“¾‚é
+		// 0.0ä»¥ä¸Š3.0æœªæº€ã®å°æ•°ã¨ã—ã¦ä¹±æ•°ã‚’å¾—ã‚‹
 		double randomNum = Math.random() * 3;
 		if (randomNum < 1)
 		{
-			// randomNum ‚ª 0.0ˆÈã1.0–¢–‚Ìê‡AƒO[
+			// randomNum ãŒ 0.0ä»¥ä¸Š1.0æœªæº€ã®å ´åˆã€ã‚°ãƒ¼
 			hand = STONE;
 		}
 		else if (randomNum < 2)
 		{
-			// randomNum ‚ª 1.0ˆÈã2.0–¢–‚Ìê‡Aƒ`ƒ‡ƒL
+			// randomNum ãŒ 1.0ä»¥ä¸Š2.0æœªæº€ã®å ´åˆã€ãƒãƒ§ã‚­
 			hand = SCISSORS;
 		}
 		else if (randomNum < 3)
 		{
-			// randomNum ‚ª 2.0ˆÈã3.0–¢–‚Ìê‡Aƒp[
+			// randomNum ãŒ 2.0ä»¥ä¸Š3.0æœªæº€ã®å ´åˆã€ãƒ‘ãƒ¼
 			hand = PAPER;
 		}
 
-		// Œˆ’è‚µ‚½è‚ğ–ß‚è’l‚Æ‚µ‚Ä•Ô‚·
+		// æ±ºå®šã—ãŸæ‰‹ã‚’æˆ»ã‚Šå€¤ã¨ã—ã¦è¿”ã™
 		return hand;
 	}
 
 	/**
-	 * R”»‚©‚çŸ”s‚ğ•·‚­B
+	 * å¯©åˆ¤ã‹ã‚‰å‹æ•—ã‚’èãã€‚
 	 *
-	 * @param result true:Ÿ‚¿,false:•‰‚¯
+	 * @param result true:å‹ã¡,false:è² ã‘
 	 */
 	public void notifyResult(boolean result)
 	{
 		if (true == result)
 		{
-			// Ÿ‚Á‚½ê‡‚ÍŸ‚¿”‚ğ‰ÁZ‚·‚é
+			// å‹ã£ãŸå ´åˆã¯å‹ã¡æ•°ã‚’åŠ ç®—ã™ã‚‹
 			winCount_ += 1;
 		}
 	}
 
 	/**
-	 * ©•ª‚ÌŸ‚Á‚½‰ñ”‚ğ“š‚¦‚éB
+	 * è‡ªåˆ†ã®å‹ã£ãŸå›æ•°ã‚’ç­”ãˆã‚‹ã€‚
 	 *
-	 * @return Ÿ‚Á‚½‰ñ”
+	 * @return å‹ã£ãŸå›æ•°
 	 */
 	public int getWinCount()
 	{
@@ -88,9 +88,9 @@ public class Player
 	}
 
 	/**
-	 * ©•ª‚Ì–¼‘O‚ğ“š‚¦‚éB
+	 * è‡ªåˆ†ã®åå‰ã‚’ç­”ãˆã‚‹ã€‚
 	 * 
-	 * @return –¼‘O
+	 * @return åå‰
 	 */
 	public String getName()
 	{

@@ -1,37 +1,37 @@
 package mit.javaseminar.oo.lesson6;
 
 /**
- * ƒe[ƒuƒ‹‚ğ•\‚·ƒNƒ‰ƒXB
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Table
 {
-	/** ƒe[ƒuƒ‹‚ğ•À‚×‚éê‚ğ•\‚·‚QŸŒ³”z—ñ */
+	/** ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä¸¦ã¹ã‚‹å ´ã‚’è¡¨ã™ï¼’æ¬¡å…ƒé…åˆ— */
 	private Card[][] table_ = new Card[4][13];
 	
 	/**
-	 * ƒe[ƒuƒ‹‚ÉƒJ[ƒh‚ğ’u‚­B
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚«ãƒ¼ãƒ‰ã‚’ç½®ãã€‚
 	 * 
-	 * @param card ƒJ[ƒh
+	 * @param card ã‚«ãƒ¼ãƒ‰
 	 */
 	public void putCard(Card card)
 	{
 		int number = card.getNumber();
 		int suit = card.getSuit();
 		
-		// ê‚ÉƒJ[ƒh‚ğ’u‚­
+		// å ´ã«ã‚«ãƒ¼ãƒ‰ã‚’ç½®ã
 		table_[suit - 1][number - 1] = card;
 		
-		// ’u‚©‚ê‚½ƒJ[ƒh‚ğ•\¦‚·‚é
-		System.out.println("  " + card + "‚ğ’u‚«‚Ü‚µ‚½B\n");
+		// ç½®ã‹ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹
+		System.out.println("  " + card + "ã‚’ç½®ãã¾ã—ãŸã€‚\n");
 		
-		// Œ»İ‚Ìê‚Ìó‘Ô‚ğ•\¦‚·‚é
+		// ç¾åœ¨ã®å ´ã®çŠ¶æ…‹ã‚’è¡¨ç¤ºã™ã‚‹
 		System.out.println(toString());
 	}
 	
 	/**
-	 * ƒe[ƒuƒ‹‚ÉƒJ[ƒh‚ª’u‚©‚ê‚Ä‚¢‚é‚©’²‚×‚éB
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚«ãƒ¼ãƒ‰ãŒç½®ã‹ã‚Œã¦ã„ã‚‹ã‹èª¿ã¹ã‚‹ã€‚
 	 * 
-	 * @return ƒJ[ƒh‚ª’u‚©‚ê‚Ä‚¢‚éê‡‚Ítrue
+	 * @return ã‚«ãƒ¼ãƒ‰ãŒç½®ã‹ã‚Œã¦ã„ã‚‹å ´åˆã¯true
 	 */
 	public boolean isThereCard(int suit, int number)
 	{
@@ -47,10 +47,10 @@ public class Table
 	
 	
 	/**
-	 * ƒe[ƒuƒ‹‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return ê‚Ì•¶š—ñ•\Œ»
+	 * @return å ´ã®æ–‡å­—åˆ—è¡¨ç¾
 	 */
 	public String toString()
 	{

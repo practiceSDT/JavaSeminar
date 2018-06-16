@@ -1,35 +1,35 @@
 package mit.javaseminar.oo.lesson5;
 /**
- * ƒgƒ‰ƒ“ƒv‚ÌƒJ[ƒh‚ğ•\‚·ƒNƒ‰ƒXB
+ * ãƒˆãƒ©ãƒ³ãƒ—ã®ã‚«ãƒ¼ãƒ‰ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Card
 {
-	/** ƒWƒ‡[ƒJ[‚ğ•\‚·’è” */
+	/** ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã‚’è¡¨ã™å®šæ•° */
 	public static final int JOKER = 0;
 	
-	/** ƒXƒy[ƒh‚ğ•\‚·’è” */
+	/** ã‚¹ãƒšãƒ¼ãƒ‰ã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_SPADE   = 1;
 	
-	/** ƒ_ƒCƒ„‚ğ•\‚·’è” */
+	/** ãƒ€ã‚¤ãƒ¤ã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_DIAMOND = 2;
 	
-	/** ƒNƒ‰ƒu‚ğ•\‚·’è” */
+	/** ã‚¯ãƒ©ãƒ–ã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_CLUB    = 3;
 	
-	/** ƒn[ƒg‚ğ•\‚·’è” */
+	/** ãƒãƒ¼ãƒˆã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_HEART   = 4;
 	
-	/** ƒJ[ƒh‚Ì¦‚·ƒX[ƒg */
+	/** ã‚«ãƒ¼ãƒ‰ã®ç¤ºã™ã‚¹ãƒ¼ãƒˆ */
 	private int suit_;
 	
-	/** ƒJ[ƒh‚Ì¦‚·” */
+	/** ã‚«ãƒ¼ãƒ‰ã®ç¤ºã™æ•° */
 	private int number_;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
 	 * 
-	 * @param suit ƒX[ƒg
-	 * @param number ” (0‚Ìê‡‚ÍƒWƒ‡[ƒJ[‚Æ‚µ‚Äˆµ‚¤)
+	 * @param suit ã‚¹ãƒ¼ãƒˆ
+	 * @param number æ•° (0ã®å ´åˆã¯ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã¨ã—ã¦æ‰±ã†)
 	 */
 	public Card(int suit, int number)
 	{
@@ -38,9 +38,9 @@ public class Card
 	}
 	
 	/**
-	 * ”š‚ğŒ©‚éB
+	 * æ•°å­—ã‚’è¦‹ã‚‹ã€‚
 	 * 
-	 * @return ” 
+	 * @return æ•° 
 	 */
 	public int getNumber()
 	{
@@ -48,10 +48,10 @@ public class Card
 	}
 	
 	/**
-	 * ƒJ[ƒh‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return ƒJ[ƒh‚Ì•¶š•\Œ»
+	 * @return ã‚«ãƒ¼ãƒ‰ã®æ–‡å­—è¡¨ç¾
 	 */
 	public String toString()
 	{
@@ -59,7 +59,7 @@ public class Card
 		
 		if (number_ > 0)
 		{
-			// ƒX[ƒg‚Ì•\¦
+			// ã‚¹ãƒ¼ãƒˆã®è¡¨ç¤º
 			switch (suit_)
 			{
 				case SUIT_SPADE :
@@ -82,7 +82,7 @@ public class Card
 					break;
 			}
 			
-			// ”‚Ì•\¦
+			// æ•°ã®è¡¨ç¤º
 			switch (number_)
 			{
 				case 1 :
@@ -112,7 +112,7 @@ public class Card
 		}
 		else
 		{
-			// ƒWƒ‡[ƒJ[‚ğ•\‚·
+			// ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã‚’è¡¨ã™
 			string.append("JK");
 		}
 		

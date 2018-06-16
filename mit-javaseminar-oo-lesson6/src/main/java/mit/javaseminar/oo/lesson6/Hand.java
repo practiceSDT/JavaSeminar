@@ -3,36 +3,36 @@ package mit.javaseminar.oo.lesson6;
 import java.util.ArrayList;
 
 /**
- * èD‚ğ•\‚·ƒNƒ‰ƒXB
+ * æ‰‹æœ­ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Hand
 {
-	/** èD‚É‚ ‚éƒJ[ƒh‚ğ•Û‚·‚é‚½‚ß‚ÌƒŠƒXƒg */
+	/** æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’ä¿æŒã™ã‚‹ãŸã‚ã®ãƒªã‚¹ãƒˆ */
 	private ArrayList<Card> deal_ = new ArrayList<Card>();
 
 	/**
-	 * ƒJ[ƒh‚ğ‰Á‚¦‚éB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’åŠ ãˆã‚‹ã€‚
 	 * 
-	 * @param card ‰Á‚¦‚éƒJ[ƒh
+	 * @param card åŠ ãˆã‚‹ã‚«ãƒ¼ãƒ‰
 	 */
 	public void addCard(Card card)
 	{
-		// ƒJ[ƒh‚ğƒŠƒXƒg‚ÌÅŒã‚É’Ç‰Á‚·‚é
+		// ã‚«ãƒ¼ãƒ‰ã‚’ãƒªã‚¹ãƒˆã®æœ€å¾Œã«è¿½åŠ ã™ã‚‹
 		deal_.add(card);
 	}
 
 	/**
-	 * èD‚É‚ ‚éƒJ[ƒh‚ğŒ©‚éB
-	 * position‚Í 0 ‚©‚ç getNumberOfCards() ‚Ì”ÍˆÍ‚Åw’è‚·‚é‚·‚é‚±‚ÆB
+	 * æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’è¦‹ã‚‹ã€‚
+	 * positionã¯ 0 ã‹ã‚‰ getNumberOfCards() ã®ç¯„å›²ã§æŒ‡å®šã™ã‚‹ã™ã‚‹ã“ã¨ã€‚
 	 * 
-	 * @param position ƒJ[ƒh‚ÌˆÊ’uB
-	 * @return position ‚Åw’è‚³‚ê‚½ˆÊ’u‚ÌƒJ[ƒhB”ÍˆÍŠO‚Ìê‡‚Ínull‚ğ•Ô‚·B
+	 * @param position ã‚«ãƒ¼ãƒ‰ã®ä½ç½®ã€‚
+	 * @return position ã§æŒ‡å®šã•ã‚ŒãŸä½ç½®ã®ã‚«ãƒ¼ãƒ‰ã€‚ç¯„å›²å¤–ã®å ´åˆã¯nullã‚’è¿”ã™ã€‚
 	 */
 	public Card lookCard(int position)
 	{
 		Card lookingCard = null;
 
-		// ˆø”‚Åw’è‚³‚ê‚½ˆÊ’u‚ª‘Ã“–‚Å‚ ‚é‚©ƒ`ƒFƒbƒN‚·‚é 
+		// å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸä½ç½®ãŒå¦¥å½“ã§ã‚ã‚‹ã‹ãƒã‚§ãƒƒã‚¯ã™ã‚‹ 
 		if ((0 <= position) && (position < deal_.size()))
 		{
 			lookingCard = (Card)deal_.get(position);
@@ -42,17 +42,17 @@ public class Hand
 	}
 
 	/**
-	 * èD‚©‚çƒJ[ƒh‚ğˆø‚­B
-	 * ˆø‚¢‚½ƒJ[ƒh‚ÍèD‚©‚çíœ‚³‚ê‚éB
+	 * æ‰‹æœ­ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã€‚
+	 * å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã¯æ‰‹æœ­ã‹ã‚‰å‰Šé™¤ã•ã‚Œã‚‹ã€‚
 	 * 
-	 * @param position ƒJ[ƒh‚ÌˆÊ’uB
-	 * @return position ‚Åw’è‚³‚ê‚½ˆÊ’u‚ÌƒJ[ƒhB”ÍˆÍŠO‚Ìê‡‚Ínull‚ğ•Ô‚·B
+	 * @param position ã‚«ãƒ¼ãƒ‰ã®ä½ç½®ã€‚
+	 * @return position ã§æŒ‡å®šã•ã‚ŒãŸä½ç½®ã®ã‚«ãƒ¼ãƒ‰ã€‚ç¯„å›²å¤–ã®å ´åˆã¯nullã‚’è¿”ã™ã€‚
 	 */
 	public Card pickCard(int position)
 	{
 		Card pickedCard = null;
 
-		// ˆø”‚Åw’è‚³‚ê‚½ˆÊ’u‚ª‘Ã“–‚Å‚ ‚é‚©ƒ`ƒFƒbƒN‚·‚é 
+		// å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸä½ç½®ãŒå¦¥å½“ã§ã‚ã‚‹ã‹ãƒã‚§ãƒƒã‚¯ã™ã‚‹ 
 		if ((0 <= position) && (position < deal_.size()))
 		{
 			pickedCard = (Card)deal_.remove(position);
@@ -62,32 +62,32 @@ public class Hand
 	}
 
 	/**
-	 * ƒVƒƒƒbƒtƒ‹‚·‚éB
+	 * ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã™ã‚‹ã€‚
 	 */
 	public void shuffle()
 	{
-		// èD‚Ì–‡”‚ğæ“¾
+		// æ‰‹æœ­ã®æšæ•°ã‚’å–å¾—
 		int number = deal_.size();
 
-		// ƒJ[ƒh‚ğ”²‚«o‚·ˆÊ’u
+		// ã‚«ãƒ¼ãƒ‰ã‚’æŠœãå‡ºã™ä½ç½®
 		int pos;
 
-		// ƒJ[ƒh‚ğƒ‰ƒ“ƒ_ƒ€‚É”²‚«æ‚Á‚ÄÅŒã‚É‰Á‚¦‚é“®ì‚ğŒJ‚è•Ô‚·
+		// ã‚«ãƒ¼ãƒ‰ã‚’ãƒ©ãƒ³ãƒ€ãƒ ã«æŠœãå–ã£ã¦æœ€å¾Œã«åŠ ãˆã‚‹å‹•ä½œã‚’ç¹°ã‚Šè¿”ã™
 		for (int count = 0; count < number * 2; count++)
 		{
-			// ƒ‰ƒ“ƒ_ƒ€‚ÈˆÊ’u‚©‚çƒJ[ƒh‚ğˆê–‡”²‚«æ‚é
+			// ãƒ©ãƒ³ãƒ€ãƒ ãªä½ç½®ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’ä¸€æšæŠœãå–ã‚‹
 			pos = (int) (Math.random() * number);
 			Card pickedCard = (Card)deal_.remove(pos);
 
-			// ”²‚«æ‚Á‚½ƒJ[ƒh‚ğÅŒã‚É‰Á‚¦‚é
+			// æŠœãå–ã£ãŸã‚«ãƒ¼ãƒ‰ã‚’æœ€å¾Œã«åŠ ãˆã‚‹
 			deal_.add(pickedCard);
 		}
 	}
 
 	/**
-	 * –‡”‚ğ”‚¦‚éB
+	 * æšæ•°ã‚’æ•°ãˆã‚‹ã€‚
 	 * 
-	 * @return èD‚É‚ ‚éƒJ[ƒh‚Ì–‡”
+	 * @return æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã®æšæ•°
 	 */
 	public int getNumberOfCards()
 	{
@@ -95,10 +95,10 @@ public class Hand
 	}
 
 	/**
-	 * èD‚É‚ ‚éƒJ[ƒh‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return èD‚É‚ ‚éƒJ[ƒh‚Ì•¶š—ñ•\Œ»
+	 * @return æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã®æ–‡å­—åˆ—è¡¨ç¾
 	 */
 	public String toString()
 	{

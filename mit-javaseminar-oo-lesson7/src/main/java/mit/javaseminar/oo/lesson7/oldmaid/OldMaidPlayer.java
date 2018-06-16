@@ -7,20 +7,20 @@ import mit.javaseminar.oo.lesson7.trump.Rule;
 import mit.javaseminar.oo.lesson7.trump.Table;
 
 /**
- * ‚Î‚Î”²‚«‚ÌƒvƒŒƒCƒ„[ƒNƒ‰ƒXB
+ * ã°ã°æŠœãã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class OldMaidPlayer extends Player
 {
-    /** — ‚©‚çŒ©‚½èD‚ğ•\‚·ƒNƒ‰ƒX */
+    /** è£ã‹ã‚‰è¦‹ãŸæ‰‹æœ­ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ */
     private BackHand backHand_ = new BackHand(myHand_);
 
     /**
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      * 
-     * @param name   –¼‘O
-     * @param master is–ğ
-     * @param table  ƒe[ƒuƒ‹
-     * @param rule   ƒ‹[ƒ‹
+     * @param name   åå‰
+     * @param master é€²è¡Œå½¹
+     * @param table  ãƒ†ãƒ¼ãƒ–ãƒ«
+     * @param rule   ãƒ«ãƒ¼ãƒ«
      */
     public OldMaidPlayer(String name, Master master, Table table, Rule rule)
     {
@@ -28,87 +28,87 @@ public class OldMaidPlayer extends Player
     }
 
     /**
-     * ƒJ[ƒh‚ğ”z‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’é…ã‚‹ã€‚
      * 
-     * @param card ó‚¯æ‚Á‚½ƒJ[ƒh
+     * @param card å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰
      */
     public void receiveCard(Card card)
     {
-        // ó‚¯æ‚Á‚½ƒJ[ƒh‚ğèD‚Ö‰Á‚¦‚é
+        // å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰ã‚’æ‰‹æœ­ã¸åŠ ãˆã‚‹
         super.receiveCard(card);
 
-        // ƒ‹[ƒ‹‚ğg—p‚µ‚Äƒe[ƒuƒ‹‚Éo‚¹‚éƒJ[ƒh‚ª‚ ‚é‚©’T‚·
+        // ãƒ«ãƒ¼ãƒ«ã‚’ä½¿ç”¨ã—ã¦ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã›ã‚‹ã‚«ãƒ¼ãƒ‰ãŒã‚ã‚‹ã‹æ¢ã™
         Card[] candidate = rule_.findCandidate(myHand_, table_);
 
-        // ƒe[ƒuƒ‹‚Éo‚¹‚éƒJ[ƒh‚ª‚ ‚éê‡‚Íê‚Éo‚·
+        // ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã›ã‚‹ã‚«ãƒ¼ãƒ‰ãŒã‚ã‚‹å ´åˆã¯å ´ã«å‡ºã™
         if (candidate != null)
         {
-            System.out.print(this +"F");
+            System.out.print(this +"ï¼š");
             table_.putCard(candidate);
         }
     }
 
     /**
-     * ‡”Ô‚ğw–¼‚·‚éB
+     * é †ç•ªã‚’æŒ‡åã™ã‚‹ã€‚
      * 
-     * @param nextPlayer Ÿ‚ÌƒvƒŒƒCƒ„[
+     * @param nextPlayer æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void play(Player nextPlayer)
     {
-        // Ÿ‚ÌƒvƒŒƒCƒ„[‚ÉèD‚ğ’ñ¦‚µ‚Ä‚à‚ç‚¤
+        // æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«æ‰‹æœ­ã‚’æç¤ºã—ã¦ã‚‚ã‚‰ã†
         BackHand nextPlayersHand = ((OldMaidPlayer)nextPlayer).showHand();
 
-        // ‘Šè‚ÌèD‚©‚çƒJ[ƒh‚ğˆê–‡ˆø‚­
+        // ç›¸æ‰‹ã®æ‰‹æœ­ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’ä¸€æšå¼•ã
         int numberOfHands = nextPlayersHand.getNumberOfCards();
         Card pickedCard =
             nextPlayersHand.pickCard((int) (Math.random() * numberOfHands));
 
-        // ˆø‚¢‚½Œ‹‰Ê‚ğ•\¦
+        // å¼•ã„ãŸçµæœã‚’è¡¨ç¤º
         System.out.println(
-            this +"F" + nextPlayer + "‚³‚ñ‚©‚ç " + pickedCard + "‚ğˆø‚«‚Ü‚µ‚½");
+            this +"ï¼š" + nextPlayer + "ã•ã‚“ã‹ã‚‰ " + pickedCard + "ã‚’å¼•ãã¾ã—ãŸ");
 
-        // ˆø‚¢‚½ƒJ[ƒh‚ğ©•ª‚ÌèD‚É‰Á‚¦‚é
+        // å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã‚’è‡ªåˆ†ã®æ‰‹æœ­ã«åŠ ãˆã‚‹
         myHand_.addCard(pickedCard);
 
-        // ƒe[ƒuƒ‹‚Éo‚¹‚éƒJ[ƒh‚Ì‘g‚İ‡‚í‚¹‚ª‚ ‚é‚©’T‚·
+        // ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã›ã‚‹ã‚«ãƒ¼ãƒ‰ã®çµ„ã¿åˆã‚ã›ãŒã‚ã‚‹ã‹æ¢ã™
         Card[] sameCards = rule_.findCandidate(myHand_, table_);
 
-        // “¯‚¶ƒJ[ƒh‚Ì‘g‚İ‡‚í‚¹‚ª‘¶İ‚µ‚½ê‡
+        // åŒã˜ã‚«ãƒ¼ãƒ‰ã®çµ„ã¿åˆã‚ã›ãŒå­˜åœ¨ã—ãŸå ´åˆ
         if (sameCards != null)
         {
-            System.out.print(this +"F");
+            System.out.print(this +"ï¼š");
             table_.putCard(sameCards);
 
-            // èD‚ªƒ[ƒ‚É‚È‚Á‚½‚©‚Ç‚¤‚©’²‚×‚é
+            // æ‰‹æœ­ãŒã‚¼ãƒ­ã«ãªã£ãŸã‹ã©ã†ã‹èª¿ã¹ã‚‹
             if (myHand_.getNumberOfCards() == 0)
             {
-                // is–ğ‚Éã‚ª‚è‚ğéŒ¾‚·‚é
+                // é€²è¡Œå½¹ã«ä¸ŠãŒã‚Šã‚’å®£è¨€ã™ã‚‹
                 master_.declareWin(this);
             }
         }
 
-        // Œ»İ‚ÌèD‚ğ•\¦
-        System.out.println(this +"Fc‚è‚ÌèD‚Í " + myHand_ + "‚Å‚·");
+        // ç¾åœ¨ã®æ‰‹æœ­ã‚’è¡¨ç¤º
+        System.out.println(this +"ï¼šæ®‹ã‚Šã®æ‰‹æœ­ã¯ " + myHand_ + "ã§ã™");
     }
 
     /**
-     * èD‚ğo‚·B
-     * ‘Šè‚ÉƒJ[ƒh‚ğˆø‚¢‚Ä‚à‚ç‚¤‚½‚ß‚ÉAèD‚ğŒ©‚¹‚éB
+     * æ‰‹æœ­ã‚’å‡ºã™ã€‚
+     * ç›¸æ‰‹ã«ã‚«ãƒ¼ãƒ‰ã‚’å¼•ã„ã¦ã‚‚ã‚‰ã†ãŸã‚ã«ã€æ‰‹æœ­ã‚’è¦‹ã›ã‚‹ã€‚
      * 
-     * @return ©•ª‚ÌèD
+     * @return è‡ªåˆ†ã®æ‰‹æœ­
      */
     public BackHand showHand()
     {
-        // ‚à‚µ‚±‚Ì“_‚ÅèD‚ªc‚è1–‡‚È‚ç‚Îã‚ª‚è‚Æ‚È‚é‚Ì‚ÅéŒ¾‚·‚é
+        // ã‚‚ã—ã“ã®æ™‚ç‚¹ã§æ‰‹æœ­ãŒæ®‹ã‚Š1æšãªã‚‰ã°ä¸ŠãŒã‚Šã¨ãªã‚‹ã®ã§å®£è¨€ã™ã‚‹
         if (myHand_.getNumberOfCards() == 1)
         {
             master_.declareWin(this);
         }
 
-        // Œ©‚¹‚é‘O‚ÉƒVƒƒƒbƒtƒ‹‚·‚é
+        // è¦‹ã›ã‚‹å‰ã«ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã™ã‚‹
         myHand_.shuffle();
 
-        // ‘Šè‚ÉèD‚ğ— ‚©‚çŒ©‚¹‚é‚½‚ßABackHand‚ğ•Ô‚·
+        // ç›¸æ‰‹ã«æ‰‹æœ­ã‚’è£ã‹ã‚‰è¦‹ã›ã‚‹ãŸã‚ã€BackHandã‚’è¿”ã™
         return backHand_;
     }
 }

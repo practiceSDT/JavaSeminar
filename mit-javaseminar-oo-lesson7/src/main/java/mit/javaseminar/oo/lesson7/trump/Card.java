@@ -1,42 +1,42 @@
 package mit.javaseminar.oo.lesson7.trump;
 
 /**
- * ƒgƒ‰ƒ“ƒv‚ÌƒJ[ƒh‚ğ•\‚·ƒNƒ‰ƒXB
+ * ãƒˆãƒ©ãƒ³ãƒ—ã®ã‚«ãƒ¼ãƒ‰ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Card
 {
-	/** ƒXƒy[ƒh‚ğ•\‚·’è” */
+	/** ã‚¹ãƒšãƒ¼ãƒ‰ã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_SPADE = 1;
 
-	/** ƒ_ƒCƒ„‚ğ•\‚·’è” */
+	/** ãƒ€ã‚¤ãƒ¤ã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_DIAMOND = 2;
 
-	/** ƒNƒ‰ƒu‚ğ•\‚·’è” */
+	/** ã‚¯ãƒ©ãƒ–ã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_CLUB = 3;
 
-	/** ƒn[ƒg‚ğ•\‚·’è” */
+	/** ãƒãƒ¼ãƒˆã‚’è¡¨ã™å®šæ•° */
 	public static final int SUIT_HEART = 4;
 	
-	/** ƒX[ƒg‚Ì” */
+	/** ã‚¹ãƒ¼ãƒˆã®æ•° */
 	public static final int SUIT_NUM = 4;
 	
-	/** ’l‚Ì” */
+	/** å€¤ã®æ•° */
 	public static final int CARD_NUM = 13;
 
-	/** ƒJ[ƒh‚Ì¦‚·ƒX[ƒg */
+	/** ã‚«ãƒ¼ãƒ‰ã®ç¤ºã™ã‚¹ãƒ¼ãƒˆ */
 	protected int suit_;
 
-	/** ƒJ[ƒh‚Ì¦‚·” */
+	/** ã‚«ãƒ¼ãƒ‰ã®ç¤ºã™æ•° */
 	protected int number_;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
-	 * ƒX[ƒg‚Æ”‚ğw’è‚µ‚ÄV‚µ‚¢ƒJ[ƒh‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ğ¶¬‚·‚éB<br>
-	 * ƒX[ƒg‚ÍSUIT_SPADEASUIT_DIAMONDASUIT_CLUBASUIT_HEART‚Ì
-	 * ‚¢‚¸‚ê‚©‚ğw’è‚·‚éB
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
+	 * ã‚¹ãƒ¼ãƒˆã¨æ•°ã‚’æŒ‡å®šã—ã¦æ–°ã—ã„ã‚«ãƒ¼ãƒ‰ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ç”Ÿæˆã™ã‚‹ã€‚<br>
+	 * ã‚¹ãƒ¼ãƒˆã¯SUIT_SPADEã€SUIT_DIAMONDã€SUIT_CLUBã€SUIT_HEARTã®
+	 * ã„ãšã‚Œã‹ã‚’æŒ‡å®šã™ã‚‹ã€‚
 	 * 
-	 * @param suit ƒX[ƒg
-	 * @param number ”
+	 * @param suit ã‚¹ãƒ¼ãƒˆ
+	 * @param number æ•°
 	 */
 	public Card(int suit, int number)
 	{
@@ -45,9 +45,9 @@ public class Card
 	}
 
 	/**
-	 * ”‚ğŒ©‚éB
+	 * æ•°ã‚’è¦‹ã‚‹ã€‚
 	 * 
-	 * @return ” 
+	 * @return æ•° 
 	 */
 	public int getNumber()
 	{
@@ -55,9 +55,9 @@ public class Card
 	}
 
 	/**
-	 * ƒX[ƒg‚ğŒ©‚éB
+	 * ã‚¹ãƒ¼ãƒˆã‚’è¦‹ã‚‹ã€‚
 	 * 
-	 * @return ƒX[ƒg 
+	 * @return ã‚¹ãƒ¼ãƒˆ 
 	 */
 	public int getSuit()
 	{
@@ -65,16 +65,16 @@ public class Card
 	}
 	
 	/**
-	 * ƒJ[ƒh‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB<br>
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚<br>
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return ƒJ[ƒh‚Ì•¶š•\Œ»
+	 * @return ã‚«ãƒ¼ãƒ‰ã®æ–‡å­—è¡¨ç¾
 	 */
 	public String toString()
 	{
 		StringBuffer string = new StringBuffer();
 
-		// ƒX[ƒg‚Ì•\¦
+		// ã‚¹ãƒ¼ãƒˆã®è¡¨ç¤º
 		switch (suit_)
 		{
 			case SUIT_SPADE :
@@ -97,7 +97,7 @@ public class Card
 				break;
 		}
 
-		// ”‚Ì•\¦
+		// æ•°ã®è¡¨ç¤º
 		switch (number_)
 		{
 			case 1 :

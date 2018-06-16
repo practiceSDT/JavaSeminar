@@ -4,45 +4,45 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * •W€“ü—Í‚É‚æ‚èƒWƒƒƒ“ƒPƒ“‚Ìè‚ğƒ†[ƒU‚É•·‚­í—ªƒNƒ‰ƒXB
+ * æ¨™æº–å…¥åŠ›ã«ã‚ˆã‚Šã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’ãƒ¦ãƒ¼ã‚¶ã«èãæˆ¦ç•¥ã‚¯ãƒ©ã‚¹ã€‚
  */
 class AskTactics implements Tactics
 {
 	/**
-	 * í—ª‚ğ“Ç‚İAƒWƒƒƒ“ƒPƒ“‚Ìè‚ğ“¾‚éB
-	 * ƒO[Eƒ`ƒ‡ƒLEƒp[‚Ì‚¢‚¸‚ê‚©‚ğPlayerƒNƒ‰ƒX‚É’è‹`‚³‚ê‚½
-	 * ˆÈ‰º‚Ì’è”‚Å•Ô‚·B
-	 * Player.STONE    EEE ƒO[
-	 * Player.SCISSORS EEE ƒ`ƒ‡ƒL
-	 * Player.PAPER    EEE ƒp[
+	 * æˆ¦ç•¥ã‚’èª­ã¿ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’å¾—ã‚‹ã€‚
+	 * ã‚°ãƒ¼ãƒ»ãƒãƒ§ã‚­ãƒ»ãƒ‘ãƒ¼ã®ã„ãšã‚Œã‹ã‚’Playerã‚¯ãƒ©ã‚¹ã«å®šç¾©ã•ã‚ŒãŸ
+	 * ä»¥ä¸‹ã®å®šæ•°ã§è¿”ã™ã€‚
+	 * Player.STONE    ãƒ»ãƒ»ãƒ» ã‚°ãƒ¼
+	 * Player.SCISSORS ãƒ»ãƒ»ãƒ» ãƒãƒ§ã‚­
+	 * Player.PAPER    ãƒ»ãƒ»ãƒ» ãƒ‘ãƒ¼
 	 * 
-	 * @return ƒWƒƒƒ“ƒPƒ“‚Ìè
+	 * @return ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 	 */
 	public int readTactics()
 	{
 		BufferedReader br =
 			new BufferedReader(new InputStreamReader(System.in));
 
-		System.out.println("\nƒWƒƒƒ“ƒPƒ“‚Ìè‚ğ“ü—Í‚µ‚Ä‰º‚³‚¢B");
-		System.out.println("0: ƒO[");
-		System.out.println("1: ƒ`ƒ‡ƒL");
-		System.out.println("2: ƒp[\n");
+		System.out.println("\nã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„ã€‚");
+		System.out.println("0: ã‚°ãƒ¼");
+		System.out.println("1: ãƒãƒ§ã‚­");
+		System.out.println("2: ãƒ‘ãƒ¼\n");
 		System.out.print("? ");
 
-		// ƒWƒƒƒ“ƒPƒ“‚Ìè
+		// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 		int hand = 0;
 
 		while (true)
 		{
 			try
 			{
-				// “ü—Í•¶š—ñ‚ğó‚¯æ‚é
+				// å…¥åŠ›æ–‡å­—åˆ—ã‚’å—ã‘å–ã‚‹
 				String inputStr = br.readLine();
 
-				// “ü—Í•¶š—ñ‚ğ”’l‚É•ÏŠ·‚·‚éB
+				// å…¥åŠ›æ–‡å­—åˆ—ã‚’æ•°å€¤ã«å¤‰æ›ã™ã‚‹ã€‚
 				hand = Integer.parseInt(inputStr);
 
-				// 0`2‚Ì‚¢‚¸‚ê‚©‚ª“ü—Í‚³‚ê‚½‚çƒ‹[ƒv‚ğ”²‚¯‚é
+				// 0ï½2ã®ã„ãšã‚Œã‹ãŒå…¥åŠ›ã•ã‚ŒãŸã‚‰ãƒ«ãƒ¼ãƒ—ã‚’æŠœã‘ã‚‹
 				if (hand == Player.STONE
 					|| hand == Player.SCISSORS
 					|| hand == Player.PAPER)
@@ -51,13 +51,13 @@ class AskTactics implements Tactics
 				}
 				else
 				{
-					System.out.println("“ü—Í‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñBÄ“x“ü—Í‚µ‚Ä‰º‚³‚¢B");
+					System.out.println("å…¥åŠ›ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚å†åº¦å…¥åŠ›ã—ã¦ä¸‹ã•ã„ã€‚");
 					System.out.print("? ");
 				}
 			}
 			catch (Exception ex)
 			{
-				System.out.println("“ü—Í‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñBÄ“x“ü—Í‚µ‚Ä‰º‚³‚¢B");
+				System.out.println("å…¥åŠ›ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚å†åº¦å…¥åŠ›ã—ã¦ä¸‹ã•ã„ã€‚");
 				System.out.print("? ");
 			}
 		}

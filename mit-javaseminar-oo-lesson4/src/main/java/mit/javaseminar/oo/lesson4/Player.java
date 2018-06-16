@@ -1,32 +1,32 @@
 package mit.javaseminar.oo.lesson4;
 
 /**
- * ƒWƒƒƒ“ƒPƒ“‚ğs‚¤ƒvƒŒƒCƒ„[ƒNƒ‰ƒXB
+ * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’è¡Œã†ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Player
 {
-	/** ƒO[ */
+	/** ã‚°ãƒ¼ */
 	public static final int STONE = 0;
 
-	/** ƒ`ƒ‡ƒL */
+	/** ãƒãƒ§ã‚­ */
 	public static final int SCISSORS = 1;
 
-	/** ƒp[ */
+	/** ãƒ‘ãƒ¼ */
 	public static final int PAPER = 2;
 
-	/** ƒvƒŒƒCƒ„[‚Ì–¼‘O */
+	/** ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰ */
 	private String name;
 
-	/** ƒvƒŒƒCƒ„[‚ÌŸ‚Á‚½‰ñ” */
+	/** ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å‹ã£ãŸå›æ•° */
 	private int winCount = 0;
 
-	/** —^‚¦‚ç‚ê‚½í—ª */
+	/** ä¸ãˆã‚‰ã‚ŒãŸæˆ¦ç•¥ */
 	private Tactics tactics_;
 
 	/**
-	 * ƒvƒŒƒCƒ„[ƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+	 * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
 	 * 
-	 * @param name –¼‘O
+	 * @param name åå‰
 	 */
 	public Player(String name)
 	{
@@ -34,9 +34,9 @@ public class Player
 	}
 
 	/**
-	 * ƒvƒŒƒCƒ„[‚Éí—ª‚ğ“n‚·B
+	 * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«æˆ¦ç•¥ã‚’æ¸¡ã™ã€‚
 	 * 
-	 * @param tactics í—ª
+	 * @param tactics æˆ¦ç•¥
 	 */
 	void setTactics(Tactics tactics)
 	{
@@ -44,37 +44,37 @@ public class Player
 	}
 
 	/**
-	 * ƒWƒƒƒ“ƒPƒ“‚Ìè‚ğo‚·B
+	 * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’å‡ºã™ã€‚
 	 *
-	 * @return ƒWƒƒƒ“ƒPƒ“‚Ìè
+	 * @return ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 	 */
 	int showHand()
 	{
-		// —^‚¦‚ç‚ê‚½í—ª‚ğ“Ç‚ñ‚ÅƒWƒƒƒ“ƒPƒ“‚Ìè‚ğŒˆ‚ß‚é
+		// ä¸ãˆã‚‰ã‚ŒãŸæˆ¦ç•¥ã‚’èª­ã‚“ã§ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’æ±ºã‚ã‚‹
 		int hand = tactics_.readTactics();
 
-		// Œˆ’è‚µ‚½è‚ğ–ß‚è’l‚Æ‚µ‚Ä•Ô‚·
+		// æ±ºå®šã—ãŸæ‰‹ã‚’æˆ»ã‚Šå€¤ã¨ã—ã¦è¿”ã™
 		return hand;
 	}
 
 	/**
-	 * Ÿ”s‚ğ•·‚­(‹³‚¦‚é)B
+	 * å‹æ•—ã‚’èã(æ•™ãˆã‚‹)ã€‚
 	 *
-	 * @param result true:Ÿ‚¿,false:•‰‚¯
+	 * @param result true:å‹ã¡,false:è² ã‘
 	 */
 	void notifyResult(boolean result)
 	{
 		if (true == result)
 		{
-			// Ÿ‚Á‚½ê‡‚ÍŸ‚¿”‚ğ‰ÁZ‚·‚é
+			// å‹ã£ãŸå ´åˆã¯å‹ã¡æ•°ã‚’åŠ ç®—ã™ã‚‹
 			winCount += 1;
 		}
 	}
 
 	/**
-	 * ©•ª‚ÌŸ‚Á‚½‰ñ”‚ğ“š‚¦‚é
+	 * è‡ªåˆ†ã®å‹ã£ãŸå›æ•°ã‚’ç­”ãˆã‚‹
 	 *
-	 * @return Ÿ‚Á‚½‰ñ”
+	 * @return å‹ã£ãŸå›æ•°
 	 */
 	int getWinCount()
 	{
@@ -82,9 +82,9 @@ public class Player
 	}
 
 	/**
-	 * ©•ª‚Ì–¼‘O‚ğ“š‚¦‚éB
+	 * è‡ªåˆ†ã®åå‰ã‚’ç­”ãˆã‚‹ã€‚
 	 * 
-	 * @return –¼‘O
+	 * @return åå‰
 	 */
 	String getName()
 	{

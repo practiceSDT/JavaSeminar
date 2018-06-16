@@ -4,31 +4,31 @@ import mit.javaseminar.oo.lesson7.trump.Card;
 import mit.javaseminar.oo.lesson7.trump.Table;
 
 /**
- * µ•À‚×‚Ìƒe[ƒuƒ‹‚ğ•\‚·ƒNƒ‰ƒXB
+ * ä¸ƒä¸¦ã¹ã®ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class FantanTable implements Table
 {
-	/** ƒJ[ƒh‚ğ•À‚×‚éƒe[ƒuƒ‹‚ğ•\‚·‚QŸŒ³”z—ñ */
+	/** ã‚«ãƒ¼ãƒ‰ã‚’ä¸¦ã¹ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¡¨ã™ï¼’æ¬¡å…ƒé…åˆ— */
 	private Card[][] table_ = new Card[Card.SUIT_NUM][Card.CARD_NUM];
 	
 	/**
-	 * ƒJ[ƒh‚ğ’u‚­B
+	 * ã‚«ãƒ¼ãƒ‰ã‚’ç½®ãã€‚
 	 * 
-	 * @param card ƒJ[ƒh
+	 * @param card ã‚«ãƒ¼ãƒ‰
 	 */
 	public void putCard(Card[] card)
 	{
 		int number = card[0].getNumber();
 		int suit = card[0].getSuit();
 		
-		// ƒe[ƒuƒ‹‚ÉƒJ[ƒh‚ğ’u‚­
+		// ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚«ãƒ¼ãƒ‰ã‚’ç½®ã
 		table_[suit - 1][number - 1] = card[0];
 	}
 
 	/**
-	 * ƒJ[ƒh‚ğŒ©‚éB
+	 * ã‚«ãƒ¼ãƒ‰ã‚’è¦‹ã‚‹ã€‚
 	 * 
-	 * @return ƒe[ƒuƒ‹‚É’u‚©‚ê‚½ƒJ[ƒh‚ğ•\‚·”z—ñ
+	 * @return ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã‹ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’è¡¨ã™é…åˆ—
 	 */
 	public Card[][] getCards()
 	{
@@ -42,10 +42,10 @@ public class FantanTable implements Table
 	}
 	
 	/**
-	 * ƒe[ƒuƒ‹‚ğ•¶š—ñ‚Å•\Œ»‚·‚éB
-	 * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æ–‡å­—åˆ—ã§è¡¨ç¾ã™ã‚‹ã€‚
+	 * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 * 
-	 * @return ƒe[ƒuƒ‹‚Ì•¶š—ñ•\Œ»
+	 * @return ãƒ†ãƒ¼ãƒ–ãƒ«ã®æ–‡å­—åˆ—è¡¨ç¾
 	 */
 	public String toString()
 	{

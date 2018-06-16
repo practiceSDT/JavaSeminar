@@ -3,29 +3,29 @@ package mit.javaseminar.oo.lesson5;
 import java.util.ArrayList;
 
 /**
- * ƒe[ƒuƒ‹‚ğ•\‚·ƒNƒ‰ƒXB
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Table
 {
-    /** Ì‚Ä‚ç‚ê‚½ƒJ[ƒh‚ğ•Û‚µ‚Ä‚¨‚­‚½‚ß‚ÌƒŠƒXƒg */
+    /** æ¨ã¦ã‚‰ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’ä¿æŒã—ã¦ãŠããŸã‚ã®ãƒªã‚¹ãƒˆ */
     private ArrayList<Card[]> disposedCards_ = new ArrayList<Card[]>();
 
     /**
-     * ƒJ[ƒh‚ğÌ‚Ä‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’æ¨ã¦ã‚‹ã€‚
      * 
-     * @param card Ì‚Ä‚éƒJ[ƒh‚Ì”z—ñ
+     * @param card æ¨ã¦ã‚‹ã‚«ãƒ¼ãƒ‰ã®é…åˆ—
      */
     public void disposeCard(Card card[])
     {
         for (int index = 0; index < card.length; index++)
         {
-            // Ì‚Ä‚ç‚ê‚½ƒJ[ƒh‚ğ•\¦‚·‚é
+            // æ¨ã¦ã‚‰ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹
             System.out.print(card[index] + " ");
         }
 
-        System.out.println("‚ğÌ‚Ä‚Ü‚µ‚½");
+        System.out.println("ã‚’æ¨ã¦ã¾ã—ãŸ");
 
-        // Ì‚Ä‚ç‚ê‚½ƒJ[ƒh‚ÍƒŠƒXƒg‚É’Ç‰Á‚µ‚Ä•Û‚µ‚Ä‚¨‚­B
+        // æ¨ã¦ã‚‰ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã¯ãƒªã‚¹ãƒˆã«è¿½åŠ ã—ã¦ä¿æŒã—ã¦ãŠãã€‚
         disposedCards_.add(card);
     }
 }

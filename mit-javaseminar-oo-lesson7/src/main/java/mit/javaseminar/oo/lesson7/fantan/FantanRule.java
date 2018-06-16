@@ -6,39 +6,39 @@ import mit.javaseminar.oo.lesson7.trump.Rule;
 import mit.javaseminar.oo.lesson7.trump.Table;
 
 /**
- * µ•À‚×—pƒ‹[ƒ‹ƒNƒ‰ƒXB
+ * ä¸ƒä¸¦ã¹ç”¨ãƒ«ãƒ¼ãƒ«ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class FantanRule implements Rule
 {
 	/**
-	 * ƒe[ƒuƒ‹‚É’u‚¯‚éƒJ[ƒh‚ğ’T‚·B
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã‘ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’æ¢ã™ã€‚
 	 * 
-	 * @param hand èD
-	 * @param table ƒe[ƒuƒ‹
-	 * @return Œ©‚Â‚©‚Á‚½ƒJ[ƒh‚Ì‘g‚İ‡‚í‚¹BŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡‚Ínull‚ğ•Ô‚·B
+	 * @param hand æ‰‹æœ­
+	 * @param table ãƒ†ãƒ¼ãƒ–ãƒ«
+	 * @return è¦‹ã¤ã‹ã£ãŸã‚«ãƒ¼ãƒ‰ã®çµ„ã¿åˆã‚ã›ã€‚è¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã¯nullã‚’è¿”ã™ã€‚
 	 */
 	public Card[] findCandidate(Hand hand, Table table)
 	{
-		// ƒe[ƒuƒ‹‚É’u‚¯‚éƒJ[ƒh‚ÌŒó•â
+		// ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã‘ã‚‹ã‚«ãƒ¼ãƒ‰ã®å€™è£œ
 		Card[] candidate = null;
 
-		// èD‚É‚ ‚éƒJ[ƒh‚ğ1–‡‚¸‚Âƒ`ƒFƒbƒN‚µ‚ÄAƒe[ƒuƒ‹‚É’u‚¯‚é‚©’²‚×‚é
+		// æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’1æšãšã¤ãƒã‚§ãƒƒã‚¯ã—ã¦ã€ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç½®ã‘ã‚‹ã‹èª¿ã¹ã‚‹
 		int numberOfHand = hand.getNumberOfCards();
 		for (int position = 0; position < numberOfHand; position++)
 		{
-			// èD‚É‚ ‚éƒJ[ƒh‚ğŒ©‚é
+			// æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’è¦‹ã‚‹
 			Card lookingCard = hand.lookCard(position);
 			int number = lookingCard.getNumber();
 			int suit = lookingCard.getSuit();
 
-			// ¡’–Ú‚µ‚Ä‚¢‚éèD‚Ì¶‚©‰E‚ÉƒJ[ƒh‚ª‚ ‚ê‚ÎAƒJ[ƒh‚ğ’u‚¯‚é
+			// ä»Šæ³¨ç›®ã—ã¦ã„ã‚‹æ‰‹æœ­ã®å·¦ã‹å³ã«ã‚«ãƒ¼ãƒ‰ãŒã‚ã‚Œã°ã€ã‚«ãƒ¼ãƒ‰ã‚’ç½®ã‘ã‚‹
 			int leftNumber = (number != 1) ? number - 1 : Card.CARD_NUM;
 			int rightNumber = (number != Card.CARD_NUM) ? number + 1 : 1;
 
 			if ((true == isThereCard(table, suit, leftNumber))
 				|| (true == isThereCard(table, suit, rightNumber)))
 			{
-				// èD‚©‚çƒJ[ƒh‚ğˆø‚¢‚ÄŒó•â‚Æ‚·‚é
+				// æ‰‹æœ­ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’å¼•ã„ã¦å€™è£œã¨ã™ã‚‹
 				candidate = new Card[1];
 				candidate[0] = hand.pickCard(position);
 				break;
@@ -49,16 +49,16 @@ public class FantanRule implements Rule
 	}
 
 	/**
-	 * ƒe[ƒuƒ‹‚ÉƒJ[ƒh‚ª’u‚©‚ê‚Ä‚¢‚é‚©’²‚×‚éB
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚«ãƒ¼ãƒ‰ãŒç½®ã‹ã‚Œã¦ã„ã‚‹ã‹èª¿ã¹ã‚‹ã€‚
 	 * 
-	 * @param table ƒe[ƒuƒ‹
-	 * @param suit ƒX[ƒg
-	 * @param number ”
-	 * @return ƒJ[ƒh‚ª’u‚©‚ê‚Ä‚¢‚éê‡‚Ítrue
+	 * @param table ãƒ†ãƒ¼ãƒ–ãƒ«
+	 * @param suit ã‚¹ãƒ¼ãƒˆ
+	 * @param number æ•°
+	 * @return ã‚«ãƒ¼ãƒ‰ãŒç½®ã‹ã‚Œã¦ã„ã‚‹å ´åˆã¯true
 	 */
 	private boolean isThereCard(Table table, int suit, int number)
 	{
-		// ƒe[ƒuƒ‹‚É‚ ‚éƒJ[ƒh‚ğ’²‚×AƒJ[ƒh‚ª’u‚©‚ê‚Ä‚¢‚é‚©’²‚×‚é
+		// ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’èª¿ã¹ã€ã‚«ãƒ¼ãƒ‰ãŒç½®ã‹ã‚Œã¦ã„ã‚‹ã‹èª¿ã¹ã‚‹
 		Card[][] cards = table.getCards();
 		if (cards[suit - 1][number - 1] != null)
 		{

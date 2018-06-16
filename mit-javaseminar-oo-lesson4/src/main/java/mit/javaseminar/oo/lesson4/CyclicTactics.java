@@ -1,37 +1,37 @@
 package mit.javaseminar.oo.lesson4;
 
 /**
- * �O�[�E�`���L�E�p�[�̏��Ԃŏo���헪�N���X�B
+ * グー・チョキ・パーの順番で出す戦略クラス。
  */
 class CyclicTactics implements Tactics
 {
-    /** �Ō�ɏo������(���J�n:-1) */
+    /** 最後に出した手(未開始:-1) */
     int lastHand = -1;
 
 	/**
-	 * �헪��ǂ݁A�W�����P���̎�𓾂�B
-	 * �O�[�E�`���L�E�p�[�̂����ꂩ��Player�N���X�ɒ�`���ꂽ
-	 * �ȉ��̒萔�ŕԂ��B
-	 * Player.STONE    �E�E�E �O�[
-	 * Player.SCISSORS �E�E�E �`���L
-	 * Player.PAPER    �E�E�E �p�[
+	 * 戦略を読み、ジャンケンの手を得る。
+	 * グー・チョキ・パーのいずれかをPlayerクラスに定義された
+	 * 以下の定数で返す。
+	 * Player.STONE    ・・・ グー
+	 * Player.SCISSORS ・・・ チョキ
+	 * Player.PAPER    ・・・ パー
 	 * 
-	 * @return �W�����P���̎�
+	 * @return ジャンケンの手
 	 */
 	public int readTactics()
 	{
-		// �Ō�ɏo������ɂ��A���̎�����߂�B
-		// �Ō�ɏo������͋L�����Ă����B
+		// 最後に出した手により、次の手を決める。
+		// 最後に出した手は記憶しておく。
 		// +-----------------+
-		// | �Ō�   | ���̎� |
+		// | 最後   | 次の手 |
 		// +-----------------+
-		// | �O�[   | �`���L |
-		// | �`���L | �p�[   |
-		// | �p�[   | �O�[   |
+		// | グー   | チョキ |
+		// | チョキ | パー   |
+		// | パー   | グー   |
 		// +-----------------+
 		lastHand = (lastHand + 1) % 3;
 
-		// ���̎���o��
+		// 次の手を出す
 		return lastHand;
 	}
 }

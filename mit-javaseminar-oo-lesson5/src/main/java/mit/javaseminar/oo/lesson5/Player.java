@@ -1,27 +1,27 @@
 package mit.javaseminar.oo.lesson5;
 /**
- * ‚Î‚Î”²‚«‚ÌƒvƒŒƒCƒ„[ƒNƒ‰ƒXB
+ * ã°ã°æŠœãã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Player
 {
-    /** is–ğ */
+    /** é€²è¡Œå½¹ */
     private Master master_;
 
-    /** ƒe[ƒuƒ‹ */
+    /** ãƒ†ãƒ¼ãƒ–ãƒ« */
     private Table  table_;
 
-    /** ©•ª‚ÌèD */
+    /** è‡ªåˆ†ã®æ‰‹æœ­ */
     private Hand   myHand_ = new Hand();
 
-    /** –¼‘O */
+    /** åå‰ */
     private String name_;
 
     /**
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      * 
-     * @param name –¼‘O
-     * @param master is–ğ
-     * @param table ƒe[ƒuƒ‹
+     * @param name åå‰
+     * @param master é€²è¡Œå½¹
+     * @param table ãƒ†ãƒ¼ãƒ–ãƒ«
      */
     public Player(String name, Master master, Table table)
     {
@@ -31,95 +31,95 @@ public class Player
     }
 
     /**
-     * ‡”Ô‚ğw–¼‚·‚éB
+     * é †ç•ªã‚’æŒ‡åã™ã‚‹ã€‚
      * 
-     * @param nextPlayer Ÿ‚ÌƒvƒŒƒCƒ„[
+     * @param nextPlayer æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
      */
     public void play(Player nextPlayer)
     {
-        // Ÿ‚ÌƒvƒŒƒCƒ„[‚ÉèD‚ğo‚µ‚Ä‚à‚ç‚¤
+        // æ¬¡ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«æ‰‹æœ­ã‚’å‡ºã—ã¦ã‚‚ã‚‰ã†
         Hand nextHand = nextPlayer.showHand();
 
-        // ‘Šè‚ÌèD‚©‚çƒJ[ƒh‚ğˆê–‡ˆø‚­
+        // ç›¸æ‰‹ã®æ‰‹æœ­ã‹ã‚‰ã‚«ãƒ¼ãƒ‰ã‚’ä¸€æšå¼•ã
         Card pickedCard = nextHand.pickCard();
 
-        // ˆø‚¢‚½Œ‹‰Ê‚ğ•\¦
-        System.out.println(this + "F" + nextPlayer + "‚³‚ñ‚©‚ç " + pickedCard
-                + " ‚ğˆø‚«‚Ü‚µ‚½");
+        // å¼•ã„ãŸçµæœã‚’è¡¨ç¤º
+        System.out.println(this + "ï¼š" + nextPlayer + "ã•ã‚“ã‹ã‚‰ " + pickedCard
+                + " ã‚’å¼•ãã¾ã—ãŸ");
 
-        // ˆø‚¢‚½ƒJ[ƒh‚ğ©•ª‚ÌèD‚É‰Á‚¦A“¯‚¶”‚ÌƒJ[ƒh‚ª‚ ‚Á‚½‚çÌ‚Ä‚é
+        // å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã‚’è‡ªåˆ†ã®æ‰‹æœ­ã«åŠ ãˆã€åŒã˜æ•°ã®ã‚«ãƒ¼ãƒ‰ãŒã‚ã£ãŸã‚‰æ¨ã¦ã‚‹
         dealCard(pickedCard);
 
-        // èD‚ªƒ[ƒ‚É‚È‚Á‚½‚©‚Ç‚¤‚©’²‚×‚é
+        // æ‰‹æœ­ãŒã‚¼ãƒ­ã«ãªã£ãŸã‹ã©ã†ã‹èª¿ã¹ã‚‹
         if (myHand_.getNumberOfCards() == 0)
         {
-            // is–ğ‚Éã‚ª‚è‚ğéŒ¾‚·‚é
+            // é€²è¡Œå½¹ã«ä¸ŠãŒã‚Šã‚’å®£è¨€ã™ã‚‹
             master_.declareWin(this);
         }
         else
         {
-            // Œ»İ‚ÌèD‚ğ•\¦‚·‚é
-            System.out.println(this + "Fc‚è‚ÌèD‚Í " + myHand_ + "‚Å‚·");
+            // ç¾åœ¨ã®æ‰‹æœ­ã‚’è¡¨ç¤ºã™ã‚‹
+            System.out.println(this + "ï¼šæ®‹ã‚Šã®æ‰‹æœ­ã¯ " + myHand_ + "ã§ã™");
         }
     }
 
     /**
-     * èD‚ğŒ©‚¹‚éB
+     * æ‰‹æœ­ã‚’è¦‹ã›ã‚‹ã€‚
      * 
-     * @return ©•ª‚ÌèD
+     * @return è‡ªåˆ†ã®æ‰‹æœ­
      */
     public Hand showHand()
     {
-        // ‚à‚µ‚±‚Ì“_‚ÅèD‚ªc‚è1–‡‚È‚ç‚Îã‚ª‚è‚Æ‚È‚é‚Ì‚ÅéŒ¾‚·‚é
+        // ã‚‚ã—ã“ã®æ™‚ç‚¹ã§æ‰‹æœ­ãŒæ®‹ã‚Š1æšãªã‚‰ã°ä¸ŠãŒã‚Šã¨ãªã‚‹ã®ã§å®£è¨€ã™ã‚‹
         if (myHand_.getNumberOfCards() == 1)
         {
             master_.declareWin(this);
         }
 
-        // Œ©‚¹‚é‘O‚ÉƒVƒƒƒbƒtƒ‹‚·‚é
+        // è¦‹ã›ã‚‹å‰ã«ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã™ã‚‹
         myHand_.shuffle();
 
         return myHand_;
     }
 
     /**
-     * ƒJ[ƒh‚ğó‚¯æ‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’å—ã‘å–ã‚‹ã€‚
      * 
-     * @param card ó‚¯æ‚Á‚½ƒJ[ƒh
+     * @param card å—ã‘å–ã£ãŸã‚«ãƒ¼ãƒ‰
      */
     public void receiveCard(Card card)
     {
-        // ˆø‚¢‚½ƒJ[ƒh‚ğ©•ª‚ÌèD‚É‰Á‚¦A“¯‚¶”‚ÌƒJ[ƒh‚ª‚ ‚Á‚½‚çÌ‚Ä‚é
+        // å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã‚’è‡ªåˆ†ã®æ‰‹æœ­ã«åŠ ãˆã€åŒã˜æ•°ã®ã‚«ãƒ¼ãƒ‰ãŒã‚ã£ãŸã‚‰æ¨ã¦ã‚‹
         dealCard(card);
     }
 
     /**
-     * ƒJ[ƒh‚ğ©•ª‚ÌèD‚É‰Á‚¦A“¯‚¶”‚ÌƒJ[ƒh‚ª‚ ‚Á‚½‚çÌ‚Ä‚éB
+     * ã‚«ãƒ¼ãƒ‰ã‚’è‡ªåˆ†ã®æ‰‹æœ­ã«åŠ ãˆã€åŒã˜æ•°ã®ã‚«ãƒ¼ãƒ‰ãŒã‚ã£ãŸã‚‰æ¨ã¦ã‚‹ã€‚
      * 
      * @param card
      */
     private void dealCard(Card card)
     {
-        // ƒJ[ƒh‚ğ©•ª‚ÌèD‚É‰Á‚¦‚é
+        // ã‚«ãƒ¼ãƒ‰ã‚’è‡ªåˆ†ã®æ‰‹æœ­ã«åŠ ãˆã‚‹
         myHand_.addCard(card);
 
-        // ¡‰Á‚¦‚½ƒJ[ƒh‚Æ“¯‚¶ƒJ[ƒh‚ğ’T‚·
+        // ä»ŠåŠ ãˆãŸã‚«ãƒ¼ãƒ‰ã¨åŒã˜ã‚«ãƒ¼ãƒ‰ã‚’æ¢ã™
         Card[] sameCards = myHand_.findSameNumberCard();
 
-        // “¯‚¶ƒJ[ƒh‚Ì‘g‚İ‡‚í‚¹‚ª‘¶İ‚µ‚½ê‡
+        // åŒã˜ã‚«ãƒ¼ãƒ‰ã®çµ„ã¿åˆã‚ã›ãŒå­˜åœ¨ã—ãŸå ´åˆ
         if (sameCards != null)
         {
-            // ƒe[ƒuƒ‹‚ÖƒJ[ƒh‚ğÌ‚Ä‚é
-            System.out.print(this + "F");
+            // ãƒ†ãƒ¼ãƒ–ãƒ«ã¸ã‚«ãƒ¼ãƒ‰ã‚’æ¨ã¦ã‚‹
+            System.out.print(this + "ï¼š");
             table_.disposeCard(sameCards);
         }
     }
 
     /**
-     * ƒvƒŒƒCƒ„[‚Ì–¼‘O‚ğ•Ô‚·B <br>
-     * ObjectƒNƒ‰ƒX‚ÌtoStringƒƒ\ƒbƒh‚ğƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ\ƒbƒhB
+     * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰ã‚’è¿”ã™ã€‚ <br>
+     * Objectã‚¯ãƒ©ã‚¹ã®toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ã‚½ãƒƒãƒ‰ã€‚
      * 
-     * @return ƒvƒŒƒCƒ„[‚Ì–¼‘O
+     * @return ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åå‰
      */
     public String toString()
     {

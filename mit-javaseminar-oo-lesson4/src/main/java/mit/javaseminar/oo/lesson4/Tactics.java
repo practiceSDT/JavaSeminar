@@ -1,19 +1,19 @@
 package mit.javaseminar.oo.lesson4;
 
 /**
- * �W�����P���헪�C���^�[�t�F�[�X�B
+ * ジャンケン戦略インターフェース。
  */
 public interface Tactics
 {
 	/**
-	 * �헪��ǂ݁A�W�����P���̎�𓾂�B
-	 * �O�[�E�`���L�E�p�[�̂����ꂩ��Player�N���X�ɒ�`���ꂽ
-	 * �ȉ��̒萔�ŕԂ��B
-	 * Player.STONE    �E�E�E �O�[
-	 * Player.SCISSORS �E�E�E �`���L
-	 * Player.PAPER    �E�E�E �p�[
+	 * 戦略を読み、ジャンケンの手を得る。
+	 * グー・チョキ・パーのいずれかをPlayerクラスに定義された
+	 * 以下の定数で返す。
+	 * Player.STONE    ・・・ グー
+	 * Player.SCISSORS ・・・ チョキ
+	 * Player.PAPER    ・・・ パー
 	 * 
-	 * @return �W�����P���̎�
+	 * @return ジャンケンの手
 	 */
 	public int readTactics();
 }

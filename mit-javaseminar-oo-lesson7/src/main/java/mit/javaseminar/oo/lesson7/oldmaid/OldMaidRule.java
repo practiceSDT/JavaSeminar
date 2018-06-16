@@ -6,22 +6,22 @@ import mit.javaseminar.oo.lesson7.trump.Rule;
 import mit.javaseminar.oo.lesson7.trump.Table;
 
 /**
- * ‚Î‚Î”²‚«—pƒ‹[ƒ‹ƒNƒ‰ƒXB
+ * ã°ã°æŠœãç”¨ãƒ«ãƒ¼ãƒ«ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class OldMaidRule implements Rule
 {
 	/**
-	 * èD‚Æƒe[ƒuƒ‹‚©‚çAƒe[ƒuƒ‹‚Éo‚µ‚¤‚éƒJ[ƒh‚Ì‘g‚İ‡‚í‚¹‚ğ’T‚·B
+	 * æ‰‹æœ­ã¨ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰ã€ãƒ†ãƒ¼ãƒ–ãƒ«ã«å‡ºã—ã†ã‚‹ã‚«ãƒ¼ãƒ‰ã®çµ„ã¿åˆã‚ã›ã‚’æ¢ã™ã€‚
 	 * 
-	 * @param hand  èD
-	 * @param table ƒe[ƒuƒ‹
-	 * @return Œ©‚Â‚©‚Á‚½ƒJ[ƒh‚Ì‘g‚İ‡‚í‚¹BŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡‚Ínull‚ğ•Ô‚·B
+	 * @param hand  æ‰‹æœ­
+	 * @param table ãƒ†ãƒ¼ãƒ–ãƒ«
+	 * @return è¦‹ã¤ã‹ã£ãŸã‚«ãƒ¼ãƒ‰ã®çµ„ã¿åˆã‚ã›ã€‚è¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã¯nullã‚’è¿”ã™ã€‚
 	 */
 	public Card[] findCandidate(Hand hand, Table table)
 	{
-		// èD‚É‚ ‚éƒJ[ƒh‚ğ‡”Ô‚ÉŒ©‚Ä“¯‚¶’l‚Ì‘g‚İ‡‚í‚¹‚ğ’T‚·
-		// èD‚Ì‹t‘¤‚©‚ç’²‚×‚Ä‚¢‚é‚Ì‚ÍÅŒã‚É’Ç‰Á‚³‚ê‚½ƒJ[ƒh‚©‚ç
-		// —Dæ“I‚Éƒ`ƒFƒbƒN‚µ‚Ä”äŠr‰ñ”‚ğŒ¸‚ç‚·‚½‚ß
+		// æ‰‹æœ­ã«ã‚ã‚‹ã‚«ãƒ¼ãƒ‰ã‚’é †ç•ªã«è¦‹ã¦åŒã˜å€¤ã®çµ„ã¿åˆã‚ã›ã‚’æ¢ã™
+		// æ‰‹æœ­ã®é€†å´ã‹ã‚‰èª¿ã¹ã¦ã„ã‚‹ã®ã¯æœ€å¾Œã«è¿½åŠ ã•ã‚ŒãŸã‚«ãƒ¼ãƒ‰ã‹ã‚‰
+		// å„ªå…ˆçš„ã«ãƒã‚§ãƒƒã‚¯ã—ã¦æ¯”è¼ƒå›æ•°ã‚’æ¸›ã‚‰ã™ãŸã‚
 		int numberOfHand = hand.getNumberOfCards();
 		for (int position = numberOfHand - 1; position >= 0; position--)
 		{
@@ -30,7 +30,7 @@ public class OldMaidRule implements Rule
 			{
 				Card secondCard = hand.lookCard(comparePos);
 
-				// “¯‚¶’l‚Ì‘g‚İ‡‚í‚¹‚ªŒ©‚Â‚©‚Á‚½‚çƒJ[ƒh‚ğˆø‚¢‚Ä–ß‚é
+				// åŒã˜å€¤ã®çµ„ã¿åˆã‚ã›ãŒè¦‹ã¤ã‹ã£ãŸã‚‰ã‚«ãƒ¼ãƒ‰ã‚’å¼•ã„ã¦æˆ»ã‚‹
 				if (firstCard.getNumber() == secondCard.getNumber())
 				{
 					Card[] candidate = new Card[2];
@@ -41,7 +41,7 @@ public class OldMaidRule implements Rule
 			}
 		}
 
-		// “¯‚¶’l‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡Anull‚ğ•Ô‚·
+		// åŒã˜å€¤ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã€nullã‚’è¿”ã™
 		return null;
 	}
 }

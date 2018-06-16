@@ -1,96 +1,96 @@
 package mit.javaseminar.oo.lesson3;
 /**
- * ƒWƒƒƒ“ƒPƒ“‚ğs‚¤R”»ƒNƒ‰ƒXB
+ * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’è¡Œã†å¯©åˆ¤ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class Judge
 {
 	/**
-	 * ƒWƒƒƒ“ƒPƒ“‚ğŠJn‚·‚éB
+	 * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’é–‹å§‹ã™ã‚‹ã€‚
 	 * 
-	 * @param player1 ”»’è‘ÎÛƒvƒŒƒCƒ„[1
-	 * @param player2 ”»’è‘ÎÛƒvƒŒƒCƒ„[2
+	 * @param player1 åˆ¤å®šå¯¾è±¡ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼1
+	 * @param player2 åˆ¤å®šå¯¾è±¡ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼2
 	 */
 	void startJanken(Player player1, Player player2)
 	{
-		// ƒWƒƒƒ“ƒPƒ“‚ÌŠJn‚ğéŒ¾‚·‚é
-		System.out.println("yƒWƒƒƒ“ƒPƒ“ŠJnz\n");
+		// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®é–‹å§‹ã‚’å®£è¨€ã™ã‚‹
+		System.out.println("ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³é–‹å§‹ã€‘\n");
 		
-		// ƒWƒƒƒ“ƒPƒ“‚ğ3‰ñs‚¤
+		// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã‚’3å›è¡Œã†
 		for (int cnt = 0; cnt < 3; cnt++)
 		{
-			// ‰½‰ñí–Ú‚©•\¦‚·‚é
-			System.out.println("y" + (cnt + 1) + "‰ñí–Úz");
+			// ä½•å›æˆ¦ç›®ã‹è¡¨ç¤ºã™ã‚‹
+			System.out.println("ã€" + (cnt + 1) + "å›æˆ¦ç›®ã€‘");
 
-			// ƒvƒŒƒCƒ„[‚Ìè‚ğŒ©‚ÄA‚Ç‚¿‚ç‚ªŸ‚¿‚©‚ğ”»’è‚·‚éB
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ‰‹ã‚’è¦‹ã¦ã€ã©ã¡ã‚‰ãŒå‹ã¡ã‹ã‚’åˆ¤å®šã™ã‚‹ã€‚
 			Player winner = judgeJanken(player1, player2);
 
 			if (winner != null)
 			{
-				// ŸÒ‚ğ•\¦‚·‚é
-				System.out.println("\n" + winner.getName() + "‚ªŸ‚¿‚Ü‚µ‚½!\n");
+				// å‹è€…ã‚’è¡¨ç¤ºã™ã‚‹
+				System.out.println("\n" + winner.getName() + "ãŒå‹ã¡ã¾ã—ãŸ!\n");
 
-				// Ÿ‚Á‚½ƒvƒŒƒCƒ„[‚ÖŒ‹‰Ê‚ğ“`‚¦‚é
+				// å‹ã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¸çµæœã‚’ä¼ãˆã‚‹
 				winner.notifyResult(true);
 			}
 			else
 			{
-				// ˆø‚«•ª‚¯‚Ìê‡
-				System.out.println("\nˆø‚«•ª‚¯‚Å‚·I\n");
+				// å¼•ãåˆ†ã‘ã®å ´åˆ
+				System.out.println("\nå¼•ãåˆ†ã‘ã§ã™ï¼\n");
 			}
 		}
 
-		// ƒWƒƒƒ“ƒPƒ“‚ÌI—¹‚ğéŒ¾‚·‚é
-		System.out.println("yƒWƒƒƒ“ƒPƒ“I—¹z\n");
+		// ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®çµ‚äº†ã‚’å®£è¨€ã™ã‚‹
+		System.out.println("ã€ã‚¸ãƒ£ãƒ³ã‚±ãƒ³çµ‚äº†ã€‘\n");
 
-		// ÅI“I‚ÈŸÒ‚ğ”»’è‚·‚é
+		// æœ€çµ‚çš„ãªå‹è€…ã‚’åˆ¤å®šã™ã‚‹
 		Player finalWinner = judgeFinalWinner(player1, player2);
 
-		// Œ‹‰Ê‚Ì•\¦
+		// çµæœã®è¡¨ç¤º
 		System.out.print(
-			player1.getWinCount() + " ‘Î " + player2.getWinCount() + "‚Å");
+			player1.getWinCount() + " å¯¾ " + player2.getWinCount() + "ã§");
 
 		if (finalWinner != null)
 		{
-			System.out.println(finalWinner.getName() + "‚ÌŸ‚¿‚Å‚·I\n");
+			System.out.println(finalWinner.getName() + "ã®å‹ã¡ã§ã™ï¼\n");
 		}
 		else
 		{
-			System.out.println("ˆø‚«•ª‚¯‚Å‚·I\n");
+			System.out.println("å¼•ãåˆ†ã‘ã§ã™ï¼\n");
 		}
 	}
 
 	/**
-	 * uƒWƒƒƒ“ƒPƒ“Aƒ|ƒ“Iv‚Æº‚ğ‚©‚¯A
-	 * ƒvƒŒƒCƒ„[‚Ìè‚ğŒ©‚ÄA‚Ç‚¿‚ç‚ªŸ‚¿‚©‚ğ”»’è‚·‚éB
+	 * ã€Œã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã€ãƒãƒ³ï¼ã€ã¨å£°ã‚’ã‹ã‘ã€
+	 * ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ‰‹ã‚’è¦‹ã¦ã€ã©ã¡ã‚‰ãŒå‹ã¡ã‹ã‚’åˆ¤å®šã™ã‚‹ã€‚
 	 * 
-	 * @param player1 ”»’è‘ÎÛƒvƒŒƒCƒ„[1
-	 * @param player2 ”»’è‘ÎÛƒvƒŒƒCƒ„[2
-	 * @return Ÿ‚Á‚½ƒvƒŒƒCƒ„[Bˆø‚«•ª‚¯‚Ìê‡‚Í null ‚ğ•Ô‚·B
+	 * @param player1 åˆ¤å®šå¯¾è±¡ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼1
+	 * @param player2 åˆ¤å®šå¯¾è±¡ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼2
+	 * @return å‹ã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã€‚å¼•ãåˆ†ã‘ã®å ´åˆã¯ null ã‚’è¿”ã™ã€‚
 	 */
 	Player judgeJanken(Player player1, Player player2)
 	{
 		Player winner = null;
 
-		// ƒvƒŒƒCƒ„[‚P‚Ìè‚ğo‚·
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ã®æ‰‹ã‚’å‡ºã™
 		int player1hand = player1.showHand();
 		
-		// ƒvƒŒƒCƒ„[‚Q‚Ìè‚ğo‚·
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ã®æ‰‹ã‚’å‡ºã™
 		int player2hand = player2.showHand();
 		
-		// ‚»‚ê‚¼‚ê‚Ìè‚ğ•\¦‚·‚é
+		// ãã‚Œãã‚Œã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹
 		printHand(player1hand);
 		System.out.print(" vs. ");
 		printHand(player2hand);
 		System.out.print("\n");
 
-		// ƒvƒŒƒCƒ„[‚P‚ªŸ‚Âê‡
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼‘ãŒå‹ã¤å ´åˆ
 		if ((player1hand == Player.STONE && player2hand == Player.SCISSORS)
 			|| (player1hand == Player.SCISSORS && player2hand == Player.PAPER)
 			|| (player1hand == Player.PAPER && player2hand == Player.STONE))
 		{
 			winner = player1;
 		}
-		// ƒvƒŒƒCƒ„[‚Q‚ªŸ‚Âê‡
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼’ãŒå‹ã¤å ´åˆ
 		else if (
 			(player1hand == Player.STONE && player2hand == Player.PAPER)
 				|| (player1hand == Player.SCISSORS && player2hand == Player.STONE)
@@ -100,64 +100,64 @@ public class Judge
 			winner = player2;
 		}
 
-		// ‚Ç‚¿‚ç‚Å‚à‚È‚¢ê‡‚Íˆø‚«•ª‚¯(null‚ğ•Ô‚·)
+		// ã©ã¡ã‚‰ã§ã‚‚ãªã„å ´åˆã¯å¼•ãåˆ†ã‘(nullã‚’è¿”ã™)
 
 		return winner;
 	}
 
 	/**
-	 * ÅI“I‚ÈŸÒ‚ğ”»’è‚·‚éB
+	 * æœ€çµ‚çš„ãªå‹è€…ã‚’åˆ¤å®šã™ã‚‹ã€‚
 	 * 
-	 * @param player1 ”»’è‘ÎÛƒvƒŒƒCƒ„[2
-	 * @param player2 ”»’è‘ÎÛƒvƒŒƒCƒ„[2
-	 * @return Ÿ‚Á‚½ƒvƒŒƒCƒ„[Bˆø‚«•ª‚¯‚Ìê‡‚Í null ‚ğ•Ô‚·B
+	 * @param player1 åˆ¤å®šå¯¾è±¡ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼2
+	 * @param player2 åˆ¤å®šå¯¾è±¡ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼2
+	 * @return å‹ã£ãŸãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã€‚å¼•ãåˆ†ã‘ã®å ´åˆã¯ null ã‚’è¿”ã™ã€‚
 	 */
 	Player judgeFinalWinner(Player player1, Player player2)
 	{
 		Player winner = null;
 
-		// Player1‚©‚çŸ‚¿”‚ğ•·‚­
+		// Player1ã‹ã‚‰å‹ã¡æ•°ã‚’èã
 		int player1WinCount = player1.getWinCount();
 
-		// Player2‚©‚çŸ‚¿”‚ğ•·‚­
+		// Player2ã‹ã‚‰å‹ã¡æ•°ã‚’èã
 		int player2WinCount = player2.getWinCount();
 
 		if (player1WinCount > player2WinCount)
 		{
-			// ƒvƒŒƒCƒ„[1‚ÌŸ‚¿
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼1ã®å‹ã¡
 			winner = player1;
 		}
 		else if (player1WinCount < player2WinCount)
 		{
-			// ƒvƒŒƒCƒ„[2‚ÌŸ‚¿
+			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼2ã®å‹ã¡
 			winner = player2;
 		}
 
-		// ‚Ç‚¿‚ç‚Å‚à‚È‚¢ê‡‚Íˆø‚«•ª‚¯(null‚ğ•Ô‚·)
+		// ã©ã¡ã‚‰ã§ã‚‚ãªã„å ´åˆã¯å¼•ãåˆ†ã‘(nullã‚’è¿”ã™)
 
 		return winner;
 	}
 	
 	
 	/**
-	 * ƒWƒƒƒ“ƒPƒ“‚Ìè‚ğ•\¦‚·‚éB
+	 * ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
 	 * 
-	 * @param hand ƒWƒƒƒ“ƒPƒ“‚Ìè
+	 * @param hand ã‚¸ãƒ£ãƒ³ã‚±ãƒ³ã®æ‰‹
 	 */
 	private void printHand(int hand)
 	{
 		switch (hand)
 		{
 			case Player.STONE :
-				System.out.print("ƒO[");
+				System.out.print("ã‚°ãƒ¼");
 				break;
 
 			case Player.SCISSORS :
-				System.out.print("ƒ`ƒ‡ƒL");
+				System.out.print("ãƒãƒ§ã‚­");
 				break;
 			
 			case Player.PAPER :
-				System.out.print("ƒp[");
+				System.out.print("ãƒ‘ãƒ¼");
 				break;
 			
 			default :

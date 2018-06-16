@@ -1,49 +1,49 @@
 package mit.javaseminar.oo.lesson6;
 
 /**
- * µ•À‚×ƒvƒƒOƒ‰ƒ€B
+ * ä¸ƒä¸¦ã¹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€‚
  */
 public class Fantan
 {
 	public static void main(String args[])
 	{
-		// is–ğ‚Ì¶¬
+		// é€²è¡Œå½¹ã®ç”Ÿæˆ
 		Master master = new Master();
 		
-		// ƒe[ƒuƒ‹‚Ì¶¬
+		// ãƒ†ãƒ¼ãƒ–ãƒ«ã®ç”Ÿæˆ
 		Table table = new Table();
 		
-		// ƒvƒŒƒCƒ„[‚Ì¶¬
-		Player murata = new Player("‘º“c", master, table);
-		Player yamada = new Player("R“c", master, table);
-		Player saito  = new Player("Ö“¡", master, table);
+		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ç”Ÿæˆ
+		Player murata = new Player("æ‘ç”°", master, table);
+		Player yamada = new Player("å±±ç”°", master, table);
+		Player saito  = new Player("æ–è—¤", master, table);
 		
-		// is–ğ‚ÖƒvƒŒƒCƒ„[‚ğ“o˜^
+		// é€²è¡Œå½¹ã¸ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ç™»éŒ²
 		master.registerPlayer(murata);
 		master.registerPlayer(yamada);
 		master.registerPlayer(saito);
 		
-		// ƒgƒ‰ƒ“ƒv‚ğ¶¬‚·‚é
+		// ãƒˆãƒ©ãƒ³ãƒ—ã‚’ç”Ÿæˆã™ã‚‹
 		Hand trump = createTrump();
 		
-		// ƒQ[ƒ€‚Ì€”õ‚ğ‚·‚é
+		// ã‚²ãƒ¼ãƒ ã®æº–å‚™ã‚’ã™ã‚‹
 		master.prepareGame(trump);
 		
-		// ƒQ[ƒ€‚ğŠJn‚·‚é
+		// ã‚²ãƒ¼ãƒ ã‚’é–‹å§‹ã™ã‚‹
 		master.startGame();
 		
 	}
 	
 	/**
-	 * 53–‡‚Ìƒgƒ‰ƒ“ƒv‚ğ¶¬‚·‚éB
+	 * 53æšã®ãƒˆãƒ©ãƒ³ãƒ—ã‚’ç”Ÿæˆã™ã‚‹ã€‚
 	 * 
-	 * @return ƒgƒ‰ƒ“ƒv‚ğŠi”[‚µ‚½Hand
+	 * @return ãƒˆãƒ©ãƒ³ãƒ—ã‚’æ ¼ç´ã—ãŸHand
 	 */
 	private static Hand createTrump()
 	{
 		Hand trump = new Hand();
 		
-		// ŠeƒX[ƒg53–‡‚ÌƒJ[ƒh‚ğ¶¬‚·‚é
+		// å„ã‚¹ãƒ¼ãƒˆ53æšã®ã‚«ãƒ¼ãƒ‰ã‚’ç”Ÿæˆã™ã‚‹
 		for (int number = 1; number <= 13; number++)
 		{
 			trump.addCard(new Card(Card.SUIT_CLUB, number));
