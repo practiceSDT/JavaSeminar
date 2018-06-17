@@ -15,7 +15,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.2.1</version>
             <configuration>
-                <mainClass>com.example.Main</mainClass>
+                <mainClass>mit.javaseminar.oo.lesson1.SimpleJanken</mainClass>
             </configuration>
         </plugin>
     </plugins>
