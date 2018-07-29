@@ -6,6 +6,7 @@ import mit.javaseminar.oo.lesson05.abs.DocumentKey;
 import mit.javaseminar.oo.lesson05.abs.KeyType;
 import mit.javaseminar.oo.lesson05.abs.Nen;
 import mit.javaseminar.oo.lesson05.dto.AbsKeyInfo;
+import mit.javaseminar.oo.lesson05.dto.SganSeparatedKeyInfo;
 import mit.javaseminar.oo.lesson05.dto.SganSimpleKeyInfo;
 
 public class Client {
@@ -21,10 +22,12 @@ public class Client {
 		
 		DocumentKey sganDocumentKey = sganFactory.createDocumentKey(sganKeyType, sganNen, sganBango);
 		
-		AbsKeyInfo sganSimpleKeyInfo = new SganSimpleKeyInfo("2001123456");
+		String key = "2001123456";
+		AbsKeyInfo sganSimpleKeyInfo = new SganSimpleKeyInfo(key);
 		
 		sganDocumentKey.setKeyInfo(sganSimpleKeyInfo);
 
+		System.out.println("インプット番号:" + key);
 		System.out.println(sganDocumentKey.getKeyType());
 		System.out.println(sganDocumentKey.getNen().getNen());
 		System.out.println(sganDocumentKey.getBango());
@@ -38,14 +41,16 @@ public class Client {
 		
 		DocumentKey sganOldDocumentKey = sganOldFactory.createDocumentKey(sganOldKeyType, sganOldNen, sganOldBango);
 		
-		sganSimpleKeyInfo = new SganSimpleKeyInfo("1980123456");
+		key = "1980123456";
+		sganSimpleKeyInfo = new SganSimpleKeyInfo(key);
 		sganOldDocumentKey.setKeyInfo(sganSimpleKeyInfo);
 
+		System.out.println("インプット番号:" + key);
 		System.out.println(sganOldDocumentKey.getKeyType());
 		System.out.println(sganOldDocumentKey.getNen().getNen());
 		System.out.println(sganOldDocumentKey.getBango());
 
-		System.out.println("=== cusstom 元号あり ===");
+		System.out.println("=== cusstom 元号あり番号形式変更 ===");
 		AbsKeyFactory sganCustomFactory = AbsKeyFactory.getKeyFactory(Util.BASE_FQCN + ".biz.sgan.custom.SganCustomFactory");
 
 		KeyType sganCustomKeyType = sganCustomFactory.createKeyType();
@@ -54,9 +59,11 @@ public class Client {
 		
 		DocumentKey sganCustomDocumentKey = sganCustomFactory.createDocumentKey(sganCustomKeyType, sganCustomNen, sganCustomBango);
 		
-		sganSimpleKeyInfo = new SganSimpleKeyInfo("2050123456");
+		key = "2050-123456";
+		sganSimpleKeyInfo = new SganSeparatedKeyInfo(key);
 		sganCustomDocumentKey.setKeyInfo(sganSimpleKeyInfo);
 
+		System.out.println("インプット番号:" + key);
 		System.out.println(sganCustomDocumentKey.getKeyType());
 		System.out.println(sganCustomDocumentKey.getNen().getNen());
 		System.out.println(sganCustomDocumentKey.getBango());
