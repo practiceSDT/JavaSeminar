@@ -5,10 +5,36 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.function.Consumer;
 
 public class Util {
 	
+	public static final String BASE_FQCN = "mit.javaseminar.oo.lesson05";
+
+	public static Integer string2Int(String num) {
+		return Integer.valueOf(num);
+	}
+
+	public static String int2String(Integer num) {
+		return String.valueOf(num);
+	}
+	
+	/*
+	 * Mapの初期値設定にラムダ式lambdaを使うための関数型インタフェース定義
+	 * From java8
+	 */
+	public static <K, V> Map<K, V> toMap(Consumer<Map<K, V>> initializer) {
+	    Map<K, V> map = new LinkedHashMap<>();
+	    initializer.accept(map);
+	    return map;
+	}
+	
+	/*
+	 * チート
+	 */
 	public static String rekiHenkan() {
 		
 		//ロケールを指定してCalendarインスタンスを取得
