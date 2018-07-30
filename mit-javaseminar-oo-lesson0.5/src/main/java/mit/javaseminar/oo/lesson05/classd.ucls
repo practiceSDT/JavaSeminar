@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <package id="1" language="java" name="mit.javaseminar.oo.lesson05.biz.com" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="270" x="590" y="444"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="2" language="java" name="mit.javaseminar.oo.lesson05.biz" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="238" x="272" y="72"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="3" language="java" name="mit.javaseminar.oo.lesson05.biz.com.NoNotationKeyType" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/NoNotationKeyType.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="83" width="174" x="1618" y="888"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="mit.javaseminar.oo.lesson05.abs.KeyType" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/KeyType.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="209" width="165" x="1832" y="639"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="mit.javaseminar.oo.lesson05.biz.com.SimpleNen" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/SimpleNen.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="119" width="174" x="1133" y="888"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="6" language="java" name="mit.javaseminar.oo.lesson05.biz.sgan" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/sgan" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="274" x="550" y="72"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="7" language="java" name="mit.javaseminar.oo.lesson05.biz.com.wareki.InterWarekiState" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/wareki/InterWarekiState.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="137" width="206" x="942" y="444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="mit.javaseminar.oo.lesson05.biz.com.wareki.From1926" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/wareki/From1926.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="155" width="206" x="609" y="213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="mit.javaseminar.oo.lesson05.abs.Nen" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/Nen.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="137" width="159" x="1169" y="639"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="mit.javaseminar.oo.lesson05.abs.Bango" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/Bango.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="209" width="165" x="1597" y="639"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="11" language="java" name="mit.javaseminar.oo.lesson05.biz.com.wareki" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/wareki" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="318" x="864" y="72"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="12" language="java" name="mit.javaseminar.oo.lesson05.dto.SganSeparatedKeyInfo" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/dto/SganSeparatedKeyInfo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="119" width="190" x="2065" y="1368"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="mit.javaseminar.oo.lesson05.dto.DefaultKeyInfo" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/dto/DefaultKeyInfo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="119" width="153" x="1185" y="1368"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="mit.javaseminar.oo.lesson05.biz.com.wareki.From1989" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/wareki/From1989.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="155" width="206" x="855" y="213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="mit.javaseminar.oo.lesson05.biz.k.SkoKeyType" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/k/SkoKeyType.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="83" width="160" x="1832" y="888"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="16" language="java" name="mit.javaseminar.oo.lesson05.abs" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="242" x="422" y="639"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="17" language="java" name="mit.javaseminar.oo.lesson05.biz.com.wareki.JpNen" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/wareki/JpNen.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="137" width="208" x="361" y="213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="mit.javaseminar.oo.lesson05.biz.com.wareki.From2019" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/com/wareki/From2019.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="155" width="206" x="1101" y="213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="mit.javaseminar.oo.lesson05.abs.AbsKeyFactory" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/AbsKeyFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="191" width="332" x="1470" y="213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="20" language="java" name="mit.javaseminar.oo.lesson05.dto" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/dto" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="240" x="361" y="888"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="21" language="java" name="mit.javaseminar.oo.lesson05.Client" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/Client.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="101" width="137" x="1844" y="72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="22" language="java" name="mit.javaseminar.oo.lesson05.biz.k" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/k" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="52" width="249" x="1410" y="444"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="23" language="java" name="mit.javaseminar.oo.lesson05.biz.k.KoKeyType" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/biz/k/KoKeyType.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="83" width="160" x="2032" y="888"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="mit.javaseminar.oo.lesson05.dto.SganSimpleKeyInfo" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/dto/SganSimpleKeyInfo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="119" width="171" x="1378" y="1368"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="mit.javaseminar.oo.lesson05.dto.AbsKeyInfo" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/dto/AbsKeyInfo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="281" width="165" x="1349" y="1047"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="mit.javaseminar.oo.lesson05.Util" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/Util.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="173" width="254" x="321" y="1368"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="mit.javaseminar.oo.lesson05.abs.DocumentKey" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/DocumentKey.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="155" width="220" x="1783" y="444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <dependency id="29">    
+    <bendpoint x="631" y="888"/>    
+    <bendpoint x="631" y="1047"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="30">    
+    <bendpoint x="652" y="888"/>    
+    <bendpoint x="652" y="1047"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <generalization id="31">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="33">    
+    <bendpoint x="351" y="1047"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="34">    
+    <bendpoint x="1792" y="639"/>    
+    <bendpoint x="1587" y="888"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <dependency id="36">    
+    <bendpoint x="1337" y="213"/>    
+    <bendpoint x="1316" y="444"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="37">    
+    <bendpoint x="309" y="213"/>    
+    <bendpoint x="351" y="444"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="38">    
+    <bendpoint x="1379" y="213"/>    
+    <bendpoint x="1337" y="444"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <realization id="39">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <dependency id="40">    
+    <bendpoint x="330" y="213"/>    
+    <bendpoint x="330" y="444"/>    
+    <bendpoint x="330" y="639"/>    
+    <bendpoint x="330" y="888"/>    
+    <bendpoint x="330" y="1047"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="41">    
+    <bendpoint x="2033" y="444"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="43">    
+    <bendpoint x="267" y="213"/>    
+    <bendpoint x="267" y="444"/>    
+    <bendpoint x="267" y="639"/>    
+    <bendpoint x="267" y="888"/>    
+    <bendpoint x="267" y="1047"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="44">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="46">    
+    <bendpoint x="890" y="444"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <dependency id="47">    
+    <bendpoint x="1379" y="444"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <association id="49">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="50" name="keyType"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="52">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <realization id="53">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <dependency id="55">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="56">    
+    <bendpoint x="559" y="444"/>    
+    <bendpoint x="694" y="639"/>    
+    <bendpoint x="694" y="888"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="57">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="58">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="60">    
+    <bendpoint x="1710" y="444"/>    
+    <bendpoint x="1566" y="639"/>    
+    <bendpoint x="1566" y="888"/>    
+    <bendpoint x="1566" y="1047"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="61">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="62">    
+    <bendpoint x="2243" y="213"/>    
+    <bendpoint x="2243" y="444"/>    
+    <bendpoint x="2243" y="639"/>    
+    <bendpoint x="2243" y="888"/>    
+    <bendpoint x="2243" y="1047"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="65">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="66" name="bango"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="69" name="nen"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="71">    
+    <bendpoint x="2264" y="213"/>    
+    <bendpoint x="2264" y="444"/>    
+    <bendpoint x="2264" y="639"/>    
+    <bendpoint x="2264" y="888"/>    
+    <bendpoint x="2264" y="1047"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="72">    
+    <bendpoint x="1337" y="888"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="73">    
+    <bendpoint x="1358" y="213"/>    
+    <bendpoint x="1358" y="444"/>    
+    <bendpoint x="1358" y="639"/>    
+    <bendpoint x="1358" y="888"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="74">    
+    <bendpoint x="1731" y="444"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="75">    
+    <bendpoint x="1199" y="444"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="76">    
+    <bendpoint x="1178" y="444"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="77">    
+    <bendpoint x="911" y="444"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="78">    
+    <bendpoint x="2054" y="213"/>    
+    <bendpoint x="2054" y="444"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="79">    
+    <bendpoint x="2222" y="213"/>    
+    <bendpoint x="2222" y="444"/>    
+    <bendpoint x="2222" y="639"/>    
+    <bendpoint x="2222" y="888"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="80">    
+    <bendpoint x="673" y="888"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="81">    
+    <bendpoint x="391" y="639"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="82">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="83">    
+    <bendpoint x="309" y="444"/>    
+    <bendpoint x="288" y="639"/>    
+    <bendpoint x="288" y="888"/>    
+    <bendpoint x="288" y="1047"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="84">    
+    <bendpoint x="1545" y="888"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="85">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="86">    
+    <bendpoint x="1832" y="213"/>    
+    <bendpoint x="1752" y="444"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="87">    
+    <bendpoint x="1853" y="213"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <realization id="88">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="89">    
+    <bendpoint x="1689" y="444"/>    
+    <bendpoint x="1545" y="639"/>    
+    <bendpoint x="1524" y="888"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="90" name="keyInfo"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="92">    
+    <bendpoint x="978" y="639"/>    
+    <bendpoint x="978" y="888"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="93">    
+    <bendpoint x="288" y="213"/>    
+    <bendpoint x="288" y="444"/>    
+    <bendpoint x="309" y="639"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="94">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="95" name="warekiState"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
