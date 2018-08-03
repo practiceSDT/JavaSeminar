@@ -1,34 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<<<<<<< HEAD
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>mit.javaseminar.oo</groupId>
-  <artifactId>mit-javaseminar-oo-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>seminar</name>
-  <dependencies>
-  	<dependency>
-  		<groupId>org.projectlombok</groupId>
-  		<artifactId>lombok</artifactId>
-  		<version>1.16.20</version>
-  		<type>pom.lastUpdated</type>
-  	</dependency>
-  </dependencies>
-=======
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mit.javaseminar.oo</groupId>
 	<artifactId>mit-javaseminar-oo-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>seminar</name>
->>>>>>> branch 'master' of https://github.com/practiceSDT/JavaTestTool.git
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 	</properties>
-<<<<<<< HEAD
-=======
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -36,5 +17,4 @@
 			<version>1.16.20</version>
 		</dependency>
 	</dependencies>
->>>>>>> branch 'master' of https://github.com/practiceSDT/JavaTestTool.git
 </project>
