@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.2" icons="true" automaticImage="PNG" generate-combined-fragments="true">  
+  <object id="1" language="java" name="mit.javaseminar.oo.lesson05.Client" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/Client.java" binary="false" 
+    label="client" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="129" y="0"/>  
+  </object>  
+  <object id="2" language="java" name="mit.javaseminar.oo.lesson05.abs.AbsKeyFactory" 
+    project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/AbsKeyFactory.java" binary="false" 
+    label="absKeyFactory" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="3">      
+      <position height="105" width="145" x="136" y="183"/>    
+    </execution>  
+  </object>  
+  <object id="6" language="java" name="mit.javaseminar.oo.lesson05.abs.KeyType" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/KeyType.java" binary="false" 
+    label="keyType" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="407" y="0"/>    
+    <execution id="5">      
+      <position height="63" width="145" x="285" y="204"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="mit.javaseminar.oo.lesson05.abs.Nen" project="mit-javaseminar-oo-lesson0.5" 
+    file="/mit-javaseminar-oo-lesson0.5/src/main/java/mit/javaseminar/oo/lesson05/abs/Nen.java" binary="false" 
+    label="nen" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="517" y="0"/>    
+    <execution id="8">      
+      <position height="21" width="145" x="434" y="225"/>    
+    </execution>  
+  </object>  
+  <message id="4" operation="KeyType()" asynchronous="false">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </message>  
+  <message id="7" operation="Nen(mit.javaseminar.oo.lesson05.dto.AbsKeyInfo)" asynchronous="false">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>
+</sequence-diagram>
