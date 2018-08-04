@@ -34,6 +34,7 @@ public class JpNen extends Nen {
 		 * 理由は同じく勉強会で触れます。
 		 */
 		Map<Integer, String> kaigenmap = Util.toMap(m -> {
+		    m.put(2040, "mit.javaseminar.oo.lesson05.biz.com.wareki.From2040");
 		    m.put(2019, "mit.javaseminar.oo.lesson05.biz.com.wareki.From2019");
 		    m.put(1989, "mit.javaseminar.oo.lesson05.biz.com.wareki.From1989");
 		    m.put(1926, "mit.javaseminar.oo.lesson05.biz.com.wareki.From1926");
