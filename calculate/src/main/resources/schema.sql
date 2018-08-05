@@ -1,7 +1,0 @@
-create table IF NOT EXISTS CALCULATE_DATA(
-ID varchar(100),
-RECEIVED_DATE varchar(8),
-CALCULATE_OPERATOR varchar(100), 
-CALCULATE_ARG int, 
-BE_CALCULATED_ARG int
-);
