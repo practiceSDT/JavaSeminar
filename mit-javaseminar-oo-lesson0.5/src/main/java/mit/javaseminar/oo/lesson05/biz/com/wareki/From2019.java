@@ -31,7 +31,7 @@ public class From2019 implements InterWarekiState {
 	@Override
 	public String getGengoNen(Nen nen) {
 		return  String.valueOf(
-				Integer.valueOf(nen.getNen().substring(2, 3)) + (-18)
+				Integer.valueOf(nen.getNen().substring(2, 4)) + (-18)
 				);
 	}
 
