@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>>>>>>> master
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mit.javaseminar.oo</groupId>
@@ -33,6 +38,31 @@
 			<artifactId>arquillian-junit-container</artifactId>
 			<version>1.1.0.Final</version>
 		</dependency>
+<<<<<<< HEAD
+=======
+		<dependency>
+			<groupId>br.com.objectos.rio</groupId>
+			<artifactId>org-testing</artifactId>
+			<version>0.7.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.jmockit</groupId>
+			<artifactId>jmockit</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.jmockit</groupId>
+			<artifactId>jmockit-coverage</artifactId>
+			<version>0.999.26</version>
+		</dependency>
+>>>>>>> master
 	</dependencies>
 	<build>
 		<plugins>
