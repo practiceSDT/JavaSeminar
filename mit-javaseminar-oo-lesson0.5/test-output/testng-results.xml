@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+  <suite name="Default suite" duration-ms="62" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+    <test name="Default test" duration-ms="62" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
       <class name="mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample">
-        <test-method status="PASS" signature="init()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="init" is-config="true" duration-ms="14" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="init" is-config="true" duration-ms="22" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="exceptionTest()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="exceptionTest" duration-ms="3" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+        <test-method status="PASS" signature="exceptionTest()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="exceptionTest" duration-ms="5" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[例外が発生しました]]>
@@ -28,19 +28,19 @@ at java.lang.reflect.Method.invoke(Method.java:498)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exceptionTest -->
-        <test-method status="PASS" signature="verifyAdd1()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="verifyAdd1" duration-ms="2" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+        <test-method status="PASS" signature="verifyAdd1()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="verifyAdd1" duration-ms="3" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAdd1 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="init" is-config="true" duration-ms="0" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="init" is-config="true" duration-ms="0" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="init" is-config="true" duration-ms="1" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="init" is-config="true" duration-ms="1" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="verifyAdd2()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="verifyAdd2" duration-ms="0" started-at="2018-08-08T13:32:16Z" finished-at="2018-08-08T13:32:16Z">
+        <test-method status="PASS" signature="verifyAdd2()[pri:0, instance:mit.javaseminar.oo.lesson05.biz.com.wareki.TestNGSample@27c20538]" name="verifyAdd2" duration-ms="1" started-at="2018-08-18T04:16:20Z" finished-at="2018-08-18T04:16:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAdd2 -->
