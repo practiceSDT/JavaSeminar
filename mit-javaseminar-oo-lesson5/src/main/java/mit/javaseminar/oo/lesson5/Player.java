@@ -1,4 +1,7 @@
 package mit.javaseminar.oo.lesson5;
+
+import java.util.ArrayList;
+
 /**
  * ばば抜きのプレイヤークラス。
  */
@@ -104,7 +107,7 @@ public class Player
         myHand_.addCard(card);
 
         // 今加えたカードと同じカードを探す
-        Card[] sameCards = myHand_.findSameNumberCard();
+        ArrayList<Card> sameCards = myHand_.findSameNumberCard();
 
         // 同じカードの組み合わせが存在した場合
         if (sameCards != null)

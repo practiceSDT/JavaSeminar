@@ -8,24 +8,24 @@ import java.util.ArrayList;
 public class Table
 {
     /** 捨てられたカードを保持しておくためのリスト */
-    private ArrayList<Card[]> disposedCards_ = new ArrayList<Card[]>();
+    private ArrayList<ArrayList<Card>> disposedCards_ = new ArrayList<ArrayList<Card>>();
 
     /**
      * カードを捨てる。
      * 
-     * @param card 捨てるカードの配列
+     * @param sameCards 捨てるカードの配列
      */
-    public void disposeCard(Card card[])
+    public void disposeCard(ArrayList<Card> sameCards)
     {
-        for (int index = 0; index < card.length; index++)
+        for (int index = 0; index < sameCards.size(); index++)
         {
             // 捨てられたカードを表示する
-            System.out.print(card[index] + " ");
+            System.out.print(sameCards.get(index) + " ");
         }
 
         System.out.println("を捨てました");
 
         // 捨てられたカードはリストに追加して保持しておく。
-        disposedCards_.add(card);
+        disposedCards_.add(sameCards);
     }
 }

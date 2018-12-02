@@ -72,14 +72,13 @@ public class Hand
      * 
      * @return 同じ数のカード
      */
-    public Card[] findSameNumberCard()
+    public ArrayList<Card> findSameNumberCard()
     {
         int numberOfCards = hand_.size();
-        Card[] sameCards = null;
+        ArrayList<Card> sameCards = new ArrayList<Card>();
 
         // 手札にカードが1枚もない場合は何もしない
-        if (numberOfCards > 0)
-        {
+        if (numberOfCards > 0) {
             // 最後に追加されたカードを取得する
             int lastIndex = numberOfCards - 1;
             Card lastAddedCard = (Card) hand_.get(lastIndex);
@@ -94,9 +93,8 @@ public class Hand
                 {
                     // 最後に追加されたカードと同じカードが見つかった場合
                     // 見つかった組み合わせをsameCardsに格納し、ループを抜ける
-                    sameCards = new Card[2];
-                    sameCards[0] = (Card) hand_.remove(lastIndex);
-                    sameCards[1] = (Card) hand_.remove(index);
+                    sameCards.add((Card) hand_.remove(lastIndex));
+                    sameCards.add((Card) hand_.remove(index));
 
                     break;
                 }
