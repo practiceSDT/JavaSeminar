@@ -49,3 +49,7 @@ Thumbs.db
 *.bak
 *_bak
 *.bak_*
+mit-javaseminar-oo-parent/*_BACKUP_*.xml
+mit-javaseminar-oo-parent/*_BASE_*.xml
+mit-javaseminar-oo-parent/*_LOCAL_*.xml
+mit-javaseminar-oo-parent/*_REMOTE_*.xml
