@@ -59,7 +59,7 @@ public class Master
             Player nextPlayer = (Player) players_.get(nextPlayerIndex);
 
             // プレイヤーを指名する
-            System.out.println("\n" + player + "さんの番です");
+            System.out.println("\n" + player.getName() + "さんの番です");
             player.play(nextPlayer);
         }
 
@@ -75,7 +75,7 @@ public class Master
     public void declareWin(Player winner)
     {
         // 上がったプレイヤー
-        System.out.println(winner + "さんが上がりました！");
+        System.out.println(winner.getName() + "さんが上がりました！");
 
         // 上がったプレイヤーをリストからはずす
         players_.remove(players_.indexOf(winner));
@@ -84,7 +84,7 @@ public class Master
         if (players_.size() == 1)
         {
             Player loser = (Player) players_.get(0);
-            System.out.println(loser + "さんの負けです！");
+            System.out.println(loser.getName() + "さんの負けです！");
         }
     }
 

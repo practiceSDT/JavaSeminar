@@ -113,7 +113,7 @@ public class Hand
      * 
      * @return 手札にあるカードの文字列表現
      */
-    public String toString()
+    public String showHand()
     {
         StringBuffer string = new StringBuffer();
 
@@ -123,7 +123,7 @@ public class Hand
             for (int index = 0; index < size; index++)
             {
                 Card card = (Card) hand_.get(index);
-                string.append(card);
+                string.append(card.showCard());
                 string.append(" ");
             }
         }

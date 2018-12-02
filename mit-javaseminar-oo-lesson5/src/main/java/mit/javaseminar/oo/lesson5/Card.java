@@ -49,11 +49,10 @@ public class Card
 	
 	/**
 	 * カードを文字列で表現する。
-	 * ObjectクラスのtoStringメソッドをオーバーライドしたメソッド。
 	 * 
 	 * @return カードの文字表現
 	 */
-	public String toString()
+	public String showCard()
 	{
 		StringBuffer string = new StringBuffer();
 		

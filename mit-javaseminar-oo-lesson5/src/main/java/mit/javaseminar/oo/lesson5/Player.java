@@ -47,7 +47,7 @@ public class Player
         Card pickedCard = nextHand.pickCard();
 
         // 引いた結果を表示
-        System.out.println(this + "：" + nextPlayer + "さんから " + pickedCard
+        System.out.println(this.getName() + "：" + nextPlayer.getName() + "さんから " + pickedCard.showCard()
                 + " を引きました");
 
         // 引いたカードを自分の手札に加え、同じ数のカードがあったら捨てる
@@ -62,7 +62,7 @@ public class Player
         else
         {
             // 現在の手札を表示する
-            System.out.println(this + "：残りの手札は " + myHand_ + "です");
+            System.out.println(this.getName() + "：残りの手札は " + myHand_.showHand() + "です");
         }
     }
 
@@ -113,18 +113,17 @@ public class Player
         if (sameCards != null)
         {
             // テーブルへカードを捨てる
-            System.out.print(this + "：");
+            System.out.print(this.getName() + "：");
             table_.disposeCard(sameCards);
         }
     }
 
     /**
      * プレイヤーの名前を返す。 <br>
-     * ObjectクラスのtoStringメソッドをオーバーライドしたメソッド。
      * 
      * @return プレイヤーの名前
      */
-    public String toString()
+    public String getName()
     {
         return name_;
     }
