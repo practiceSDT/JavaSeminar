@@ -17,6 +17,7 @@ public class Master
      */
     public void prepareGame(Hand cards)
     {
+    	// カードを配る宣言する
         System.out.println("【カードを配ります】");
 
         // トランプをシャッフルする
@@ -28,6 +29,8 @@ public class Master
         // プレイヤーの人数を取得する
         int numberOfPlayers = players_.size();
 
+        // カードの枚数分カードを配る処理を繰り返すが。。。引かれることを考慮してループしすぎないように。
+        // 日本語とプログラムの間には少し隙間がある。そこにUTバグもある。難しいね。BPさんは大変なんです。
         for (int index = 0; index < numberOfCards; index++)
         {
             // カードから一枚引く
@@ -44,12 +47,16 @@ public class Master
      */
     public void startGame()
     {
+    	// ばば抜き開始を宣言する
         System.out.println("\n【ばば抜きを開始します】");
 
-        // プレイヤーの人数を取得する
+        // プレイヤーの人数分繰り返す
         for (int count = 0; players_.size() > 1; count++)
         {
+        	// %つまり除算の余りを利用するといいかもね。人数とカウンタの関係を利用します。
+        	// カウンタは指名されたプレイヤー
             int playerIndex = count % players_.size();
+            // 次のプレイヤーの番号を決める
             int nextPlayerIndex = (count + 1) % players_.size();
 
             // 指名するプレイヤーの取得
@@ -58,7 +65,7 @@ public class Master
             // 次のプレイヤーの取得
             Player nextPlayer = (Player) players_.get(nextPlayerIndex);
 
-            // プレイヤーを指名する
+            // 指名されたプレイヤーを宣言する
             System.out.println("\n" + player.getName() + "さんの番です");
             player.play(nextPlayer);
         }
@@ -74,7 +81,7 @@ public class Master
      */
     public void declareWin(Player winner)
     {
-        // 上がったプレイヤー
+        // 上がったプレイヤーを宣言する
         System.out.println(winner.getName() + "さんが上がりました！");
 
         // 上がったプレイヤーをリストからはずす
@@ -84,6 +91,9 @@ public class Master
         if (players_.size() == 1)
         {
             Player loser = (Player) players_.get(0);
+            // 敗者を宣言する
+            // ババ抜きだからね。。。
+            // じじ抜きを考慮するならこの部分含めて処理の構造は汎化が必要だね。
             System.out.println(loser.getName() + "さんの負けです！");
         }
     }

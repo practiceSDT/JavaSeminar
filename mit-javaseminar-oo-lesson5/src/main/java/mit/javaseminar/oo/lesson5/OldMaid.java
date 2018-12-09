@@ -40,6 +40,7 @@ public class OldMaid
      */
     private static Hand createTrump()
     {
+    	// 手札クラスを生成する
         Hand trump = new Hand();
         
         // 各スート53枚のカードを生成する

@@ -20,12 +20,14 @@ public class Table
     {
         for (int index = 0; index < sameCards.size(); index++)
         {
-            // 捨てられたカードを表示する
+            // 捨てられたカードを宣言する
             System.out.print(sameCards.get(index).showCard() + " ");
             // 捨てられたカードはリストに追加して保持しておく。
+            // 使われることはないけど、捨てられたものが存在している気分にする
             disposedCards_.add(sameCards.get(index));
         }
 
+        // 捨てた動作を宣言する
         System.out.println("を捨てました");
 
     }

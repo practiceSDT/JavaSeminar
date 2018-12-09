@@ -8,26 +8,25 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import lombok.extern.java.Log;
 import mockit.Deencapsulation;
 import mockit.Expectations;
 import mockit.Injectable;
-import mockit.Mocked;
-import mockit.Verifications;
+import mockit.integration.junit4.JMockit;
 
+@RunWith(JMockit.class)
 @Log
 public class PlayerTest {
 
-	//Mockedは全てのPlayerをモックとするため、テスト対象として使えなくなる。@Injectableは、特定のインスタンスのみ
+	//Mockedは全てのPlayerをモックとするため、テスト対象として使えなくなる。
+	//@Injectableは、特定のインスタンスのみ
 	@Injectable
 	private Player mockedPlayer;
 	@Injectable

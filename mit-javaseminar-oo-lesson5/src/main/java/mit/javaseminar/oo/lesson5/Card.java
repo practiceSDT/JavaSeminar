@@ -59,6 +59,10 @@ public class Card
 		if (number_ > 0)
 		{
 			// スートの表示
+			// スペードはS
+			// ダイヤはD
+			// クローバはC
+			// ハードはH
 			switch (suit_)
 			{
 				case SUIT_SPADE :
@@ -82,6 +86,12 @@ public class Card
 			}
 			
 			// 数の表示
+			// 1はA
+			// 10はT
+			// 11はJ
+			// 12はQ
+			// 13はK
+			
 			switch (number_)
 			{
 				case 1 :
@@ -111,7 +121,7 @@ public class Card
 		}
 		else
 		{
-			// ジョーカーを表す
+			// ジョーカーを表すJK
 			string.append("JK");
 		}
 		

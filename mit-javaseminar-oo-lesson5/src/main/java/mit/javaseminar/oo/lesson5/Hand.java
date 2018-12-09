@@ -70,11 +70,14 @@ public class Hand
      * 同じ数のカードを探す。
      * 同じ数のカードがない場合は null を返します。
      * 
-     * @return 同じ数のカード
+     * @return 同じ数のカードのリスト
      */
     public ArrayList<Card> findSameNumberCard()
     {
+    	// 手札の枚数を取得する
         int numberOfCards = hand_.size();
+        
+        // 同じカードを保存しておくリストを用意する
         ArrayList<Card> sameCards = new ArrayList<Card>();
 
         // 手札にカードが1枚もない場合は何もしない
@@ -86,9 +89,12 @@ public class Hand
             // 最後に追加されたカードの数字を取得する
             int lastAddedCardNum = lastAddedCard.getNumber();
 
+            // 最後に追加されたカードのひとつ前までのカードを走査する
             for (int index = 0; index < lastIndex; index++)
             {
                 Card card = (Card) hand_.get(index);
+                
+                // 最後に追加されたカードと走査しているカードの数を比較する
                 if (card.getNumber() == lastAddedCardNum)
                 {
                     // 最後に追加されたカードと同じカードが見つかった場合
@@ -100,7 +106,7 @@ public class Hand
                 }
 
                 // 同じ数の組み合わせが見つからなかった場合、
-                // sameCardsはnullのままとなる。
+                // 同じカードを保存しておくリストはnullのままとなる。
             }
         }
 
@@ -109,7 +115,6 @@ public class Hand
 
     /**
      * 手札にあるカードを文字列で表現する。
-     * ObjectクラスのtoStringメソッドをオーバーライドしたメソッド。
      * 
      * @return 手札にあるカードの文字列表現
      */
@@ -118,8 +123,11 @@ public class Hand
         StringBuffer string = new StringBuffer();
 
         int size = hand_.size();
+        
+        // 手札の枚数は事前に確認する
         if (size > 0)
         {
+        	// 手札の枚数分カードを文字列化する
             for (int index = 0; index < size; index++)
             {
                 Card card = (Card) hand_.get(index);

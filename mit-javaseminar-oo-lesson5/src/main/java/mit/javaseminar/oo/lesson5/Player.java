@@ -46,11 +46,13 @@ public class Player
         // 相手の手札からカードを一枚引く
         Card pickedCard = nextHand.pickCard();
 
-        // 引いた結果を表示
+        // 引いた結果を宣言する
         System.out.println(this.getName() + "：" + nextPlayer.getName() + "さんから " + pickedCard.showCard()
                 + " を引きました");
 
         // 引いたカードを自分の手札に加え、同じ数のカードがあったら捨てる
+        // 共通処理にしてしまいましょう。原理主義者として共通関数を嫌っても複雑すぎる。
+        // ババ抜きの仕様で上記の動作が変わることはないでしょう。
         dealCard(pickedCard);
 
         // 手札がゼロになったかどうか調べる
